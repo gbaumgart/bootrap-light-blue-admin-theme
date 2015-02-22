@@ -1,0 +1,39 @@
+{{#extend "layout"}}
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="stat_realtime"}}
+    {{/replace}}
+    {{#replace "app_content"}}
+        <h2 class="page-title">Realtime Chart <small>Realtime data</small></h2>
+        <div class="row">
+            <div class="col-md-10 offset1">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-user"></i>
+                            Visitors by Countries
+                        </h4>
+                    </header>
+                    <div class="body row">
+                        <div class="col-sm-2">
+                            <div id="legend"></div>
+                        </div>
+                        <div class="col-sm-10" id="chart-container">
+                            <div id="realtime-chart" style="height: 300px;">
+                            </div>
+                            <div id="timeline"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/replace}}
+
+    {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/rickshaw/rickshaw.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/stat-realtime.js"></script>
+    {{/append}}
+{{/extend}}

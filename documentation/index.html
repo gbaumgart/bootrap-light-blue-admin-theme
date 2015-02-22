@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Light Blue Documentation</title>
+    <link href="css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+<nav id="sidebar" class="sidebar">
+    <ul id="side-nav" class="side-nav">
+        <li class="active green">
+            <a href="index.html"><i class=" icon-desktop"></i> <span class="name">Dashboard</span></a>
+        </li>
+        <li class="teal accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class=" icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse">
+                <li><a href="stat_statistics.html">Stats</a></li>
+                <li><a href="stat_charts.html">Charts</a></li>
+                <li><a href="stat_realtime.html">Realtime</a></li>
+            </ul>
+        </li>
+        <li class="blue accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#forms-collapse"><i class=" icon-edit"></i> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="accordion-body collapse">
+                <li><a href="form_account.html">Account</a></li>
+                <li><a href="form_article.html">Article</a></li>
+                <li><a href="form_elements.html">Elements</a></li>
+                <li><a href="form_validation.html">Validation</a></li>
+                <li><a href="form_wizard.html">Wizard</a></li>
+            </ul>
+        </li>
+        <li class="brown accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#ui-collapse"><i class=" icon-magic"></i> <span class="name">UI</span></a>
+            <ul id="ui-collapse" class="accordion-body collapse">
+                <li><a href="ui_buttons.html">Buttons</a></li>
+                <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_notifications.html">Notifications</a></li>
+                <li><a href="ui_icons.html">Icons</a></li>
+                <li><a href="ui_tabs.html">Tabs</a></li>
+                <li><a href="ui_accordion.html">Accordion</a></li>
+            </ul>
+        </li>
+        <li class="dark-red accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#components-collapse"><i class=" icon-bookmark-empty"></i> <span class="name">Components</span></a>
+            <ul id="components-collapse" class="accordion-body collapse">
+                <li><a href="component_calendar.html">Calendar</a></li>
+                <li><a href="component_maps.html">Maps</a></li>
+                <li><a href="component_gallery.html">Gallery</a></li>
+                <li><a href="component_fileupload.html">Fileupload</a></li>
+            </ul>
+        </li>
+        <li class="red accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"><i class=" icon-table"></i> <span class="name">Tables</span></a>
+            <ul id="tables-collapse" class="accordion-body collapse">
+                <li><a href="tables_static.html">Static</a></li>
+                <li><a href="tables_dynamic.html">Dynamic</a></li>
+            </ul>
+        </li>
+        <li class="orange">
+            <a href="grid.html"><i class=" icon-columns"></i><span class="name">Widgets &nbsp; <span class="label label-info">new</span></span></a>
+        </li>
+        <li class="lime accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#special-collapse"><i class=" icon-asterisk"></i> <span class="name">Special</span></a>
+            <ul id="special-collapse" class="accordion-body collapse">
+                <li><a href="special_search.html">Search</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="special_404.html">404</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div class="wrap">
+    <header class="page-header">
+        <h1>Documentation</h1>
+    </header>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <section class="widget">
+                    <h2>About Template (Light Blue 3.0)</h2>
+                    <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next
+                        web application or admin entrance for it.</p>
+                    <p>It's based on super powerful <a href="http://getbootstrap.com/">Bootstrap</a> front-end framework which
+                        uses <strong>12-column responsive grid</strong> layout.</p>
+
+                    <h2>Structure</h2>
+                    <p><strong>Tl;dr</strong> - go to <a href="../html-transparent/dist">../html-transparent/dist folder</a> (or <a href="../html-white/dist">../html-white/dist folder</a> if you prefer white version)
+                        to check the most default html/css-only version of Light Blue. The stuff below
+                    is for compiling different variations of Light Blue from sass/handlebars sources.</p>
+                    <p>Since version <span class="label label-important">3.0.0</span> Light Blue template depends on <a href="http://gruntjs.com/">Grunt Task runner</a>
+                        to build an application version. So Light Blue root folder contains only setting & build files. Here is the structure:</p>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><strong>*root*</strong> - package meta-files (bower.json, package.json, etc);</li>
+                        <li><strong>bower_components</strong> - various JS & CSS libraries used in Light Blue. <a href="http://bower.io/">Bower package manager</a>
+                            is used to manage Light Blue dependencies;</li>
+                        <li><strong>documentation</strong> - you're actually reading it now;</li>
+                        <li><strong>html-transparent</strong> - transparent version of Light Blue template;</li>
+                        <li><strong>html-white</strong> - white version of Light Blue template;</li>
+                        <li><em>node_modules</em> - <a href="https://www.npmjs.org/">npm</a> modules used in Light Blue to assemble a compiled version;</li>
+                    </ul>
+                    <p>Every version (as of 3.1.0 it's <a href="../html-transparent">html-transparent</a> and <a href="../html-white">html-transparent</a>) goes with following folders:</p>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><strong>src</strong> - handlebars & sass sources;</li>
+                        <li><strong>dist</strong> - compiled html & css files;</li>
+                        <li><strong>src/img</strong> - images;</li>
+                        <li><strong>src/js</strong> - custom javascript written for Light Blue;</li>
+                        <li><strong>src/partials</strong> - reusable layouts & partials handlebars templates;</li>
+                        <li><strong>src/sass</strong> - scss stylesheets that compiled into css;</li>
+                        <li><strong>src/server</strong> - few php files used for fileupload & ajax widgets demo.</li>
+                        <li>dist/css - compiled css stylesheets;</li>
+                        <li>dist/img - images copied from <em>src/img</em> by grunt task;</li>
+                        <li>dist/js - custom javascript copied or minified from <em>src/js</em> by grunt task;</li>
+                        <li>dist/lib - js libs extracted from <em>../bower_components</em> (Only js files are copied);</li>
+                        <li>dist/server - few php files used for fileupload & ajax widgets demo copied from <em>src/server</em>.</li>
+                    </ul>
+                    <h2>Building a package</h2>
+                    <p>In order to build a package you need to be familiar with <a href="http://gruntjs.com/getting-started">Grunt Task runner</a> and have it installed. Before building a package we need to make sure that
+                        all required <em>npm</em> libraries (and <a href="https://www.npmjs.org/">npm</a> itself) are installed:</p>
+                    <pre><code>$> npm install
+$> npm install -g grunt-cli</code></pre>
+                    <p>After that all you need to do is to run:</p>
+                    <pre><code>$> grunt --env=development --target=html-transparent</code></pre>
+                    <p>This will compile handlebars templates and sass files into html and css accordingly and put them
+                        into a <a href="../html-transparent/dist">html-transparent/dist</a> folder. Options that may be passed to grunt are:</p>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><em>--env</em> - may be either <em>development</em> or <em>production</em>. The first one compiles commented css and unminified js files, while the second one compiles both minified css and js files. Default value is <em>development</em>;</li>
+                        <li><em>--target</em> - the version to be compiled. Currently there are two versions available: <em>html-transparent</em> and <em>html-white</em>. Default value is <em>html-transparent</em></li>
+                    </ul>
+                    <p>There are also other Grunt tasks available. Check <a href="../Gruntfile.js">Gruntfile.js</a> for a list of them. The most important one would be
+                        <code>grunt dist-watch</code>, that you may want to use during developement. It will watch for changes in a <em>src</em> folder and recompile
+                    <em>dist</em> if necessary. </p>
+
+                    <h2>Templates</h2>
+                    <p>Since version <span class="label label-important">3.0.0</span> Light Blue template uses
+                        <a href="http://handlebarsjs.com/">Handlebars</a>
+                        to compile html from handlebars sources.</p>
+                    <p>Most handlebars views are files placed into a <a href="../html-transparent/src/">src folder</a>. All views extend <a href="../html-transparent/src/partials/layout.hbs">layout.hbs</a> that exists in
+                        a folder named <a href="../html-transparent/src/partials">partials</a>.</p>
+                    <p>Compiling handlebars layouts into an html is done by a special lib called <a href="https://github.com/thierryc/grunt-handlebars-layouts">grunt-handlebars-layouts</a>.</p>
+
+                    <h2 id="bower">Bower</h2>
+                    <p>Since maintaining front-end libraries is getting more and more complicated we use <a href="http://bower.io/">Bower</a>
+                        to manage Light Blue dependencies. Bower is a front-end package management system which allows you to easely install required
+                        packages. Installing Bootstrap (for instance) becomes really simple:</p>
+                    <pre><code>bower install bootstrap</code></pre>
+                    <p>Above command installs bootstrap framework from <a href="https://github.com/twbs/bootstrap">https://github.com/twbs/bootstrap</a> directly into
+                        the <a href="../bower_components">bower_components folder</a>.</p>
+                    <p>There is also a <a href="../bower.json">bower.json file</a> where all libraries are put. Check it out for complete list of
+                        libs used in Light Blue.</p>
+
+                    <h2 id="scss">Scss</h2>
+                    <p>Light Blue uses <a href="http://sass-lang.com/">scss</a> to generate css. This choice has been made because of significant boost
+                        scss gives when developing front-end apps like this one. We used <a href="http://compass-style.org/">compass</a> to compile scss to css, but what to use
+                        is absolutely up to your choice. Anyway editing css is a good old way, right? :)</p>
+                    <p>The main scss file is <a href="../html-transparent/src/sass/application.scss">application.scss</a>. It includes all libraries and partial files.</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><p><a href="../html-transparent/src/sass/_base.scss">base.scss</a> - core application styles. Layout, sidebar, right chat,
+                            basic widget layout styles are
+                            here.</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_override-bootstrap.scss">bootstrap-override.scss</a> - there are situations when
+                            just changing bootstrap sass variable is not enough - we need to override something manually. This is the place for
+                            such overrides.</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_override-custom-libs.scss">override-custom-libs.scss</a> - same but for custom <strong>not essential</strong> libs (datepickers,
+                            calendar). This file <strong class="text-success">can be removed</strong>.</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_font.scss">font.scss</a> - downloaded version of Open Sans font.</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_general.scss">general.scss</a> - all application styles. Only tag-selector styles
+                            (<code>body</code>, <code>a</code>, <code>h2</code>, etc).</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_override-libs.scss">override-libs.scss</a> - core libs (Font Awesome, Bootstrap select) overrides.</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_mixins.scss">mixins.scss</a> - Light Blue sass mixins. Use when needed.</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_print.scss">print.scss</a> - yep, print styles. Disables parts of layout when printing.</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_utils.scss">utils.scss</a> - utilities classes. Mostly so-called property classes (margins, borders, etc).</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_variables.scss">variables.scss</a> - all template variables like colors, button sizes, etc.</p></li>
+                        <li><p><a href="../html-transparent/src/sass/_widgets.scss">widgets.scss</a> - custom widgets classes (email widget, charts, etc). This file <strong class="text-success">can be removed</strong>.</p></li>
+                    </ul>
+                    <h3>Sass 3.3</h3>
+                    <p>Sass 3.3 is used in Light Blue. In order to correctly use please update compass:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>update compass - run <code>gem install compass -v '1.0.0.alpha.19'</code> (or greater version
+                            if available)</li>
+                        <li>install wdm - as of <a href="https://github.com/chriseppstein/compass/issues/1470">compass
+                            issue discussion</a> run <code>gem install wdm</code></li>
+                    </ul>
+
+                    <h2 id="scss-import">Css files import</h2>
+                    <p>Unfortunately lots of libs used in Light Blue do not provide sass versions of stylesheets which creates
+                        few problems for us cause we want to serve just one application.<strong>css</strong> file and keep
+                        imports consistent. This is solved either by simply copy-pasting lib styles into
+                        <a href="../html-transparent/src/sass/application.scss">application.scss</a> (bad) or by finding a way to import .css
+                        files into .scss file (good).</p>
+                    <p>There is a ruby gem called <a href="https://github.com/chriseppstein/sass-css-importer">
+                        sass-css-importer</a> which allows us to do what's needed. To install it:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>install sass-css-importer - run <code>gem install --pre sass-css-importer</code></li>
+                    </ul>
+                    <p>There is a line in <a href="../html-transparent/src/config.rb">config.rb:9</a> <code>require 'sass-css-importer'</code>
+                        which tells compass to use sass-css-importer when processing <code>@import</code>'s.</p>
+
+                    <h2>Pjax</h2>
+                    <p>Light Blue uses <a href="https://github.com/defunkt/jquery-pjax">jquery-pjax</a> library that
+                        uses ajax and pushState which makes page loading super fast.</p>
+                    <p>In case you want to turn off ajax page loading you need to just set <code>window.PJAX_ENABLED</code>
+                    variable to <code>false</code> (js/app.js file):</p>
+                    <pre><code>window.PJAX_ENABLED = false;</code></pre>
+
+                    <h2>Support</h2>
+                    <p>If you have any questions or problems when installing template feel free to contact us via email -
+                        <a href="mailto:contact@flatlogic.com">contact@flatlogic.com</a>. We will provide as much help as possible.</p>
+
+                    <h3>Statistics Boxes</h3>
+                    <hr/>
+                    <p>See <a href="stat_statistics.html">statistics section</a>.</p>
+
+                    <h3>Left Sidebar</h3>
+                    <hr/>
+                    <p>Left sidebar is based on
+                        <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap's collapse component</a>.
+                        <a href="../html-transparent/src/js/settings.js">Settings.js</a> holds additional javascript code which is used to
+                        change sidebar state and sidebar position depending on chosen option (icons, auto) and (left, right).</p>
+
+                    <h3>Top Navigation</h3>
+                    <hr/>
+                    <p>Is simple <a href="http://getbootstrap.com/components/#navbar">Bootstrap's Navbar</a>.
+                        User profile and settings popovers are implemented via <a href="http://getbootstrap.com/javascript/#popovers">Bootstrap's popover</a></p>
+
+                    <h3>Widget Controls</h3>
+                    <hr>
+                    <p>Each widget may have widget controls. See <a href="grid.html">Widgets</a>.</p>
+                    <h3>Charts</h3>
+                    <hr/>
+                    <p>Charts are built with <a href="http://d3js.org/">D3.js</a>-based <a href="http://nvd3.org/">nvd3 library</a>. Read more in
+                        <a href="stat_charts.html">charts section</a></p>
+
+                    <h3>Change Log</h3>
+                    <hr/>
+                    <h4><strong>Version 3.1</strong></h4>
+                    <ul>
+                        <li>- White Version codebase rewrite & improvement</li>
+                        <li>- Bootstrap 3.3.1 update</li>
+                        <li>- UI issues fixing and improvements</li>
+                    </ul>
+                    <h4><strong>Version 3.0</strong></h4>
+                    <ul>
+                        <li>- Entire codebase rewrite & improvement</li>
+                        <li>- Grunt tasks to build an application</li>
+                        <li>- Bower package management</li>
+                        <li>- General layout redesign</li>
+                        <li>- Handlebars templates</li>
+                        <li>- Bootstrap 3.2.0 update</li>
+                    </ul>
+                    <h4><strong>Version 2.1</strong></h4>
+                    <ul>
+                        <li>- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)</li>
+                        <li>- Messenger notifications</li>
+                        <li>- Input Sliders</li>
+                        <li>- Parsley 2.0.0</li>
+                        <li>- White version bug fixes</li>
+                    </ul>
+                    <h4><strong>Version 2.0</strong></h4>
+                    <ul>
+                        <li>- Super fast Ajax page loading</li>
+                        <li>- Lib updates</li>
+                        <li>- Few bug fixes</li>
+                    </ul>
+                    <h4><strong>Version 1.8</strong></h4>
+                    <ul>
+                        <li>- Bootstrap v3.1 update</li>
+                        <li>- Few bug fixes</li>
+                    </ul>
+                    <h4><strong>Version 1.7.1</strong></h4>
+                    <ul>
+                        <li>- Bootstrap 3.0.3 upgrade fix</li>
+                    </ul>
+                    <h4><strong>Version 1.7</strong></h4>
+                    <ul>
+                        <li>- 4+ level menu</li>
+                        <li>- Libs updates & fixes</li>
+                        <li>- Documentation update</li>
+                    </ul>
+                    <h4><strong>Version 1.6</strong></h4>
+                    <ul>
+                        <li>- Bootstrap components page</li>
+                        <li>- Draggable Grid</li>
+                        <li>- List Groups</li>
+                        <li>- Jquery 2.0, lib updates</li>
+                        <li>- Font Awesome 4.0.3</li>
+                    </ul>
+                    <h4><strong>Version 1.5</strong></h4>
+                    <ul>
+                        <li>- White version (<a href="../white/index.html">white/</a>) <small><em>Thanks to Quang Pham for convincing me :)</em></small></li>
+                        <li>- Landing page (<a href="../html-transparent/dist/landing.html">landing.html</a>)</li>
+                        <li>- Css & Structure refactoring</li>
+                        <li>- Drop Bootstrap 2 version from package</li>
+                    </ul>
+                    <h4><strong>Version 1.4</strong></h4>
+                    <ul>
+                        <li>- Bootstrap 3 support</li>
+                        <li>- Ready-to-use Inbox App (<a href="../html-transparent/dist/special_inbox.html">special_inbox.html</a>)</li>
+                    </ul>
+                    <h4><strong>Version 1.3</strong></h4>
+                    <ul>
+                        <li>- Overall UI improvements</li>
+                        <li>- New iCheck library instead of out-of-date uniform</li>
+                        <li>- Print Optimized</li>
+                        <li>- Invoice Page (<a href="../html-transparent/dist/special_invoice.html">special_invoice.html</a>)</li>
+                    </ul>
+                    <h4><strong>Version 1.2</strong></h4>
+                    <ul>
+                        <li>- Fileupload fix</li>
+                        <li>- Second level menu overlap fix</li>
+                    </ul>
+                    <h4><strong>Version 1.1</strong></h4>
+                    <ul>
+                        <li>- Generic Search Field</li>
+                        <li>- Form Wizard (<a href="../fhtml-transparent/dist/orm_wizard.html">form_wizard.html</a>)</li>
+                        <li>- jQuery Datatables (<a href="../html-transparent/dist/tables_dynamic.html">tables_dynamic.html</a>)</li>
+                        <li>- UI improvements</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="js/jquery.1.9.0.min.js"> </script>
+
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

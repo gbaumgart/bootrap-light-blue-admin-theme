@@ -1,0 +1,100 @@
+{{#extend "layout"}}
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="grid_basic"}}
+    {{/replace}}
+    {{#replace "app_content"}}
+        <h2 class="page-title"><span class="fw-semi-bold">Responsive</span> Grid <small>Fully responsive layout</small></h2>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <section class="widget tiny">
+                    <header>
+                        <h4>
+
+                            Col-md-8 widget
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <blockquote class="blockquote-sm">
+                            Looks great with <code>.col-md-offset-2</code>
+                        </blockquote>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <section class="widget tiny">
+                    <header>
+                        <h4>
+                            The same with 10
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <blockquote class="blockquote-sm">
+                            Looks great with <code>.col-md-offset-1</code>
+                        </blockquote>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <section class="widget tiny-x2">
+                    <header>
+                        <h4>
+                            Col-md-5
+                        </h4>
+                    </header>
+                    <div class="body">
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <section class="widget tiny">
+                    <header>
+                        <h4>
+                            Col-md-4
+                        </h4>
+                    </header>
+                    <div class="body">
+                    </div>
+                </section>
+                <section class="widget tiny">
+                    <header>
+                        <h4>
+                            Col-md-4
+                        </h4>
+                    </header>
+                    <div class="body">
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-3">
+                <section class="widget tiny">
+                    <header>
+                        <h4>
+                            Col-md-3
+                        </h4>
+                    </header>
+                    <div class="body">
+                    </div>
+                </section>
+                <section class="widget tiny">
+                    <header>
+                        <h4>
+                            Col-md-3
+                        </h4>
+                    </header>
+                    <div class="body">
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/replace}}
+
+    {{#append "scripts"}}
+        <!-- page specific libs -->
+
+        <!-- page application js -->
+    {{/append}}
+{{/extend}}

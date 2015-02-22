@@ -1,0 +1,127 @@
+//some basic definitions
+//html-elements only. no classes
+
+@mixin background-radial-gradient($figure, $type, $position_x, $position_y, $color_1, $color_2, $color_3){
+//final w3c
+  background: radial-gradient(
+      $type $figure at $position_x $position_y,
+      $color_1,
+      $color_2,
+      $color_3
+  ),
+  url("../img/bgnoise_lg_dark.png");
+  //webkit-specific
+  background: -webkit-radial-gradient(
+      $position_x $position_y, $type $figure,
+      $color_1,
+      $color_2,
+      $color_3
+  ),
+  url("../img/bgnoise_lg_dark.png");
+
+  //moz-specific
+  background: -moz-radial-gradient(
+      $position_x $position_y, $type $figure,
+      $color_1,
+      $color_2,
+      $color_3
+  ),
+  url("../img/bgnoise_lg_dark.png");
+}
+
+html{
+  min-height: 100%;
+}
+
+body{
+  min-width: 300px;
+  min-height: 620px;
+  font-weight: 300;
+  padding-bottom: 100px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoNzQsIDEyMSwgMTQ3LCAwLjg5KSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSJyZ2JhKDIyNiwgMjI2LCAyMjYsIDAuODcpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE4NSwgMTM1LCAxMzEsIDAuODcpIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
+  @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
+    rgba(74, 121, 147, 0.89),
+    rgba(226, 226, 226, 0.87),
+    rgba(185, 135, 131, 0.87)
+
+  );
+}
+
+#{headings()} {
+  font-weight: 300;
+
+  small{
+    color: $smallsColor;
+  }
+}
+h1 {
+  font-size: 50px;
+}
+h2{
+  font-size: 26px;
+}
+
+h3{
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 15px;
+}
+h5,
+h6 {
+  font-size: 11px;
+}
+
+input[type=search], input.search {
+  padding-left: 26px;
+  background-color:white;
+  background:url(../img/search.png) 5px 5px no-repeat #fff;
+}
+
+ul ul,
+ol ul{
+  list-style: none;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+hr{
+  margin: 5px 0 10px;
+}
+
+
+//setting default iframe behaviour to border box
+//so it behaves normally within .control-row
+iframe{
+  @include box-sizing(border-box);
+}
+
+//opera is buggy? no chrome is buggy! really strange fix
+fieldset{
+  width: 100%;
+}
+
+/* --------------------------------------------------------	*/
+/*	Custom styled scrollbar */
+/* --------------------------------------------------------	*/
+html:not(.osx) ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+html:not(.osx) ::-webkit-scrollbar-track-piece {
+
+  background-color: #eee;
+  box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+}
+html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
+  opacity:0.4;
+  background-color: $red;
+}
+
+html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
+  opacity:0.4;
+  background-color: $red;
+}

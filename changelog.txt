@@ -1,0 +1,204 @@
+V3.0
+- Entire codebase rewrite & improvement
+- Grunt tasks to build an application
+- Bower package management
+- General layout redesign
+- Handlebars templates
+
+Files changed:
+ html:
+  * *.html -> *.hbs (compiling html from handlebars templates)
+  * tables_static.hbs
+  * special_search.hbs
+  * special_404.hbs -> error.hbs
+  * login.hbs
+  * --new-- partials/layout.hbs
+  * --new-- partials/sidebar.hbs
+ js:
+  * app.js
+
+ styles:
+  * sass/_base
+  * sass/application
+  * --new-- sass/_widgets
+  * --new-- sass/_utils
+
+V2.1
+- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)
+- Messenger notifications
+- Input Sliders
+- Parsley 2.0.0
+- White version bug fixes
+
+Files changed:
+ html:
+  * form_account.html
+  * form_article.html
+  * form_validation.html
+  * form_elements.html
+  * grid_live.html
+  * --new-- ui_notifications.html
+ js:
+  * index.js
+  * grid-live.js
+  * forms.js
+  * forms-article.js
+  * forms-validation.js
+  * --new-- ui-notifications.js
+  * lib/parsley.js
+
+ styles:
+  * sass/_base
+  * sass/application
+  * --new-- sass/lib/messenger-1.4.1/*
+  * --new-- sass/lib/_bootstrap-slider
+
+V2.0
+- Super fast Ajax page loading
+- Lib updates
+- Few bug fixes
+
+Files changed:
+ html:
+  * <root>/*
+ js:
+  * app.js (PjaxApp)
+  * js/*
+  * --new-- lib/jquery-pjax
+
+ styles:
+  * sass/_bootstrap-override
+  * sass/_base
+
+V1.8
+- Bootstrap v3.1 update
+- Few bug fixes
+
+Files changed:
+ html:
+  * form_elements.html
+  * stat_statistics.html
+ styles:
+  * sass/bootstrap-original/*
+  * sass/_bootstrap-override
+
+V1.7.1
+- Bootstrap 3.0.3 upgrade fix
+Files changed:
+ styles:
+  * sass/_base
+
+V1.7
+- 4+ level menu.
+- Libs updates & fixes
+- Documentation update
+
+Files changed:
+ html:
+  * form_account.html
+  * index.html
+ styles:
+  * sass/bootstrap-original/*
+ js:
+  * app.js
+
+V1.6
+- Bootstrap components page
+- Live Grid
+- List Groups
+- jquery 2.0, lib updates
+- Font Awesome 4.0.3
+
+Files changed:
+ html:
+  * --new-- grid_live.html
+  * --new-- component_bootstrap.html
+  * --new-- component_list_groups.html
+ styles:
+  * sass/_base
+  * sass/_bootstrap-override
+  * sass/_responsive
+  * --new-- sass/lib/_nestable
+ js:
+  * inbox.js
+  * stats.js
+  * --removed-- lib/jquery-migrate-1.1.0.min.js
+  * --removed-- lib/jquery.1.9.0.min.js
+  * --new-- lib/jquery-2.0.3.min.js
+
+V1.5
+- White version
+- Landing page
+- Css & Structure refactoring
+- Drop Bootstrap 2 version from package
+
+Files changed:
+ folder:
+  * --new-- white/*
+ html:
+  * --new-- landing.html
+ styles:
+  * sass/_base
+  * sass/_bootstrap-override
+  * sass/_responsive
+  * sass/lib/_animate
+
+V1.4
+- Bootstrap 3 support
+- Ready-to-use Inbox App
+
+Files changed:
+ all files :)
+ html:
+  * --new-- special_inbox.html
+ styles:
+  * sass/bootstrap-original/*
+ js:
+  * inbox.js
+  * folders.json
+  * emails.json
+ lib:
+  * --new-- lib/wysihtml5/advanced.js
+
+V1.3
+- Overall UI improvements
+- New iCheck library instead of out-of-date uniform
+- Print Optimized
+- Invoice Page
+
+Files changed:
+ html:
+  * all html files: icon-desktop replaced with icon-home
+  * --new-- special_invoice.html
+ styles:
+  * _base.scss
+  * _bootstrap-override.scss
+  * _general.scss
+  * _variables.scss
+  * application.scss
+  * --new-- _print.scss
+ js:
+  * form-elemets.js
+  * forms.js
+ lib:
+  * --new-- lib/icheck.js/jquery.icheck.js
+  * --removed-- lib/uniform/*
+ images:
+  * --new-- img/icheck/square/*
+  * --removed-- img/sprite.png
+  * --removed-- img/sprite.psd
+
+
+V1.2
+- Fileupload fix
+- Second level menu overlap fix
+Files changed:
+  * js/app.js
+  * component_fileupload.html
+
+
+V1.1
+- Generic Search Field
+- Form Wizard (form_wizard.html)
+- jQuery Datatables (tables_dynamic.html)
+- UI improvements

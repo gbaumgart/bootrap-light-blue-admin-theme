@@ -1,0 +1,117 @@
+//Define our own and
+//override default bootstrap properties
+
+$lime:                  #8CBF26 !default;
+$red:                   #e5603b !default;
+$redDark:               #d04f4f !default;
+$blue:                  #618fb0 !default;
+$green:                 #56bc76 !default;
+$orange:                #eac85e !default;
+$pink:                  #E671B8 !default;
+$purple:                #A700AE !default;
+$brown:                 #A05000 !default;
+$teal:                  #4ab0ce !default;
+$gray:                  #666 !default;
+$grayDark:              #555 !default;;
+$lightGray:             #f8f8f8 !default;
+$shadowGray:            #676767 !default;
+$linkRed:               #da3712 !default;
+$white:                 #ffffff !default;
+$lightBlue:             #eff5ef !default;
+$lightBrown:            #f5f2ee !default;
+$lightRed:              #f8f3f0 !default;
+$lightGreen:            #efffee !default;
+$lightOrange:           #fff8e4 !default;
+
+//$colors: $lime, $red, $redDark, $blue, $green, $orange, $brown, $teal;
+$colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $redDark;
+//$color_names: lime, red, dark-red, blue, green, orange, brown, teal;
+$color_names: red, orange, lime, green, teal, blue, brown, dark-red;
+
+$light_colors: $lightRed, $lightOrange, $lightGreen, $lightBlue,$lightBrown, $lightGray;
+$light_color_names: red, orange, green, blue, brown, gray;
+
+$widget-shadow: 0 0 12px $shadowGray;
+$widget-border-radius: 1px;
+$button-border-radius: 1px;
+$box-margin-bottom: 40px;
+
+//$textColor: #6f6251 !default;
+$textColor: $gray !default;
+$textLightGray: #999 !default;
+$smallsColor: #dfdfdf;
+$backgroundBrown: #786c60 !default;
+$backgroundBlue: #426D73 !default;
+$backgroundColor: $backgroundBrown;
+
+//bootstrap override
+//responsive
+$navbarCollapseWidth: 767px !default;
+
+//fonts
+
+$baseFontSize:          15px !default;
+
+//buttons
+
+$baseBorderRadius:      $widget-border-radius !default;
+$borderRadiusLarge:     $widget-border-radius !default;
+$borderRadiusSmall:     0px !default;
+// Buttons
+// -------------------------
+$btnBackground:                     lighten($textColor, 2%) !default;
+$btnBackgroundHighlight:            $textColor !default;
+
+$btnPrimaryBackground:              $blue !default;
+$btnPrimaryBackgroundHighlight:     $blue !default;
+
+$btnInfoBackground:                 $teal !default;
+$btnInfoBackgroundHighlight:        $teal !default;
+
+$btnSuccessBackground:              $green !default;
+$btnSuccessBackgroundHighlight:     $green !default;
+
+$btnWarningBackground:              $orange !default;
+$btnWarningBackgroundHighlight:     $orange !default;
+
+$btnDangerBackground:               $red !default;
+$btnDangerBackgroundHighlight:      $red !default;
+
+$btnInverseBackground:              darken($lightGray, 2%) !default;
+$btnInverseBackgroundHighlight:     darken($lightGray, 2%) !default;
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white !default;
+$dropdownBorder:                rgba(0,0,0,.2) !default;
+$dropdownDividerTop:            #e5e5e5 !default;
+$dropdownDividerBottom:         $white !default;
+
+$dropdownLinkColor:             $textColor !default;
+$dropdownLinkColorHover:        $white !default;
+$dropdownLinkColorActive:       $dropdownLinkColor !default;
+
+$dropdownLinkBackgroundActive:  $blue !default;
+$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
+
+// Form states and alerts
+// -------------------------
+$warningText:             $orange !default;
+$warningBackground:       #fcf8e3 !default;
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
+
+$errorText:               $red !default;
+$errorBackground:         #f2dede !default;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
+
+$successText:             $green !default;
+$successBackground:       #dff0d8 !default;
+$successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
+
+$infoText:                $blue !default;
+$infoBackground:          #d9edf7 !default;
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
+
+// Component sizing
+
+$paddingLarge:          8px 18px !default; // 44px

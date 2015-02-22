@@ -1,0 +1,161 @@
+<nav id="sidebar" class="sidebar nav-collapse collapse">
+    <ul id="side-nav" class="side-nav">
+        <li class="{{conditionClass "active" active "index"}}">
+            <a href="index.html"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
+        </li>
+        <li class="panel {{conditionClass "active" active "form_account form_article form_elements form_validation form_wizard"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "form_account form_article form_elements form_validation form_wizard" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-pencil"></i> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="panel-collapse collapse {{conditionClass "in" active "form_account form_article form_elements form_validation form_wizard"}}">
+                <li class="{{conditionClass "active" active "form_account"}}"><a href="form_account.html">Account</a></li>
+                <li class="{{conditionClass "active" active "form_article"}}"><a href="form_article.html">Article</a></li>
+                <li class="{{conditionClass "active" active "form_elements"}}"><a href="form_elements.html">Elements</a></li>
+                <li class="{{conditionClass "active" active "form_validation"}}"><a href="form_validation.html">Validation</a></li>
+                <li class="{{conditionClass "active" active "form_wizard"}}"><a href="form_wizard.html">Wizard</a></li>
+            </ul>
+        </li>
+        <li class="panel {{conditionClass "active" active "stat_statistics stat_charts stat_realtime"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "stat_statistics stat_charts stat_realtime" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="panel-collapse collapse {{conditionClass "in" active "stat_statistics stat_charts stat_realtime"}}">
+                <li class="{{conditionClass "active" active "stat_statistics"}}"><a href="stat_statistics.html">Stats</a></li>
+                <li class="{{conditionClass "active" active "stat_charts"}}"><a href="stat_charts.html">Charts</a></li>
+                <li class="{{conditionClass "active" active "stat_realtime"}}"><a href="stat_realtime.html">Realtime</a></li>
+            </ul>
+        </li>
+        <li class="panel {{conditionClass "active" active "ui_buttons ui_dialogs ui_notifications ui_icons ui_tabs ui_accordion"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "ui_buttons ui_dialogs ui_notifications ui_icons ui_tabs ui_accordion" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
+            <ul id="ui-collapse" class="panel-collapse collapse {{conditionClass "in" active "ui_buttons ui_dialogs ui_notifications ui_icons ui_tabs ui_accordion"}}">
+                <li class="{{conditionClass "active" active "ui_buttons"}}"><a href="ui_buttons.html">Buttons</a></li>
+                <li class="{{conditionClass "active" active "ui_dialogs"}}"><a href="ui_dialogs.html">Dialogs</a></li>
+                <li class="{{conditionClass "active" active "ui_notifications"}}"><a href="ui_notifications.html">Notifications</a></li>
+                <li class="{{conditionClass "active" active "ui_icons"}}"><a href="ui_icons.html">Icons</a></li>
+                <li class="{{conditionClass "active" active "ui_tabs"}}"><a href="ui_tabs.html">Tabs</a></li>
+                <li class="{{conditionClass "active" active "ui_accordion"}}"><a href="ui_accordion.html">Accordion</a></li>
+            </ul>
+        </li>
+        <li class="panel {{conditionClass "active" active "component_calendar component_maps component_gallery component_fileupload component_bootstrap component_list_groups"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "component_calendar component_maps component_gallery component_fileupload component_bootstrap component_list_groups" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
+            <ul id="components-collapse" class="panel-collapse collapse {{conditionClass "in" active "component_calendar component_maps component_gallery component_fileupload component_bootstrap component_list_groups"}}">
+                <li class="{{conditionClass "active" active "component_calendar"}}"><a href="component_calendar.html">Calendar</a></li>
+                <li class="{{conditionClass "active" active "component_maps"}}"><a href="component_maps.html" data-no-pjax>Maps</a></li>
+                <li class="{{conditionClass "active" active "component_gallery"}}"><a href="component_gallery.html">Gallery</a></li>
+                <li class="{{conditionClass "active" active "component_fileupload"}}"><a href="component_fileupload.html" data-no-pjax>Fileupload</a></li>
+                <li class="{{conditionClass "active" active "component_bootstrap"}}"><a href="component_bootstrap.html">Bootstrap</a></li>
+                <li class="{{conditionClass "active" active "component_list_groups"}}"><a href="component_list_groups.html">List Groups</a></li>
+            </ul>
+        </li>
+        <li class="panel {{conditionClass "active" active "tables_static tables_dynamic"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "tables_static tables_dynamic" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
+            <ul id="tables-collapse" class="panel-collapse collapse {{conditionClass "in" active "tables_static tables_dynamic"}}">
+                <li class="{{conditionClass "active" active "tables_static"}}"><a href="tables_static.html">Static <sup class="text-danger fw-bold">upd</sup></a></li>
+                <li class="{{conditionClass "active" active "tables_dynamic"}}"><a href="tables_dynamic.html">Dynamic</a></li>
+            </ul>
+        </li>
+        <li class="panel {{conditionClass "active" active "grid_basic grid_live"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "grid_basic grid_live" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>
+            <ul id="grid-collapse" class="panel-collapse collapse {{conditionClass "in" active "grid_basic grid_live"}}">
+                <li class="{{conditionClass "active" active "grid_basic"}}"><a href="grid_basic.html">Basic</a></li>
+                <li class="{{conditionClass "active" active "grid_live"}}"><a href="grid_live.html">Live</a></li>
+            </ul>
+        </li>
+        <li class="panel {{conditionClass "active" active "special_search special_invoice special_inbox"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "special_search special_invoice special_inbox" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
+            <ul id="special-collapse" class="panel-collapse collapse {{conditionClass "in" active "special_search special_invoice special_inbox"}}">
+                <li class="{{conditionClass "active" active "special_search"}}"><a href="special_search.html">Search <sup class="text-warning fw-bold">new</sup></a></li>
+                <li class="{{conditionClass "active" active "special_invoice"}}"><a href="special_invoice.html">Invoice</a></li>
+                <li class="{{conditionClass "active" active "special_inbox"}}"><a href="special_inbox.html">Inbox &nbsp; <span class="label label-important">3</span></a></li>
+                <li><a target="_blank" href="login.html">Login</a></li>
+                <li><a target="_blank" href="error.html">Error Page</a></li>
+                <li><a href="landing.html" data-no-pjax>Landing</a></li>
+                <li><a href="../white/index.html" data-no-pjax>White <sup class="text-warning fw-bold">new</sup></a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-folder-open"></i> <span class="name">Menu Levels</span></a>
+            <ul id="menu-levels-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 1.1</a></li>
+                <li><a href="#">Item 1.2</a></li>
+                <li class="panel">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse"
+                       data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
+                    <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
+                        <li class="panel">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse"
+                               data-parent="#sub-menu-1-collapse" href="#sub-menu-3-collapse">Item 2.1</a>
+                            <ul id="sub-menu-3-collapse" class="panel-collapse collapse">
+                                <li><a href="#">Item 3.1</a></li>
+                                <li><a href="#">Item 3.2</a></li>
+                                <li><a href="#">Item 3.3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Item 2.2</a></li>
+                        <li class="panel">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse"
+                               data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
+                            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                                <li><a href="#">Item 3.4</a></li>
+                                <li><a href="#">Item 3.5</a></li>
+                                <li><a href="#">Item 3.6</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="visible-xs">
+            <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
+        </li>
+    </ul>
+
+    <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+    <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+    <ul class="sidebar-labels">
+        <li>
+            <a href="#">
+                <!-- yep, .circle again -->
+                <i class="fa fa-circle text-warning"></i>
+                <span class="label-name">My Recent</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-gray"></i>
+                <span class="label-name">Starred</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-circle text-danger"></i>
+                <span class="label-name">Background</span>
+            </a>
+        </li>
+    </ul>
+
+    <h5 class="sidebar-nav-title">Projects</h5>
+    <!-- A place for sidebar notifications & alerts -->
+    <div class="sidebar-alerts">
+        <div class="alert fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+            <span class="text-white fw-semi-bold">Sales Report</span> <br>
+            <div class="progress progress-xs mt-xs mb-0">
+                <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
+            </div>
+            <small>Calculating x-axis bias... 65%</small>
+        </div>
+        <div class="alert fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+            <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+            <div class="progress progress-xs mt-xs mb-0">
+                <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
+            </div>
+            <small>Provide required notes</small>
+        </div>
+    </div>
+</nav>

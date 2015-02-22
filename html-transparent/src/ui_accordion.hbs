@@ -1,0 +1,111 @@
+{{#extend "layout"}}
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="ui_accordion"}}
+    {{/replace}}
+    {{#replace "app_content"}}
+        <h2 class="page-title">Accordion <small>Simple and toggle accordion</small></h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4><strong>Simple</strong> Accordion</h4>
+                <div class="panel-group" id="accordion2">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                Collapsible Group Item
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse in collapse" style="height: auto;">
+                            <div class="panel-body">
+                                <strong>Light Blue</strong> - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it:
+                                We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one.
+                                We searched for a solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
+                                <br>
+                                <em>- Some One</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                Normal text Insertion
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually. Everyone knows what is lore ipsum - it is
+                                easy to understand if text is lore ipsum. You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one? You start to read it!
+                                But the goal of this text is different. So a bit of Lore Ipsum is always great practice.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                Check it
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4><strong>Toggle</strong> Accordion</h4>
+                <div class="panel-group" id="accordion3">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseOneTwo">
+                                Collapsible Group Item
+                            </a>
+                        </div>
+                        <div id="collapseOneTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <strong>Light Blue</strong> - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it:
+                                We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one.
+                                We searched for a solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
+                                <br>
+                                <em>- Some One</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" href="#collapseTwoTwo">
+                                Random from the Web
+                            </a>
+                        </div>
+                        <div id="collapseTwoTwo" class="panel-collapse in collapse">
+                            <div class="panel-body">
+                                Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually. Everyone knows what is lore ipsum - it is
+                                easy to understand if text is lore ipsum. You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one? You start to read it!
+                                But the goal of this text is different. The goal is the example. So a bit of Lore Ipsum is always very good practice. Keep it in mind!
+                                <br>
+                                Awesome text that <strong>stands out</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseThreeTwo">
+                                Check it
+                            </a>
+                        </div>
+                        <div id="collapseThreeTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/replace}}
+
+    {{#append "scripts"}}
+        <!-- page application js -->
+        <script src="js/ui-buttons.js"></script>
+    {{/append}}
+{{/extend}}
