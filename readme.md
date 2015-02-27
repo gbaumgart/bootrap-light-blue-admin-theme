@@ -139,3 +139,5 @@ Please note that support is provided via email as mentioned in the documentation
  
   gem install compass
   gem install --pre sass-css-importer
+  
+grunt --env=development --target=html-transparent
