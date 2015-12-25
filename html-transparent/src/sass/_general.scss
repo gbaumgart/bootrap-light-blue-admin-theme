@@ -111,3 +111,9 @@ a{
 .btn{
   @include transition(background-color .2s);
 }
+
+svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+}

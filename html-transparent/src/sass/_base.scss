@@ -771,14 +771,14 @@ $i: 1;
   text-align: center;
 
   //override js-set variables
-  left: -76px !important;
+  left: -40px !important;
   top: 30px !important;
 
   &.bottom .arrow{
     border-bottom-color: transparent;
     top: -13px;
     margin-left: 0;
-    left: auto;
+    left: 44% !important;
     right: 4px;
     &:after{
       border-bottom-color: $popover-bg;

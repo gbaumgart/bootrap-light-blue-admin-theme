@@ -2,6 +2,16 @@
 Changelog
 -
 
+Version 3.2
+
+- Full library list update
+
+Version 3.1
+
+- White Version codebase rewrite & improvement
+- Tiny UI issues fix
+- Bootstrap 3.3.1 update
+
 Version 3.0
 
 - Entire codebase rewrite & improvement

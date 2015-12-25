@@ -85,7 +85,7 @@ $(function(){
         $('.date-picker').datetimepicker();
 
         $('.selectpicker').selectpicker({
-            pickTime: false
+            format: false
         });
 
         $("#phone, #fax").mask("(999) 999-9999");

@@ -1,4 +1,4 @@
-Light Blue v3.0 (November 15)
+Light Blue v3.2
 =========
 
 Now available in two [transparent (basic)](http://demo.flatlogic.com/3.1/transparent) and [white](http://demo.flatlogic.com/3.1/white) version both with **handlebars** and **bower** under the hood!
@@ -10,14 +10,12 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-![Light Blue Preview](http://demo.flatlogic.com/3.0/light-blue-preview.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.1/light-blue-preview.png)
 
-New Version 3.1 Released!
+New Version 3.2 Released!
 -
 
-- White Version codebase rewrite & improvement
-- Tiny UI issues fix
-- Bootstrap 3.3.1 update
+- Full library list update
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster.
@@ -28,12 +26,11 @@ We plan to release continuous long term updates and dozens of new features will 
 Feedback
 -
 Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let us know!
-Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
+Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [FlatlogicInc](https://twitter.com/FlatlogicInc). We will do our best to help you.
 
 Next Release Plan
 -
 
-  - White Version 3.0
   - Design Improvements
   - Your suggestions!
 
@@ -120,24 +117,3 @@ Full feature list
     *   Landing Page
 
 Please note that support is provided via email as mentioned in the documentation page.
-
-##install compass on ubuntu 14
-
- #https://gorails.com/setup/ubuntu/14.04
- sudo apt-get update
- sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
- sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
-  
- curl -L https://get.rvm.io | bash -s stable
- source ~/.rvm/scripts/rvm
- echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
- rvm install 2.1.2
- rvm use 2.1.2 --default
- ruby -v
-  
- #http://blog.acrona.com/index.php?post/2014/05/15/Installer-Fondation-et-Compass/sass-sur-Ubuntu-14.04
- 
-  gem install compass
-  gem install --pre sass-css-importer
-  
-grunt --env=development --target=html-transparent

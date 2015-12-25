@@ -8,7 +8,7 @@
 
 // essential libs
 //
-@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../../bower_components/font-awesome/scss/font-awesome";
 @import "../../../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox";
 @import "CSS:../../../bower_components/animate.css/animate";
@@ -23,7 +23,7 @@
 // custom libs. can be removed
 //
 
-@import "CSS:../../../bower_components/nvd3/nv.d3";
+@import "CSS:../../../bower_components/nvd3/build/nv.d3";
 @import "CSS:../../../bower_components/bootstrap-select/dist/css/bootstrap-select";
 @import "CSS:../../../bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5";
 @import "CSS:../../../bower_components/select2/select2";

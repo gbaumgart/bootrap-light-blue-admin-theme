@@ -84,7 +84,7 @@ $(function(){
     function pageLoad(){
         $("#tooltip-enabled, #max-length").tooltip();
 
-        $(".autogrow").autosize({append: "\n"});
+        autosize($('.autogrow'));
 
         $('.selectpicker').selectpicker();
 
@@ -105,7 +105,7 @@ $(function(){
         new Switchery(document.getElementById('checkbox-ios2'),{color: $blue});
 
         $('#datetimepicker1').datetimepicker({
-            pickTime: false
+            format: false
         });
         $('#datetimepicker2').datetimepicker({
         });

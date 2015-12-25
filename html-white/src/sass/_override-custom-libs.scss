@@ -19,7 +19,8 @@
   }
 }
 
-svg text {
+svg text,
+.nvd3 text{
   font: $font-weight-base $font-size-small $font-family-base;
   fill: $text-color;
 
@@ -48,6 +49,10 @@ svg .title {
   }
 }
 
+.nvd3 .nv-legend .disabled circle {
+  fill-opacity: 0;
+}
+
 .nvd3 .nv-axis line{
   stroke: #000;
   stroke-opacity: .1;
@@ -56,6 +61,7 @@ svg .title {
 .nvtooltip h3{
   background-color: transparent;
   border: none;
+  color: inherit;
 }
 
 .stat-widget header .nvd3.nv-multibar .nv-group{
@@ -141,15 +147,25 @@ svg .title {
   }
 }
 
-.select2-search input.select2-active,
-.select2-more-results.select2-active,
-.select2-container-multi .select2-choices .select2-search-field input.select2-active{
-  background-image: url("#{$libs-compiled-folder}/select2/select2-spinner.gif");
-}
-
 .select2-container .select2-choice .select2-arrow,
 .select2-container .select2-choice div {
   border-left: none;
+}
+
+.select2-search input.select2-active {
+  background: #fff url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%;
+  background: url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+  background: url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+  background: url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+  background: url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0;
+}
+
+.select2-more-results.select2-active {
+  background: #f4f4f4 url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input.select2-active {
+  background: #fff url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100% !important;
 }
 
 /**
@@ -581,7 +597,7 @@ a.fc-event{
       }
     }
 
-    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
+    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-base, $border-radius-small);
   }
 }
 

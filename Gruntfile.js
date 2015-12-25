@@ -46,26 +46,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     config: '<%= config.target %>/config.rb',
-                    sassDir: '<%= config.srcFolder %>/theme',
-                    cssDir: '<%= config.distFolder %>/css',
-                    environment: ENV
-                }
-            },
-            theme: {
-                options: {
-                    config: '<%= config.target %>/configTheme.rb',
-                    sassDir: '<%= config.srcFolder %>/theme',
-                    cssDir: '<%= config.distFolder %>/theme',
-                    environment: ENV
-                }
-            }
-        },
-        // compile sass to css
-        theme: {
-            dist: {
-                options: {
-                    config: '<%= config.target %>/config.rb',
-                    sassDir: '<%= config.srcFolder %>/theme',
+                    sassDir: '<%= config.srcFolder %>/sass',
                     cssDir: '<%= config.distFolder %>/css',
                     environment: ENV
                 }
@@ -117,7 +98,7 @@ module.exports = function(grunt) {
             libs: {
                 expand: true,
                 cwd: 'bower_components',
-                src: ['**/*.js', '**/*.png'],
+                src: ['**/*.js', '**/*.png', '**/*.gif'],
                 dest: '<%= config.distFolder %>/lib/',
 
                 //copy js files from bower_packages only if they are not sources
@@ -127,13 +108,13 @@ module.exports = function(grunt) {
             },
             fontGoogle: {
                 expand: true,
-                cwd: '<%= config.srcFolder %>/theme/',
+                cwd: '<%= config.srcFolder %>/sass/',
                 src: 'fonts/**',
                 dest: '<%= config.distFolder %>/css/'
             },
             fontBootstrap: {
                 expand: true,
-                cwd: 'bower_components/bootstrap-sass-official/assets',
+                cwd: 'bower_components/bootstrap-sass/assets',
                 src: 'fonts/**',
                 dest: '<%= config.distFolder %>/css/'
             },
@@ -145,11 +126,11 @@ module.exports = function(grunt) {
             },
             syncVersionsStyles: {
                 expand: true,
-                cwd: 'html-transparent/src/theme',
+                cwd: 'html-transparent/src/sass',
                 src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
                     '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
                     '_responsive.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
-                dest: 'html-white/src/theme'
+                dest: 'html-white/src/sass'
             }
         },
 
@@ -174,11 +155,11 @@ module.exports = function(grunt) {
                 tasks: ['handlebarslayouts']
             },
             syncSass: {
-                files: ['<%= config.srcFolder %>/theme/**.scss', '<%= config.srcFolder %>/theme/**.sass'],
+                files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
                 tasks: ['copy:syncVersionsStyles']
             },
             sass: {
-                files: ['<%= config.srcFolder %>/theme/**.scss', '<%= config.srcFolder %>/theme/**.sass'],
+                files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
                 tasks: ['dist-compass']
             },
             scripts: {
@@ -217,15 +198,6 @@ module.exports = function(grunt) {
         distCompass.push('rename:css');  //rename to application.min if env is production
     }
     grunt.registerTask('dist-compass', distCompass);
-
-
-    //as theme
-    var themeCompass = ['compass:theme', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
-    if (ENV == 'production') {
-        themeCompass.push('rename:css');  //rename to application.min if env is production
-    }
-    grunt.registerTask('dist-theme', themeCompass);
-
 
     // assemble html files
     grunt.registerTask('dist-templates', ['handlebarslayouts']);

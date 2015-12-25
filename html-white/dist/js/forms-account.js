@@ -1,7 +1,7 @@
 $(function(){
     function pageLoad(){
         $('.date-picker').datetimepicker({
-            pickTime: false
+            format: false
         });
 
         $('.selectpicker').selectpicker();

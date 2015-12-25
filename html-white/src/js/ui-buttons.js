@@ -2,7 +2,7 @@ $(function(){
     function pageLoad(){
         $("button").tooltip();
 
-        $('.selectpicker').selectpicker();
+        // $('.selectpicker').selectpicker();
     }
 
     pageLoad();

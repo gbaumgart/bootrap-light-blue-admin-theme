@@ -4,7 +4,7 @@ $(function(){
         $("#destination").mask("99999");
         $("#credit").mask("9999-9999-9999-9999");
         $("#expiration-date").datetimepicker({
-            pickTime: false
+            format: false
         });
         $("#wizard").bootstrapWizard({
             onTabShow: function(tab, navigation, index) {

@@ -85,7 +85,7 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template (Light Blue 3.0)</h2>
+                    <h2>About Template (Light Blue 3.2)</h2>
                     <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next
                         web application or admin entrance for it.</p>
                     <p>It's based on super powerful <a href="http://getbootstrap.com/">Bootstrap</a> front-end framework which
@@ -106,7 +106,7 @@
                         <li><strong>html-white</strong> - white version of Light Blue template;</li>
                         <li><em>node_modules</em> - <a href="https://www.npmjs.org/">npm</a> modules used in Light Blue to assemble a compiled version;</li>
                     </ul>
-                    <p>Every version (as of 3.1.0 it's <a href="../html-transparent">html-transparent</a> and <a href="../html-white">html-transparent</a>) goes with following folders:</p>
+                    <p>Every version (as of 3.2.0 it's <a href="../html-transparent">html-transparent</a> and <a href="../html-white">html-transparent</a>) goes with following folders:</p>
                     <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
                         <li><strong>src</strong> - handlebars & sass sources;</li>
                         <li><strong>dist</strong> - compiled html & css files;</li>
@@ -121,31 +121,7 @@
                         <li>dist/lib - js libs extracted from <em>../bower_components</em> (Only js files are copied);</li>
                         <li>dist/server - few php files used for fileupload & ajax widgets demo copied from <em>src/server</em>.</li>
                     </ul>
-                    <h2>Building a package</h2>
-                    <p>In order to build a package you need to be familiar with <a href="http://gruntjs.com/getting-started">Grunt Task runner</a> and have it installed. Before building a package we need to make sure that
-                        all required <em>npm</em> libraries (and <a href="https://www.npmjs.org/">npm</a> itself) are installed:</p>
-                    <pre><code>$> npm install
-$> npm install -g grunt-cli</code></pre>
-                    <p>After that all you need to do is to run:</p>
-                    <pre><code>$> grunt --env=development --target=html-transparent</code></pre>
-                    <p>This will compile handlebars templates and sass files into html and css accordingly and put them
-                        into a <a href="../html-transparent/dist">html-transparent/dist</a> folder. Options that may be passed to grunt are:</p>
-                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
-                        <li><em>--env</em> - may be either <em>development</em> or <em>production</em>. The first one compiles commented css and unminified js files, while the second one compiles both minified css and js files. Default value is <em>development</em>;</li>
-                        <li><em>--target</em> - the version to be compiled. Currently there are two versions available: <em>html-transparent</em> and <em>html-white</em>. Default value is <em>html-transparent</em></li>
-                    </ul>
-                    <p>There are also other Grunt tasks available. Check <a href="../Gruntfile.js">Gruntfile.js</a> for a list of them. The most important one would be
-                        <code>grunt dist-watch</code>, that you may want to use during developement. It will watch for changes in a <em>src</em> folder and recompile
-                    <em>dist</em> if necessary. </p>
-
-                    <h2>Templates</h2>
-                    <p>Since version <span class="label label-important">3.0.0</span> Light Blue template uses
-                        <a href="http://handlebarsjs.com/">Handlebars</a>
-                        to compile html from handlebars sources.</p>
-                    <p>Most handlebars views are files placed into a <a href="../html-transparent/src/">src folder</a>. All views extend <a href="../html-transparent/src/partials/layout.hbs">layout.hbs</a> that exists in
-                        a folder named <a href="../html-transparent/src/partials">partials</a>.</p>
-                    <p>Compiling handlebars layouts into an html is done by a special lib called <a href="https://github.com/thierryc/grunt-handlebars-layouts">grunt-handlebars-layouts</a>.</p>
-
+                    
                     <h2 id="bower">Bower</h2>
                     <p>Since maintaining front-end libraries is getting more and more complicated we use <a href="http://bower.io/">Bower</a>
                         to manage Light Blue dependencies. Bower is a front-end package management system which allows you to easely install required
@@ -203,6 +179,31 @@ $> npm install -g grunt-cli</code></pre>
                     <p>There is a line in <a href="../html-transparent/src/config.rb">config.rb:9</a> <code>require 'sass-css-importer'</code>
                         which tells compass to use sass-css-importer when processing <code>@import</code>'s.</p>
 
+                    <h2>Building a package</h2>
+                    <p>In order to build a package you need to be familiar with <a href="http://gruntjs.com/getting-started">Grunt Task runner</a> and have it installed. Before building a package we need to make sure that
+                        all required <em>npm</em> libraries (and <a href="https://www.npmjs.org/">npm</a> itself) are installed:</p>
+                    <pre><code>$> npm install
+$> npm install -g grunt-cli</code></pre>
+                    <p>After that all you need to do is to run:</p>
+                    <pre><code>$> grunt --env=development --target=html-transparent</code></pre>
+                    <p>This will compile handlebars templates and sass files into html and css accordingly and put them
+                        into a <a href="../html-transparent/dist">html-transparent/dist</a> folder. Options that may be passed to grunt are:</p>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><em>--env</em> - may be either <em>development</em> or <em>production</em>. The first one compiles commented css and unminified js files, while the second one compiles both minified css and js files. Default value is <em>development</em>;</li>
+                        <li><em>--target</em> - the version to be compiled. Currently there are two versions available: <em>html-transparent</em> and <em>html-white</em>. Default value is <em>html-transparent</em></li>
+                    </ul>
+                    <p>There are also other Grunt tasks available. Check <a href="../Gruntfile.js">Gruntfile.js</a> for a list of them. The most important one would be
+                        <code>grunt dist-watch</code>, that you may want to use during developement. It will watch for changes in a <em>src</em> folder and recompile
+                    <em>dist</em> if necessary. </p>
+
+                    <h2>Templates</h2>
+                    <p>Since version <span class="label label-important">3.0.0</span> Light Blue template uses
+                        <a href="http://handlebarsjs.com/">Handlebars</a>
+                        to compile html from handlebars sources.</p>
+                    <p>Most handlebars views are files placed into a <a href="../html-transparent/src/">src folder</a>. All views extend <a href="../html-transparent/src/partials/layout.hbs">layout.hbs</a> that exists in
+                        a folder named <a href="../html-transparent/src/partials">partials</a>.</p>
+                    <p>Compiling handlebars layouts into an html is done by a special lib called <a href="https://github.com/thierryc/grunt-handlebars-layouts">grunt-handlebars-layouts</a>.</p>
+
                     <h2>Pjax</h2>
                     <p>Light Blue uses <a href="https://github.com/defunkt/jquery-pjax">jquery-pjax</a> library that
                         uses ajax and pushState which makes page loading super fast.</p>
@@ -240,6 +241,10 @@ $> npm install -g grunt-cli</code></pre>
 
                     <h3>Change Log</h3>
                     <hr/>
+                    <h4><strong>Version 3.2</strong></h4>
+                    <ul>
+                        <li>- Full library list update</li>
+                    </ul>
                     <h4><strong>Version 3.1</strong></h4>
                     <ul>
                         <li>- White Version codebase rewrite & improvement</li>
