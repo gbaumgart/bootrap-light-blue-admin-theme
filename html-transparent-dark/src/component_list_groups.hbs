@@ -1,0 +1,107 @@
+{{#extend "layout"}}
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="component_list_groups"}}
+    {{/replace}}
+    {{#replace "app_content"}}
+        <h2 class="page-title">List - <span class="fw-semi-bold">Groups</span></h2>
+        <div class="row">
+            <div class="col-md-10">
+                <h4>Closest stars</h4>
+                <ol class="list-group list-group-outer sortable list-group-sortable">
+                    <li class="list-group-item">
+                        <i class="fa fa-sort"></i>
+                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+                        &nbsp;&nbsp;&nbsp; 03 &nbsp;&nbsp;&nbsp;
+                        Barnard's Star
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-sort"></i>
+                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+                        &nbsp;&nbsp;&nbsp; 01 &nbsp;&nbsp;&nbsp;
+                        The Sun
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-sort"></i>
+                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+                        &nbsp;&nbsp;&nbsp; 04 &nbsp;&nbsp;&nbsp;
+                        Wolf 359
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-sort"></i>
+                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+                        &nbsp;&nbsp;&nbsp; 02 &nbsp;&nbsp;&nbsp;
+                        Proxima Centauri
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-sort"></i>
+                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+                        &nbsp;&nbsp;&nbsp; 05 &nbsp;&nbsp;&nbsp;
+                        Lalande 21185
+                    </li>
+                </ol>
+                <br/>
+                <h4 class="page-title">Nestable List</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="dd" id="nestable1">
+                            <ol class="dd-list">
+                                <li class="dd-item" data-id="1">
+                                    <div class="dd-handle">Item 1</div>
+                                </li>
+                                <li class="dd-item" data-id="2">
+                                    <div class="dd-handle">Item 2</div>
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="3"><div class="dd-handle">Item 3</div></li>
+                                        <li class="dd-item" data-id="4"><div class="dd-handle">Item 4</div></li>
+                                        <li class="dd-item" data-id="5">
+                                            <div class="dd-handle">Item 5</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="6"><div class="dd-handle">Item 6</div></li>
+                                                <li class="dd-item" data-id="7"><div class="dd-handle">Item 7</div></li>
+                                                <li class="dd-item" data-id="8"><div class="dd-handle">Item 8</div></li>
+                                            </ol>
+                                        </li>
+                                        <li class="dd-item" data-id="9"><div class="dd-handle">Item 9</div></li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="dd" id="nestable2">
+                            <ol class="dd-list">
+                                <li class="dd-item" data-id="13">
+                                    <div class="dd-handle">Item 13</div>
+                                </li>
+                                <li class="dd-item" data-id="14">
+                                    <div class="dd-handle">Item 14</div>
+                                </li>
+                                <li class="dd-item" data-id="15">
+                                    <div class="dd-handle">Item 15</div>
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="16"><div class="dd-handle">Item 16</div></li>
+                                        <li class="dd-item" data-id="17"><div class="dd-handle">Item 17</div></li>
+                                        <li class="dd-item" data-id="18"><div class="dd-handle">Item 18</div></li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/replace}}
+
+    {{#append "scripts"}}
+        <!-- page specific libs -->
+        <script src="lib/jquery-ui/ui/core.js"></script>
+        <script src="lib/jquery-ui/ui/widget.js"></script>
+        <script src="lib/jquery-ui/ui/mouse.js"></script>
+        <script src="lib/jquery-ui/ui/sortable.js"></script>
+        <script src="lib/jquery.nestable/jquery.nestable.js"></script>
+        <script src="lib/jqueryui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/component-list-groups.js"></script>
+    {{/append}}
+{{/extend}}

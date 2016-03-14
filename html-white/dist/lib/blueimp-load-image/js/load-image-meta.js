@@ -1,5 +1,5 @@
 /*
- * JavaScript Load Image Meta 1.0.2
+ * JavaScript Load Image Meta
  * https://github.com/blueimp/JavaScript-Load-Image
  *
  * Copyright 2013, Sebastian Tschan
@@ -13,14 +13,15 @@
  * http://www.opensource.org/licenses/MIT
  */
 
-/*jslint continue:true */
-/*global define, window, DataView, Blob, Uint8Array, console */
+/*global define, module, require, window, DataView, Blob, Uint8Array, console */
 
 (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         // Register as an anonymous AMD module:
         define(['load-image'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        factory(require('./load-image'));
     } else {
         // Browser globals:
         factory(window.loadImage);

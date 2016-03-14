@@ -1,5 +1,5 @@
 /*
- * JavaScript Load Image 1.10.0
+ * JavaScript Load Image
  * https://github.com/blueimp/JavaScript-Load-Image
  *
  * Copyright 2011, Sebastian Tschan
@@ -9,8 +9,7 @@
  * http://www.opensource.org/licenses/MIT
  */
 
-/*jslint nomen: true */
-/*global define, window, document, URL, webkitURL, Blob, File, FileReader */
+/*global define, module, window, document, URL, webkitURL, FileReader */
 
 (function ($) {
     'use strict';
@@ -295,6 +294,8 @@
         define(function () {
             return loadImage;
         });
+    } else if (typeof module === 'object' && module.exports) {
+        module.exports = loadImage;
     } else {
         $.loadImage = loadImage;
     }

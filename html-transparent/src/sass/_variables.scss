@@ -9,15 +9,15 @@ $libs-compiled-folder: '../lib' !default;
 // ------------------------
 
 $lime:                  #8CBF26 !default;
-$red:                   #e5603b !default;
+$red:                   #f25118 !default;
 $red-dark:              #d04f4f !default;
-$blue:                  #618fb0 !default;
-$green:                 #56bc76 !default;
-$orange:                #eac85e !default;
+$blue:                  #2d82c7 !default;
+$green:                 #3ecd74 !default;
+$orange:                #f2c34d !default;
 $pink:                  #E671B8 !default;
 $purple:                #A700AE !default;
 $brown:                 #A05000 !default;
-$teal:                  #4ab0ce !default;
+$teal:                  #25a1c5 !default;
 $white:                 #ffffff !default;
 $black:                 #000000 !default;
 
@@ -42,11 +42,14 @@ $brand-warning:         $orange !default;
 $brand-danger:          $red !default;
 $brand-info:            $teal !default;
 
+$bg-gradient-color-1: #7fc4f0;
+$bg-gradient-color-2: #c1dde6;
+
 // Typography
 // -------------------------
 $text-color: $white-dark !default;
 $text-bold: lighten($text-color, 3%);
-$text-muted: darken($text-color, 15%) !default;
+$text-muted: #666 !default;
 
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
 
@@ -61,7 +64,7 @@ $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
 $font-weight-normal: 400 !default;
 $font-weight-thin: 300 !default;
-$font-weight-base: $font-weight-thin !default;
+$font-weight-base: $font-weight-normal !default;
 
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
@@ -69,7 +72,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 // Links
 // -------------------------
 
-$link-color:            saturate(lighten($blue, 25%), 50%);
+$link-color:              #4B88D4;
 
 // Layout
 // -------------------------
@@ -83,46 +86,52 @@ $sidebar-mt: 80px;
 
 $basic-border-color: transparent;
 
-$widget-bg-common:        #333 !default; //#ddd
+$widget-bg-common:        #fff !default; //#ddd
 $widget-mb:        30px;
-$widget-color:     $text-color;
+$widget-color:     #444;
 $widget-header-color: lighten($widget-color, 5%);
 $widget-header-smalls-color: $text-muted;
-$widget-controls-color: rgba($white, .45);
+$widget-controls-color: rgba($widget-color, .6);
 $widget-controls-hover-color: rgba($white, .6);
 
-$text-transparent: rgba($widget-bg-common, .5);
-$bg-addition: rgba($widget-bg-common, .25);
-$widget-bg: rgba($widget-bg-common, .4);
+$text-transparent: rgba($widget-bg-common, .7);
+$bg-addition: rgba($widget-bg-common, .3);
+$widget-bg: rgba($widget-bg-common, .3);
 
 $widget-padding-vertical: 12px;
 $widget-padding-horizontal: 17px;
 $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
 
+$sidebar-color: #00194f;
 $sidebar-item-active-bg: rgba($black,.07);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 
 $page-title-color: $white;
 
-$header-notification-count: rgba($widget-bg-common, .55);
+$header-link-color: #4e80aa;
+$header-notification-count: $brand-danger;
 
-$header-search-query-bg-image: url(../img/search-white.png);
-$header-search-query-placeholder-color: rgba(#eee, .76);
+$header-search-query-bg-image: url(../img/search.png);
+$header-search-query-placeholder-color: rgba(#444, .76);
 
 
 $header-dropdown-primary-color:          $widget-header-color;
-$header-dropdown-secondary-color:        #ddd;
+$header-dropdown-secondary-color:        #888;
 $header-dropdown-bg:                     rgba($widget-bg-common, .85);
 $header-dropdown-shadow:                 none;
 $header-dropdown-item-hover:             $brand-primary;
 
 $nav-tabs-link-color: $widget-color;
 
+$input-transparent-color: $widget-color;
+$input-transparent-placeholder-color: rgba(#444, .76);
+
 // Widgets
 // -------------------------
 
 $feed-item-bg: $widget-bg;
+$feed-item-color: #2f6ba2;
 $feed-item-line-color: transparent;
 
 $nav-tabs-link-color: $widget-color;
@@ -134,7 +143,7 @@ $nav-tabs-tab-content-bg: $bg-addition;
 
 $tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), .4);
 
-$location-selector-bg: $bg-addition;
+$location-selector-bg: darken($bg-addition, 20%);
 $location-selector-border-color: #eee;
 $messenger-spinner-bg: $white;
 
@@ -311,7 +320,7 @@ $well-border:     transparent !default;
 // --------------------------------------------------
 
 $pre-bg: $bg-addition !default;
-$pre-color:                   $text-color !default;
+$pre-color:                   $widget-color !default;
 $pre-border-color: $widget-bg !default;
 
 // Type
@@ -325,4 +334,4 @@ $blockquote-border-color:             $widget-bg;
 // Awesome Checkbox
 // ------------------------
 
-$awesome-checkbox-default-color:       #eee;
+$awesome-checkbox-default-color:       #555;

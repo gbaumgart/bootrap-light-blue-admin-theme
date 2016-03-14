@@ -1,5 +1,5 @@
 /*
- * JavaScript Load Image Exif Map 1.0.2
+ * JavaScript Load Image Exif Map
  * https://github.com/blueimp/JavaScript-Load-Image
  *
  * Copyright 2013, Sebastian Tschan
@@ -12,13 +12,15 @@
  * http://www.opensource.org/licenses/MIT
  */
 
-/*global define, window */
+/*global define, module, require, window */
 
 (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         // Register as an anonymous AMD module:
         define(['load-image', 'load-image-exif'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        factory(require('./load-image'), require('./load-image-exif'));
     } else {
         // Browser globals:
         factory(window.loadImage);

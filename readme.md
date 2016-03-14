@@ -1,7 +1,13 @@
-Light Blue v3.2
+Light Blue v3.3.1
 =========
 
-Now available in two [transparent (basic)](http://demo.flatlogic.com/3.1/transparent) and [white](http://demo.flatlogic.com/3.1/white) version both with **handlebars** and **bower** under the hood!
+**World First Transparent Dashboard**
+
+Available in three versions [transparent dark (basic)](http://demo.flatlogic.com/3.3.1/dark),
+ [transparent light](http://demo.flatlogic.com/3.3.1/light)
+ and [white opaque](http://demo.flatlogic.com/3.3.1/white) all with **handlebars** and **bower** under the hood!
+
+![Light Blue Preview](http://demo.flatlogic.com/3.3.1/light-blue-preview.png)
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
@@ -10,29 +16,33 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-![Light Blue Preview](http://demo.flatlogic.com/3.1/light-blue-preview.png)
-
-New Version 3.2 Released!
+New Version 3.3.0 Released!
 -
 
-- Full library list update
+- Completely new Transparent Light version!
+- Updated color scheme and design improvements
+- Bugfixes
+
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster.
 It is based on great Bootstrap framework, uses powerful Sass (CSS preprocessor) technology and makes page loading super fast with built-in ajax page-loader.
 
-We plan to release continuous long term updates and dozens of new features will be coming soon in the future releases. Once you purchased Light Blue, you will be entitled to free download of all future updates.
+We plan to release continuous long term updates and dozens of new features will be coming soon in the future releases.
+Once you purchased Light Blue, you will be entitled to free download of all future updates.
 
 Feedback
 -
 Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let us know!
-Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [FlatlogicInc](https://twitter.com/FlatlogicInc). We will do our best to help you.
+Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [Flatlogic](https://twitter.com/flatlogic). We will do our best to help you.
 
 Next Release Plan
 -
 
-  - Design Improvements
-  - Your suggestions!
+  - Bootstrap 4.0 (is already [being developed](https://twitter.com/flatlogicinc/status/682193108549931010))
+  - Angular version
+  - Rails seed project
+  - .NET seed project
 
 Full feature list
 -
@@ -115,5 +125,6 @@ Full feature list
     *   Invoice Page
     *   Inbox Page
     *   Landing Page
+
 
 Please note that support is provided via email as mentioned in the documentation page.

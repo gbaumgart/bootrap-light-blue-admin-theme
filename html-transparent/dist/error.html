@@ -1,4 +1,4 @@
-<!-- light-blue - v3.2.0 - 2015-10-05 -->
+<!-- light-blue - v3.3.0 - 2016-03-08 -->
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
         */
     </script>
 </head>
-<body class="background-dark">
+<body>
         <div class="error-page container">
             <main id="content" class="error-container" role="main">
                 <div class="row">
@@ -43,7 +43,7 @@
             </main>
 
             <footer class="page-footer">
-                2014 &copy; Light Blue. Admin Dashboard Template
+                2014-2016 &copy; Light Blue. Admin Dashboard Template
             </footer>
         </div>
 <!-- common libraries. required for every page-->
@@ -60,14 +60,6 @@
 <!-- common templates -->
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
-        <div>Background</div>
-        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
-            <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">Light</button>
-        </div>
-    </div>
-    <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
@@ -81,6 +73,12 @@
             <% display = displaySidebar%>
             <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>">Show</button>
             <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>">Hide</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Dark Version</div>
+        <div>
+            <a href="../dark/index.html" class="btn btn-sm btn-default">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
     <div class="setting clearfix">

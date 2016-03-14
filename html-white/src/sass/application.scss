@@ -3,14 +3,11 @@
 @import "variables";
 @import "mixins";
 
-@import "compass";
-
-
 // essential libs
 //
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../../bower_components/font-awesome/scss/font-awesome";
-@import "../../../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox";
+@import "../../../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
 @import "CSS:../../../bower_components/animate.css/animate";
 
 @import "override-libs";
@@ -37,7 +34,7 @@
 //@import "CSS:../../../bower_components/messenger/build/css/messenger-theme-air"; see _custom-libs-override. the whole file is included there as we don't want to use Raleway font
 @import "override-messenger";
 @import "CSS:../../../bower_components/fullcalendar/dist/fullcalendar";
-@import "CSS:../../../bower_components/jqvmap/jqvmap/jqvmap";
+@import "CSS:../../../bower_components/jqvmap/dist/jqvmap";
 @import "../../../bower_components/magnific-popup/src/css/main";
 @import "CSS:../../../bower_components/blueimp-file-upload/css/jquery.fileupload";
 

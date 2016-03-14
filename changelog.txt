@@ -1,3 +1,26 @@
+V3.3.0
+- Completely new Transparent Light version!
+- Updated color scheme and design improvements
+- Bugfixes
+
+Files changed:
+ html:
+  * layout.hbs
+  * sidebar.hbs
+  * header.hbs
+  * index.hbs
+  * form_account.hbs
+ js:
+  * app.js
+  * index.js
+  * settings.js
+
+ styles:
+  * sass/_general
+  * sass/_base
+  * sass/_variables
+  * sass/_widgets
+
 V3.0
 - Entire codebase rewrite & improvement
 - Grunt tasks to build an application

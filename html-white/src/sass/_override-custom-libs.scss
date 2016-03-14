@@ -134,7 +134,7 @@ svg .title {
 }
 
 .select2-container-multi .select2-choices .select2-search-choice{
-  @include border-radius($input-border-radius);
+  border-radius: $input-border-radius;
 }
 
 /**

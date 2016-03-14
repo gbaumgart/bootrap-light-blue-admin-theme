@@ -60,7 +60,7 @@ h4 small { font-size: $font-size-base; }
 
 code,
 pre {
-  @include border-radius($border-radius-base);
+  border-radius: $border-radius-base;
 }
 
 /***************************/
@@ -120,7 +120,7 @@ textarea,
 }
 
 .search-query, .navbar-form .search-query{
-  @include border-radius($border-radius-base);
+  border-radius: $border-radius-base;
   line-height: $line-height-computed;
 }
 
@@ -182,8 +182,7 @@ textarea,
 .table td > .checkbox,
 .table th > .checkbox{
   position: relative;
-  top: 3px;
-  left: 7px;
+  left: 3px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -231,7 +230,7 @@ textarea,
 /***************************/
 
 .dropdown-menu{
-  @include border-radius($border-radius-large);
+  border-radius: $border-radius-large;
 }
 
 .dropdown-menu > li > a {
@@ -347,7 +346,7 @@ textarea,
   margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
-  @include border-radius(0 0 $border-radius-base $border-radius-base);
+  border-radius: 0 0 $border-radius-base $border-radius-base;
   &:hover,
   &:focus {
     border-bottom-color: transparent;
@@ -384,7 +383,7 @@ textarea,
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
-  @include border-radius($border-radius-base 0 0 $border-radius-base);
+  border-radius: $border-radius-base 0 0 $border-radius-base;
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
@@ -404,7 +403,7 @@ textarea,
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
-  @include border-radius(0 $border-radius-base $border-radius-base 0);
+  border-radius: 0 $border-radius-base $border-radius-base 0;
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
@@ -446,7 +445,7 @@ textarea,
 }
 
 .nav-tabs > li > a {
-  @include border-radius($border-radius-base $border-radius-base 0 0);
+  border-radius: $border-radius-base $border-radius-base 0 0;
   color: $nav-tabs-link-color;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -474,17 +473,17 @@ textarea,
 }
 
 .nav-tabs .dropdown-menu {
-  @include border-radius(0 0 $border-radius-base $border-radius-base); // remove the top rounded corners here since there is a hard edge above the menu
+  border-radius: 0 0 $border-radius-base $border-radius-base; // remove the top rounded corners here since there is a hard edge above the menu
 }
 .nav-pills .dropdown-menu {
-  @include border-radius($border-radius-base); // make rounded corners match the pills
+  border-radius: $border-radius-base; // make rounded corners match the pills
 }
 .tabs-below > .nav-tabs {
   border-top: $nav-tabs-border;
 }
 
 .tabs-below > .nav-tabs > li > a {
-  @include border-radius(0 0 $border-radius-base $border-radius-base);
+  border-radius: 0 0 $border-radius-base $border-radius-base;
 }
 
 .tabs-left > .nav-tabs {
@@ -493,7 +492,7 @@ textarea,
 }
 
 .tabs-left > .nav-tabs > li > a {
-  @include border-radius($border-radius-base 0 0 $border-radius-base);
+  border-radius: $border-radius-base 0 0 $border-radius-base;
 }
 
 .tabs-right > .nav-tabs {
@@ -501,7 +500,7 @@ textarea,
   border-left: $nav-tabs-border;
 }
 .tabs-right > .nav-tabs > li > a {
-  @include border-radius(0 $border-radius-base $border-radius-base 0);
+  border-radius: 0 $border-radius-base $border-radius-base 0;
 }
 
 .tabs-below > .nav-tabs > li {
@@ -559,7 +558,7 @@ textarea,
 .nav-pills > li > a {
   margin-top: 2px;
   margin-bottom: 2px;
-  @include border-radius($border-radius-base);
+  border-radius: $border-radius-base;
   background: $bg-addition;
 }
 
@@ -661,9 +660,9 @@ textarea,
 
 .modal {
   color: $gray-dark;
-  @include border-radius($border-radius-base);
+  border-radius: $border-radius-base;
 
-  #{headings()}{
+  h1,h2,h3,h4,h5,h6{
     color: $gray-dark;
   }
 }
@@ -691,14 +690,14 @@ textarea,
 
 .popover {
   color: $text-color;
-  @include border-radius($border-radius-base);
-  #{headings()}{
+  border-radius: $border-radius-base;
+  h1,h2,h3,h4,h5,h6{
     color: $text-color;
   }
 }
 
 .popover-title {
-  @include border-radius($border-radius-base $border-radius-base 0 0);
+  border-radius: $border-radius-base $border-radius-base 0 0;
 }
 
 /***************************/
@@ -936,7 +935,7 @@ textarea,
         @include transition(transform .3s ease-in-out)
       }
       &.collapsed:before{
-        @include transform(rotate(90deg));
+        transform: rotate(90deg);
       }
     }
   }

@@ -1,4 +1,4 @@
-<!-- light-blue - v3.2.0 - 2015-10-05 -->
+<!-- light-blue - v3.3.0 - 2016-03-08 -->
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
         */
     </script>
 </head>
-<body class="background-dark">
+<body>
     <div class="logo">
         <h4><a href="index.html">Light <strong>Blue</strong></a></h4>
     </div>
@@ -96,8 +96,9 @@
                         <li class=""><a href="special_inbox.html">Inbox &nbsp; <span class="label label-important">3</span></a></li>
                         <li><a target="_blank" href="login.html">Login</a></li>
                         <li><a target="_blank" href="error.html">Error Page</a></li>
-                        <li><a href="../transparent/landing.html" data-no-pjax>Landing</a></li>
-                        <li><a href="../transparent/index.html" data-no-pjax>Transparent</a></li>
+                        <li><a href="../dark/landing.html" data-no-pjax>Landing</a></li>
+                        <li><a href="../dark/index.html" data-no-pjax title="Light Blue Transparent Dark version">Dark <sup class="text-warning fw-bold">new</sup></a></li>
+                        <li><a href="../light/index.html" data-no-pjax title="Light Blue Transparent Light version">Light <sup class="text-warning fw-bold">new</sup></a></li>
                     </ul>
                 </li>
                 <li class="panel">
@@ -195,12 +196,12 @@
                         <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
-                            <i class="fa fa-comments"></i>
+                            <i class="glyphicon glyphicon-comment"></i>
                         </a>
                         <ul id="messages-menu" class="dropdown-menu messages" role="menu">
                             <li role="presentation">
                                 <a href="#" class="message">
-                                    <img src="img/1.jpg" alt="">
+                                    <img src="img/1.png" alt="">
                                     <div class="details">
                                         <div class="sender">Jane Hew</div>
                                         <div class="text">
@@ -211,7 +212,7 @@
                             </li>
                             <li role="presentation">
                                 <a href="#" class="message">
-                                    <img src="img/2.jpg" alt="">
+                                    <img src="img/2.png" alt="">
                                     <div class="details">
                                         <div class="sender">Alies Rumiancaŭ</div>
                                         <div class="text">
@@ -222,7 +223,7 @@
                             </li>
                             <li role="presentation">
                                 <a href="#" class="message">
-                                    <img src="img/3.jpg" alt="">
+                                    <img src="img/3.png" alt="">
                                     <div class="details">
                                         <div class="sender">Michał Rumiancaŭ</div>
                                         <div class="text">
@@ -242,7 +243,7 @@
                         <a href="#" title="8 support tickets"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
-                            <i class="fa fa-group"></i>
+                            <i class="glyphicon glyphicon-globe"></i>
                             <span class="count">8</span>
                         </a>
                         <ul id="support-menu" class="dropdown-menu support" role="menu">
@@ -309,18 +310,18 @@
                            title="Settings"
                            data-toggle="popover"
                            data-placement="bottom">
-                            <i class="fa fa-cog"></i>
+                            <i class="glyphicon glyphicon-cog"></i>
                         </a>
                     </li>
                     <li class="hidden-xs dropdown">
                         <a href="#" title="Account" id="account"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
-                            <i class="fa fa-user"></i>
+                            <i class="glyphicon glyphicon-user"></i>
                         </a>
                         <ul id="account-menu" class="dropdown-menu account" role="menu">
                             <li role="presentation" class="account-picture">
-                                <img src="img/2.jpg" alt="">
+                                <img src="img/2.png" alt="">
                                 Philip Daineka
                             </li>
                             <li role="presentation">
@@ -352,7 +353,7 @@
                             <i class="fa fa-bars"></i>
                         </a>
                     </li>
-                    <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
+                    <li class="hidden-xs"><a href="login.html"><i class="glyphicon glyphicon-off"></i></a></li>
                 </ul>
                 <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="form-control search-query" placeholder="Search...">
@@ -512,14 +513,6 @@
 <!-- common templates -->
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
-        <div>Background</div>
-        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
-            <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">Light</button>
-        </div>
-    </div>
-    <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
@@ -536,9 +529,15 @@
         </div>
     </div>
     <div class="setting clearfix">
-        <div>White Version</div>
+        <div>Dark Version</div>
         <div>
-            <a href="../transparent/index.html" class="btn btn-sm btn-default">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
+            <a href="../dark/index.html" class="btn btn-sm btn-default">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Light Version</div>
+        <div>
+            <a href="../light/index.html" class="btn btn-sm btn-default">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
 </script>

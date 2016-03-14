@@ -6,8 +6,7 @@ $(function(){
                 .margin({top: 0, bottom: 25, left: 25, right: 0})
                 //.showLegend(false)
                 .color([
-                    $orange, '#cf6d51'
-                    //'#618fb0', '#61b082'
+                    '#1d6bcf', '#0bc126'
                 ]);
 
             chart.legend.margin({top: 3});

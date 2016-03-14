@@ -1,0 +1,1 @@
+[Icon vector designed by Freepik](http://www.freepik.com/free-photos-vectors/icon)

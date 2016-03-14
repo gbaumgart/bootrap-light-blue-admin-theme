@@ -36,7 +36,7 @@
     width: 0.7em;
     height: 0.7em;
     border: 0.15em solid $white;
-    @include border-radius(50%);
+    border-radius: 50%;
 
     &.status-bottom{
       top: auto;

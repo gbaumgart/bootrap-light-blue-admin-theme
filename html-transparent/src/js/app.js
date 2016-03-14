@@ -5,11 +5,11 @@ window.DEBUG        = true;
 //same as in _variables.scss
 //keep it synchronized
 var $lime = "#8CBF26",
-    $red = "#e5603b",
+    $red = "#f25118",
     $redDark = "#d04f4f",
-    $blue = "#6a8da7",
-    $green = "#56bc76",
-    $orange = "#eac85e",
+    $blue = "#4e91ce",
+    $green = "#3ecd74",
+    $orange = "#f2c34d",
     $pink = "#E671B8",
     $purple = "#A700AE",
     $brown = "#A05000",

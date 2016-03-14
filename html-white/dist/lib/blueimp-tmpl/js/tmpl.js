@@ -1,5 +1,5 @@
 /*
- * JavaScript Templates 2.4.1
+ * JavaScript Templates
  * https://github.com/blueimp/JavaScript-Templates
  *
  * Copyright 2011, Sebastian Tschan
@@ -12,8 +12,8 @@
  * http://ejohn.org/blog/javascript-micro-templating/
  */
 
-/*jslint evil: true, regexp: true, unparam: true */
-/*global document, define */
+/*jshint evil: true */
+/*global document, define, module */
 
 (function ($) {
     "use strict";
@@ -21,7 +21,7 @@
         var f = !/[^\w\-\.:]/.test(str) ? tmpl.cache[str] = tmpl.cache[str] ||
                 tmpl(tmpl.load(str)) :
                     new Function(
-                        tmpl.arg + ',tmpl',
+                        tmpl.arg + ",tmpl",
                         "var _e=tmpl.encode" + tmpl.helper + ",_s='" +
                             str.replace(tmpl.regexp, tmpl.func) +
                             "';return _s;"
@@ -81,6 +81,8 @@
         define(function () {
             return tmpl;
         });
+    } else if (typeof module === "object" && module.exports) {
+        module.exports = tmpl;
     } else {
         $.tmpl = tmpl;
     }

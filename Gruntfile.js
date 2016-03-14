@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
     "use strict";
     var ENV = grunt.option('env') || 'development'; // pass --env=production to compile minified css
-
+    var fs = require('fs');
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         config: {
-            target: grunt.option('target') || 'html-transparent', // pass --target=html-transparent. possible targets: html-transparent, html-white
+            target: grunt.option('target') || 'html-transparent', // pass --target=html-transparent. possible targets: html-transparent, html-transparent-dark, html-white
             srcFolder: '<%= config.target %>/src',
             distFolder: '<%= config.target %>/dist'
         },
@@ -42,22 +42,38 @@ module.exports = function(grunt) {
         },
 
         // compile sass to css
-        compass: {
+        sass: {
+            options: {
+                importer:  function(url, prev, done) {
+                    var urlPrefix = "projects/flaming-octo-nemesis";
+                    if ((/^CSS:/.test(url))) { // if indexOf == true then url.indexOf == 0 == false
+                        return {
+                            contents: fs.readFileSync(urlPrefix+url.replace('CSS:.', '') + '.css').toString()
+                        }
+                    } else {
+                        return {
+                            file: url
+                        }
+                    }
+                },
+                sourcemap: 'none'
+            },
             dist: {
                 options: {
-                    config: '<%= config.target %>/config.rb',
-                    sassDir: '<%= config.srcFolder %>/sass',
-                    cssDir: '<%= config.distFolder %>/css',
-                    environment: ENV
+                    outputStyle: 'expanded',
+                    precision: 10
+                },
+                files: {
+                    "<%= config.distFolder %>/css/application.css":"<%= config.srcFolder %>/sass/application.scss"
                 }
-            }
-        },
-
-        // rename minified scss files
-        rename: {
-            css: {
-                src: '<%= config.distFolder %>/css/application.css',
-                dest: '<%= config.distFolder %>/css/application.min.css'
+            },
+            min: {
+                options: {
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    "<%= config.distFolder %>/css/application.min.css":"<%= config.srcFolder %>/sass/application.scss"
+                }
             }
         },
 
@@ -124,13 +140,21 @@ module.exports = function(grunt) {
                 src: '**/*.*',
                 dest: '<%= config.distFolder %>/css/fonts/font-awesome'
             },
-            syncVersionsStyles: {
+            syncTransparentDarkStyles: {
                 expand: true,
                 cwd: 'html-transparent/src/sass',
                 src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
                     '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
                     '_responsive.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
                 dest: 'html-white/src/sass'
+            },
+            syncWhiteStyles: {
+                expand: true,
+                cwd: 'html-transparent/src/sass',
+                src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
+                    '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
+                    '_responsive.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
+                dest: 'html-transparent-dark/src/sass'
             }
         },
 
@@ -156,11 +180,11 @@ module.exports = function(grunt) {
             },
             syncSass: {
                 files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
-                tasks: ['copy:syncVersionsStyles']
+                tasks: ['copy:syncTransparentDarkStyles', 'copy:syncWhiteStyles']
             },
             sass: {
                 files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
-                tasks: ['dist-compass']
+                tasks: ['dist-sass']
             },
             scripts: {
                 files: ['<%= config.srcFolder %>/js/**.js', '<%= config.srcFolder %>/js/**.json'],
@@ -181,10 +205,9 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-rename');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks("grunt-handlebars-layouts");
@@ -193,11 +216,11 @@ module.exports = function(grunt) {
     grunt.registerTask('dist-scripts', ['clean:scripts', 'copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
 
 
-    var distCompass = ['compass:dist', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
+    var distSass = ['sass:dist', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
     if (ENV == 'production') {
-        distCompass.push('rename:css');  //rename to application.min if env is production
+        distSass = ['sass:min', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
     }
-    grunt.registerTask('dist-compass', distCompass);
+    grunt.registerTask('dist-sass', distSass);
 
     // assemble html files
     grunt.registerTask('dist-templates', ['handlebarslayouts']);
@@ -211,6 +234,6 @@ module.exports = function(grunt) {
     grunt.registerTask('dist-watch', ['watch']);
 
     // Default task(s)
-    grunt.registerTask('default', ['clean:all', 'dist-compass', 'dist-templates', 'dist-scripts', 'dist-libs', 'dist-misc']);
+    grunt.registerTask('default', ['clean:all', 'dist-sass', 'dist-templates', 'dist-scripts', 'dist-libs', 'dist-misc']);
 
 };

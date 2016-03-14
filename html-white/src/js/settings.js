@@ -15,7 +15,6 @@ $(function(){
         $sidebarSettings = $("#sidebar-settings"),
         settingsState = JSON.parse(localStorage.getItem("lb-white-settings-state")) || {
             sidebar: 'left',
-            background: 'light',
             sidebarState: 'auto',
             displaySidebar: true
         },
@@ -27,7 +26,7 @@ $(function(){
         },
         popoverClose = function(e){
             var $popover = $settings.siblings(".popover");
-            if(!$.contains($popover[0], e.target)){
+            if($popover.length && !$.contains($popover[0], e.target)){
                 popoverReallyHide();
                 $(document).off("click", popoverClose);
             }
@@ -39,20 +38,13 @@ $(function(){
                 $body.removeClass("sidebar-on-right")
             }
         },
-        backgroundStyle = function(style){
-            if (style == "dark"){
-                $body.addClass("background-dark");
-            } else {
-                $body.removeClass("background-dark");
-            }
-        },
         sidebarState = function(state, triggerResize){
             var $template = $('#sidebar-settings-template');
             triggerResize = triggerResize == undefined ? true : false;
             if (!$template[0]){
                 return;
             }
-            $sidebarSettings.html(_.template($template.html(), {sidebarState: state}));
+            $sidebarSettings.html(_.template($template.html())({sidebarState: state}));
             if (state == "auto"){
                 $(".sidebar, .side-nav, .wrap, .logo").removeClass("sidebar-icons");
             } else {
@@ -76,7 +68,6 @@ $(function(){
         };
 
     sidebarSide(settingsState.sidebar);
-    backgroundStyle(settingsState.background);
     sidebarState(settingsState.sidebarState, false);
     displaySidebar(settingsState.displaySidebar, false);
 
@@ -95,7 +86,7 @@ $(function(){
         animation: false,
         placement: 'bottom',
         content: function(){
-            return _.template($('#settings-template').html(), settingsState);
+            return _.template($('#settings-template').html())(settingsState);
         }
     }).click(function(e){
             //close all open dropdowns
@@ -116,15 +107,6 @@ $(function(){
             side = $this.data("value");
         sidebarSide(side);
         settingsState.sidebar = side;
-        localStorage.setItem("lb-white-settings-state", JSON.stringify(settingsState));
-    });
-
-    //background
-    $pageHeader.on("click", ".popover #background-toggle .btn", function(){
-        var $this = $(this),
-            style = $this.data("value");
-        backgroundStyle(style);
-        settingsState.background = style;
         localStorage.setItem("lb-white-settings-state", JSON.stringify(settingsState));
     });
 

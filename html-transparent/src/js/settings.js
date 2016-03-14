@@ -15,7 +15,6 @@ $(function(){
         $sidebarSettings = $("#sidebar-settings"),
         settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
             sidebar: 'left',
-            background: 'dark',
             sidebarState: 'auto',
             displaySidebar: true
         },
@@ -37,13 +36,6 @@ $(function(){
                 $body.addClass("sidebar-on-right")
             } else {
                 $body.removeClass("sidebar-on-right")
-            }
-        },
-        backgroundStyle = function(style){
-            if (style == "dark"){
-                $body.addClass("background-dark");
-            } else {
-                $body.removeClass("background-dark");
             }
         },
         sidebarState = function(state, triggerResize){
@@ -76,7 +68,6 @@ $(function(){
         };
 
     sidebarSide(settingsState.sidebar);
-    backgroundStyle(settingsState.background);
     sidebarState(settingsState.sidebarState, false);
     displaySidebar(settingsState.displaySidebar, false);
 
@@ -116,15 +107,6 @@ $(function(){
             side = $this.data("value");
         sidebarSide(side);
         settingsState.sidebar = side;
-        localStorage.setItem("settings-state", JSON.stringify(settingsState));
-    });
-
-    //background
-    $pageHeader.on("click", ".popover #background-toggle .btn", function(){
-        var $this = $(this),
-            style = $this.data("value");
-        backgroundStyle(style);
-        settingsState.background = style;
         localStorage.setItem("settings-state", JSON.stringify(settingsState));
     });
 
