@@ -1,0 +1,201 @@
+<div class="navbar-collapse">
+  <ul class="nav navbar-nav navbar-right pull-right">
+    <li class="nav-item visible-phone-landscape">
+      <a (click)="searchFormOpen()" class="nav-link" href="#" id="search-toggle">
+        <i class="fa fa-search"></i>
+      </a>
+    </li>
+    <li class="nav-item dropdown">
+      <a href title="Messages" id="messages"
+         class="nav-link dropdown-toggle"
+         data-toggle="dropdown">
+        <i class="glyphicon glyphicon-comment"></i>
+      </a>
+      <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+        <li role="presentation">
+          <a href="#" class="dropdown-item message">
+            <img src="../../../assets/img/1.png" alt="">
+            <div class="details">
+              <div class="sender">Jane Hew</div>
+              <div class="text">
+                Hey, John! How is it going? ...
+              </div>
+            </div>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#" class="dropdown-item message">
+            <img src="../../../assets/img/2.png" alt="">
+
+            <div class="details">
+              <div class="sender">Alies Rumiancaŭ</div>
+              <div class="text">
+                I'll definitely buy this template
+              </div>
+            </div>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#" class="dropdown-item message">
+            <img src="../../../assets/img/3.png" alt="">
+
+            <div class="details">
+              <div class="sender">Michał Rumiancaŭ</div>
+              <div class="text">
+                Is it really Lore ipsum? Lore ...
+              </div>
+            </div>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#" class="dropdown-item text-align-center see-all">
+            See all messages <i class="fa fa-arrow-right"></i>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a href title="8 support tickets"
+         class="nav-link dropdown-toggle"
+         data-toggle="dropdown">
+        <i class="glyphicon glyphicon-globe"></i>
+        <span class="count">8</span>
+      </a>
+      <ul id="support-menu" class="dropdown-menu support" role="menu">
+        <li role="presentation">
+          <a href="#" class="dropdown-item support-ticket ">
+            <div class="picture">
+              <span class="tag tag-important"><i class="fa fa-bell-o"></i></span>
+            </div>
+            <div class="details">
+              Check out this awesome ticket
+            </div>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#" class="dropdown-item support-ticket">
+            <div class="picture">
+              <span class="tag tag-warning"><i class="fa fa-question-circle"></i></span>
+            </div>
+            <div class="details">
+              "What is the best way to get ...
+            </div>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#" class="dropdown-item support-ticket">
+            <div class="picture">
+              <span class="tag tag-success"><i class="fa fa-tag"></i></span>
+            </div>
+            <div class="details">
+              This is just a simple notification
+            </div>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#" class="dropdown-item support-ticket">
+            <div class="picture">
+              <span class="tag tag-info"><i class="fa fa-info-circle"></i></span>
+            </div>
+            <div class="details">
+              12 new orders has arrived today
+            </div>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#" class="dropdown-item support-ticket">
+            <div class="picture">
+              <span class="tag tag-important"><i class="fa fa-plus"></i></span>
+            </div>
+            <div class="details">
+              One more thing that just happened
+            </div>
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#" class="dropdown-item text-align-center see-all">
+            See all tickets <i class="fa fa-arrow-right"></i>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="divider"></li>
+    <li class="nav-item dropdown hidden-sm-down">
+      <a href="#" id="settings"
+         title="Settings"
+         class="nav-link dropdown-toggle"
+         data-toggle="dropdown">
+        <i class="glyphicon glyphicon-cog"></i>
+      </a>
+      <div class="dropdown-menu settings">
+        <div class="settings-content">
+          <div class="setting clearfix">
+            <div>Sidebar on the</div>
+            <div id="sidebar-toggle" class="pull-left btn-group">
+              <!--nRight = sidebar == 'right'-->
+              <button type="button" btnRadio="Left"  [(ngModel)]="radioModel" (click)="sidebarPosition('Left')"  class="btn btn-sm btn-secondary">Left</button>
+              <button type="button" btnRadio="Right" [(ngModel)]="radioModel" (click)="sidebarPosition('Right')"  class="btn btn-sm btn-secondary">Right</button>
+            </div>
+          </div>
+          <div class="setting clearfix">
+            <div>Sidebar</div>
+            <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+              <!--display = displaySidebar-->
+              <button type="button" btnRadio="Left"  [(ngModel)]="display" (click)="sidebarDisplay('Show')" class="btn btn-sm btn-secondary">Show</button>
+              <button type="button" btnRadio="Right" [(ngModel)]="display" (click)="sidebarDisplay('Hide')" class="btn btn-sm btn-secondary">Hide</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item dropdown hidden-sm-down">
+      <a href title="Account" id="account"
+         class="nav-link dropdown-toggle"
+         data-toggle="dropdown">
+        <i class="glyphicon glyphicon-user"></i>
+      </a>
+      <ul id="account-menu" class="dropdown-menu account" role="menu">
+        <li role="presentation" class="account-picture">
+          <img src="../../../assets/img/2.png" alt="">
+          Philip Daineka
+        </li>
+        <li role="presentation">
+          <a routerLink="profile" class="dropdown-item">
+            <i class="fa fa-user"></i>
+            Profile
+          </a>
+        </li>
+        <li role="presentation">
+          <a routerLink="calendar" class="dropdown-item">
+            <i class="fa fa-calendar"></i>
+            Calendar
+          </a>
+        </li>
+        <li role="presentation">
+          <a routerLink="inbox" class="dropdown-item">
+            <i class="fa fa-inbox"></i>
+            Inbox
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="hidden-md-up">
+      <a href="#" (click)="sidebarOpen()" class="btn-navbar" data-toggle="collapse" data-target=".sidebar" title="">
+      <i class="fa fa-bars"></i>
+      </a>
+    </li>
+    <li class="nav-item hidden-sm-down">
+      <a class="nav-link" routerLink="/login"><i class="glyphicon glyphicon-off"></i></a>
+    </li>
+  </ul>
+  <form id="search-form" class="navbar-form pull-right" role="search">
+    <input type="search" class="form-control search-query" placeholder="Search...">
+  </form>
+  <div class="notifications pull-right">
+    <div class="alert pull-right">
+      <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
+      <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on
+      the right!
+    </div>
+  </div>
+</div>

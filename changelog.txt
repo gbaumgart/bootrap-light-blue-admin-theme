@@ -1,3 +1,9 @@
+V3.4.0
+- Angular 2.0 Seed Version
+
+Files changed:
+ * a2-seed folder containing completely new Angular 2.0 seed version of Light Blue
+
 V3.3.0
 - Completely new Transparent Light version!
 - Updated color scheme and design improvements

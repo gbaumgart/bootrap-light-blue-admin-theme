@@ -2,6 +2,10 @@
 Changelog
 -
 
+Version 3.4.0
+
+- Angular 2.0 Seed Version
+
 Version 3.3.1
 
 - Screenshot update

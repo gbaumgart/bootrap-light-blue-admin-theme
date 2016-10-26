@@ -85,7 +85,7 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template (Light Blue 3.3.0)</h2>
+                    <h2>About Template (Light Blue 3.4.0)</h2>
                     <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful
                         front-end template. It's very useful for designing either your next
                         web application or admin entrance for it.</p>
@@ -98,6 +98,7 @@
                         Transparent Dark version or <a href="../html-white/dist">../html-white/dist folder</a> if you prefer White version)
                         to check the most default html/css-only version of Light Blue. The stuff below
                     is for compiling different variations of Light Blue from sass/handlebars sources.</p>
+                    <p><strong>For <a href="../angular2-seed">Angular 2.0 Seed version</a> please refer to <a href="#running-angular2">Angular 2.0 Section</a> of this documentation.</strong></p>
                     <p>Since version <span class="label label-important">3.0.0</span> Light Blue template depends on
                         <a href="http://gruntjs.com/">Grunt Task runner</a>
                         to build an application version. So Light Blue root folder contains only setting & build files. Here is the structure:</p>
@@ -113,7 +114,7 @@
                     </ul>
                     <p>Every version (as of 3.3.0 there are <a href="../html-transparent">html-transparent-light</a>,
                         <a href="../html-transparent-dark">html-transparent-dark</a> and <a href="../html-white">html-white</a>)
-                        goes with the following folders:</p>
+                        goes with the following folders (except <a href="../angular2-seed">Angular 2.0 Seed</a> version):</p>
                     <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
                         <li><strong>src</strong> - handlebars & sass sources;</li>
                         <li><strong>dist</strong> - compiled html & css files;</li>
@@ -140,6 +141,25 @@
                     <p>There is also a <a href="../bower.json">bower.json file</a> where all libraries are put.
                         Check it out for complete list of
                         libs used in Light Blue.</p>
+
+                    <h2 id="running-angular2">Running the project <small><span class="label label-info" style="font-size: 13px">angular 2 seed version</span></small></h2>
+                    <hr>
+                    <ol start="0" style="list-style: decimal; padding-left: 40px;">
+                        <li><p>Windows 10 users need to install <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Visual C++ Build Tools</a>,
+                            choose Custom Install, and select both Windows 8.1 and Windows 10 SDKs.
+                            <a href="https://www.python.org/">Python 2.7</a> is also required. For an extensive description on how to solve <code>node-gyp</code> problems please read though this
+                            <a href="https://github.com/nodejs/node-gyp/issues/629">thread on github</a>.</p></li>
+                        <li><p>Run <code>npm install</code> to install node dependencies defined in <a href="../angular2-seed/package.json">package.json</a>.</p></li>
+                        <li><p>Run <code>npm start</code> to run the project</p></li>
+                    </ol>
+                    <p>There are also other npm tasks:</p>
+                    <ul style="padding-left: 40px;">
+                        <li><p><code>npm run build:prod</code> - builds a production version of the application. All html/css/js code is
+                            minified and put to <code>dist</code> folder. The contents of this folder you will want to put
+                            to your production server when publising the application;</p></li>
+                        <li><p><code>npm run lint</code> - checks your code in <code>.ts</code> files for typescript errors</p></li>
+                    </ul>
+                    <p>For more instruction please refer to Angular 2.0 Final seed <a href="../angular2-seed/readme.md">readme.md</a>.</p>
 
                     <h2 id="scss">Scss</h2>
                     <p>Light Blue uses <a href="http://sass-lang.com/">scss</a> to generate css.

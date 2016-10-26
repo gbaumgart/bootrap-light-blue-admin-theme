@@ -1,13 +1,14 @@
-Light Blue v3.3.1
+Light Blue v3.4.0
 =========
+
+![Light Blue Preview](http://demo.flatlogic.com/3.4.0/light-blue-preview-2016.png)
 
 **World First Transparent Dashboard**
 
-Available in three versions [transparent dark (basic)](http://demo.flatlogic.com/3.3.1/dark),
- [transparent light](http://demo.flatlogic.com/3.3.1/light)
- and [white opaque](http://demo.flatlogic.com/3.3.1/white) all with **handlebars** and **bower** under the hood!
-
-![Light Blue Preview](http://demo.flatlogic.com/3.3.1/light-blue-preview.png)
+Available in four versions [transparent dark (basic)](http://demo.flatlogic.com/3.4.0/dark),
+ [transparent light](http://demo.flatlogic.com/3.4.0/light),
+ [white opaque](http://demo.flatlogic.com/3.4.0/white) all with **handlebars** and **bower** under the hood
+ and completely new [Angular 2.0 Seed version](http://demo.flatlogic.com/3.4.0/a2-seed)
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
@@ -16,12 +17,10 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-New Version 3.3.0 Released!
+New Version 3.4.0 Released!
 -
 
-- Completely new Transparent Light version!
-- Updated color scheme and design improvements
-- Bugfixes
+- Angular 2.0 Final Seed Version
 
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
@@ -34,13 +33,13 @@ Once you purchased Light Blue, you will be entitled to free download of all futu
 Feedback
 -
 Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let us know!
-Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [Flatlogic](https://twitter.com/flatlogic). We will do our best to help you.
+Email us at [support@flatlogic.com](mailto:support@flatlogic.com) or tweet to [Flatlogic](https://twitter.com/flatlogic). We will do our best to help you.
 
 Next Release Plan
 -
 
   - Bootstrap 4.0 (is already [being developed](https://twitter.com/flatlogicinc/status/682193108549931010))
-  - Angular version
+  - Angular 2.0 Full version
   - Rails seed project
   - .NET seed project
 
@@ -52,6 +51,7 @@ Full feature list
     *   Unobtrusive colors and widgets
     *   Option to select between two perfectly chosen background gradients
   - White & Transparent Versions
+  - Angular 2.0 Seed Version
   - Fully Responsive Layout: from small mobile to large desktop devices.
   - Bower package manager
   - Grunt tasks
