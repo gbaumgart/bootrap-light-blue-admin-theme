@@ -1,0 +1,41 @@
+{
+  "name": "jqvmap",
+  "version": "1.4.0",
+  "homepage": "http://jqvmap.com",
+  "authors": [
+    "JQVMap"
+  ],
+  "license": "(MIT OR GPL-3.0)",
+  "description": "jQuery Vector Map Library",
+  "main": "dist/jquery.vmap.min.js",
+  "keywords": [
+    "jquery",
+    "map",
+    "svg",
+    "vml",
+    "vector"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manifestinteractive/jqvmap.git"
+  },
+  "dependencies": {
+    "jquery": ">=1.11.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.4.0",
+    "commit": "6b7b5a3ea2093aa7a4af24a119fb1b4cd030fd81"
+  },
+  "_source": "https://github.com/manifestinteractive/jqvmap.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/manifestinteractive/jqvmap.git"
+}
