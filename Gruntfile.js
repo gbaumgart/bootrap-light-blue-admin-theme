@@ -2,7 +2,6 @@ module.exports = function(grunt) {
     "use strict";
     var ENV = grunt.option('env') || 'development'; // pass --env=production to compile minified css
     var fs = require('fs');
-    var path = require('path');
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -47,19 +46,14 @@ module.exports = function(grunt) {
             options: {
                 importer:  function(url, prev, done) {
                     var urlPrefix = "projects/flaming-octo-nemesis";
-                    //var urlPrefix = "projects/flaming-octo-nemesis";
-                    //fix vendor bug
-                    urlPrefix ="";
                     if ((/^CSS:/.test(url))) { // if indexOf == true then url.indexOf == 0 == false
-                        //fix vendor bug
-                        url = url.replace('../../','');
                         return {
                             contents: fs.readFileSync(urlPrefix+url.replace('CSS:.', '') + '.css').toString()
-                        };
+                        }
                     } else {
                         return {
                             file: url
-                        };
+                        }
                     }
                 },
                 sourcemap: 'none'

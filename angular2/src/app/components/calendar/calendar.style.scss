@@ -1,0 +1,86 @@
+@import "../../../../node_modules/fullcalendar/dist/fullcalendar";
+@import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+.widget > header h4 {
+  font-size: 14px;
+}
+
+/**************************/
+/* Full Calendar Override */
+/**************************/
+
+label.btn.btn-secondary {
+  margin-bottom: 0;
+}
+
+.fc-body {
+  .fc-widget-content {
+    .fc-scroller {
+      overflow-y: hidden !important;
+    }
+  }
+}
+
+.fc-grid th{
+  text-transform: uppercase;
+}
+
+.fc-event {
+  padding: 2px 3px;
+  border: none;
+  font-weight: $font-weight-normal;
+  background-color: $gray-semi-lighter;
+  color: $gray;
+}
+
+a:not([href]):not([tabindex]) {
+  color: $gray;
+  text-decoration: none;
+}
+
+.fc-today{
+  background-color: #88918e !important;
+  border-left-color: rgb(221, 221, 221);
+  border-top-color: rgb(221, 221, 221);
+}
+
+a.fc-event{
+  height: auto;
+  line-height: $line-height-base;
+}
+
+/***********************************/
+/**      Full Calendar Custom     **/
+/***********************************/
+
+.full-calendar{
+  margin-top: 10px;
+}
+
+.calendar-controls{
+  .btn{
+    font-size: $font-size-mini;
+  }
+}
+
+.calendar-external-events{
+  margin-top: 20px;
+
+  .external-event{
+    margin: 10px 0;
+    padding: 6px;
+    font-size: $font-size-mini;
+    cursor: pointer;
+    border-radius: .25rem;
+    background-color: $white;
+    border: 1px solid #bbb;
+  }
+}
+
+.widget-calendar{
+  @include media-breakpoint-up(xl){
+    margin-top: -100px;
+  }
+}

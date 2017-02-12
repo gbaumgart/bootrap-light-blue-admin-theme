@@ -1,0 +1,36 @@
+@import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+
+/***********************************/
+/**            INVOICE            **/
+/***********************************/
+
+.invoice-logo{
+  width: 253px;
+  height: 70px;
+}
+
+.invoice-number{
+  font-size: $font-size-base * 1.5;
+  margin-top: 15px;
+}
+
+.invoice-number-info{
+  color: $text-muted;
+  font-size: $font-size-larger;
+}
+
+.invoice-info{
+  .details-title{
+    color: $text-muted;
+    margin: 0;
+  }
+}
+
+.invoice-actions{
+  margin-top: $line-height-computed;
+}
+
+.client-details{
+  text-align: right;
+}

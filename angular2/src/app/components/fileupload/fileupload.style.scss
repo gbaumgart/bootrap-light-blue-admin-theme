@@ -1,0 +1,129 @@
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../scss/variables";
+
+@charset "UTF-8";
+/*
+ * jQuery File Upload UI Plugin CSS 7.4
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-right: 4px;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
+}
+.fileupload-buttonbar .btn,
+.fileupload-buttonbar .toggle {
+  margin-bottom: 5px;
+}
+.fileupload-loading {
+  position: absolute;
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  //okendoken. removing. using font awesome here
+  //background: url(../img/loading.gif) center no-repeat;
+  display: none;
+}
+.fileupload-processing .fileupload-loading {
+  display: block;
+}
+
+/* Fix for IE 6: */
+* html .fileinput-button {
+  line-height: 24px;
+  margin: 1px -3px 0 0;
+}
+
+/* Fix for IE 7: */
+* + html .fileinput-button {
+  padding: 2px 15px;
+  margin: 1px 0 0 0;
+}
+
+@media (max-width: 767px) {
+  .fileupload-buttonbar .toggle,
+  .files .toggle,
+  .files .btn span {
+    display: none;
+  }
+  .files .name * {
+    width: 80px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  .files .progress {
+    width: 20px;
+  }
+}
+
+// Table styles
+
+.files-table {
+  td:first-child {
+    padding-left: 3*$table-cell-padding;
+  }
+  td {
+    .progress {
+      margin-bottom: 9px;
+      margin-top: 0;
+      margin-right: 0;
+    }
+    p {
+      margin-bottom: 9px;
+    }
+    .btn .glyphicon {
+      top: 3px;
+    }
+  }
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  .btn {
+    margin-right: 7px;
+  }
+}
+
+.fileupload-progress {
+  padding-top: 1.39rem;
+
+  progress {
+    margin-bottom: 0.39rem;
+  }
+
+  .progress-extended {
+    margin-bottom: 1.39rem;
+  }
+}
+
+@media (max-width: #{map-get($grid-breakpoints, 'sm')}) {
+  .files-table td p {
+    word-break: break-all;
+    max-width: 100px;
+  }
+
+  .files-table td .btn .glyphicon {
+    top: 4px;
+  }
+}

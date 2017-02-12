@@ -1,7 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 
-import { ButtonsModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { ButtonsModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { ROUTES } from './layout.routes';
 
@@ -13,7 +13,8 @@ import { Navbar } from './navbar/navbar.component';
   imports: [
     CommonModule,
     ROUTES,
-    ButtonsModule
+    ButtonsModule,
+    DropdownModule
   ],
   declarations: [Layout, Sidebar, Navbar]
 })

@@ -1,0 +1,86 @@
+@import "../../../../node_modules/rickshaw/rickshaw";
+@import "../../../../node_modules/morris.js/morris";
+@import "../../../../node_modules/nvd3/build/nv.d3";
+@import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+.stats-row {
+  &.centered {
+    text-align: center;
+  }
+}
+
+.stat-item+.stat-item {
+  padding-left: 15px;
+}
+
+.stat-item {
+  display: inline-block;
+  padding-right: 15px;
+
+  &.stat-item-mini-chart {
+    position: relative;
+    top: -15px;
+    padding-left: 0;
+  }
+
+  .name {
+    margin-top: 10px;
+    font-size: $font-size-larger;
+  }
+
+  .value {
+    margin-bottom: 10px;
+    font-size: $font-size-larger;
+    font-weight: bold;
+  }
+}
+
+/***********************/
+/*   Easy Pie Chart    */
+/***********************/
+
+
+.easy-pie-chart{
+  position: relative;
+  display: inline-block;
+  line-height: 120px;
+  height: 120px;
+  width: 120px;
+  text-align: center;
+  color: $widget-color;
+  canvas{
+    position: absolute;
+    top: 0;
+    left: 0
+  }
+}
+
+
+/***********************/
+/*         Flot        */
+/***********************/
+
+
+.chart-tooltip{
+  position: fixed;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  border: 1px solid $gray-semi-lighter;
+  font-size: $font-size-mini;
+  background-color: $white;
+}
+
+[flot-chart] .legend .legendLabel {
+  color: $widget-color;
+}
+
+/***********************/
+/*         Morris        */
+/***********************/
+
+.morris-hover.morris-default-style {
+  color: $widget-color;
+  background-color: rgba(51, 51, 51, 0.6);
+  border: none;
+}

@@ -1,0 +1,24 @@
+#basic,
+#location {
+  height: 100%;
+
+  sebm-google-map {
+    height: 100%
+  }
+}
+
+#vector-world,
+#vector-europe,
+#vector-usa,
+#vector-australia {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.form-control {
+  width: inherit;
+}
+
+.widget .actions {
+  top: -3px;
+}

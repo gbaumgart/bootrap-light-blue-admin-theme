@@ -1,0 +1,10 @@
+@import "../../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../scss/variables";
+
+.compose-view{
+  margin: $widget-padding-vertical $widget-padding-horizontal;
+}
+
+#wysiwyg {
+  resize: none;
+}

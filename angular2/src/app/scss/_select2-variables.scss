@@ -1,0 +1,49 @@
+// Select 2 bootstrap theme
+
+$s2bs-border-radius-base: $border-radius;
+$s2bs-border-radius-large: $border-radius-lg;
+$s2bs-border-radius-small: $border-radius-sm;
+$s2bs-btn-default-border: transparent; // !!
+$s2bs-caret-width-base: 4px;
+$s2bs-caret-width-large: 4px;
+$s2bs-cursor-disabled: $cursor-disabled;
+$s2bs-dropdown-header-color: $dropdown-header-color;
+$s2bs-dropdown-link-active-bg: $dropdown-link-active-bg;
+$s2bs-dropdown-link-active-color: $dropdown-link-active-color;
+$s2bs-dropdown-link-disabled-color: $dropdown-link-disabled-color;
+$s2bs-dropdown-link-hover-bg: $dropdown-link-hover-bg;
+$s2bs-dropdown-link-hover-color: $dropdown-link-hover-color;
+$s2bs-font-size-base: $font-size-base;
+$s2bs-font-size-large: $font-size-lg;
+$s2bs-font-size-small: $font-size-sm;
+$s2bs-padding-base-horizontal: $input-padding-x;
+$s2bs-padding-large-horizontal: $input-padding-x-lg;
+$s2bs-padding-small-horizontal: $input-padding-x-sm;
+$s2bs-padding-base-vertical: $input-padding-y;
+$s2bs-padding-large-vertical: $input-padding-y-lg;
+$s2bs-padding-small-vertical: $input-padding-y-sm;
+$s2bs-line-height-base: $line-height-base;
+$s2bs-line-height-large: $line-height-lg;
+$s2bs-line-height-small: $line-height-sm;
+$s2bs-input-bg: $input-bg;
+$s2bs-input-bg-disabled: $input-bg-disabled;
+$s2bs-input-color: $input-color;
+$s2bs-input-color-placeholder: $input-color-placeholder;
+$s2bs-input-border: $input-border-color;
+$s2bs-input-border-focus: $input-border-focus;
+$s2bs-input-border-radius: $input-border-radius;
+$s2bs-input-height-base: 35px;
+$s2bs-input-height-large: $input-height-lg;
+$s2bs-input-height-small: $input-height-sm;
+
+
+$s2bs-dropdown-arrow-color: $s2bs-input-color-placeholder;
+$s2bs-dropdown-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+$s2bs-dropdown-box-shadow-above: 0px -6px 12px rgba(0,0,0,.175);
+$s2bs-clear-selection-color: $s2bs-dropdown-arrow-color;
+$s2bs-clear-selection-hover-color: $btn-default-bg;
+$s2bs-remove-choice-color: $input-color-placeholder;
+$s2bs-remove-choice-hover-color: $btn-default-bg;
+$s2bs-selection-choice-border-radius: $border-radius;
+$s2bs-dropdown-header-padding-vertical: $s2bs-padding-base-vertical;
+$s2bs-dropdown-header-font-size: $s2bs-font-size-small;

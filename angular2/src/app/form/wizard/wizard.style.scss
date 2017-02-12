@@ -1,0 +1,62 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../scss/select2-variables";
+@import "../../../../node_modules/select2/src/scss/core";
+@import "../../../../node_modules/select2-bootstrap-theme/src/select2-bootstrap";
+@import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker3.min";
+@import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min";
+
+.form-wizard{
+  .progress{
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .pager {
+    display: flex;
+    margin: 18px 0;
+    flex-direction: row;
+    justify-content: space-between;
+    .disabled button{
+      cursor: not-allowed;
+      opacity: .65;
+    }
+  }
+
+  #datetimepicker .input-group {
+    width: 100%;
+    display: flex !important;
+
+    .form-control {
+      border-bottom-right-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+
+    .input-group-addon {
+      display: none;
+    }
+  }
+}
+
+.wizard-navigation{
+  margin-bottom: 5px;
+  @include nav-justified;
+
+  a{
+    color: $text-color;
+
+    strong{
+      font-weight: $font-weight-semi-bold;
+    }
+
+    small {
+      font-weight: $font-weight-thin;
+    }
+  }
+}

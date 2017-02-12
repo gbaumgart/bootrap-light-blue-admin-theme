@@ -1,0 +1,24 @@
+@import "../../scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+/***********************************/
+/**            PARSLEY            **/
+/***********************************/
+
+
+input.parsley-error{
+  border-color: $brand-danger;
+  @include box-shadow(inset 0 1px 1px rgba($brand-danger,.075));
+}
+
+.parsley-errors-list{
+  font-size: $font-size-smaller;
+  padding-left: 0;
+  margin-bottom: 5px;
+
+  li{
+    list-style: none;
+    color: $brand-danger;
+  }
+}

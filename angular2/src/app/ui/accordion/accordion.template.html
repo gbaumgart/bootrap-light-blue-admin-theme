@@ -1,0 +1,75 @@
+<h2 class="page-title">Accordion
+  <small>Simple and toggle accordion</small>
+</h2>
+<div class="row">
+  <div class="col-lg-6 col-xs-12">
+    <h4><strong>Simple</strong> Accordion</h4>
+    <accordion [closeOthers]="true" class="mb-lg show" id="accordion">
+      <accordion-group isOpen="true">
+        <div accordion-heading>
+          Collapsible Group Item
+        </div>
+        <div>
+          <strong>Light Blue</strong> - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it:
+          We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one.
+          We searched for a solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
+          <br>
+          <em>- Some One</em>
+        </div>
+      </accordion-group>
+      <accordion-group>
+        <div accordion-heading>
+          Normal text Insertion
+        </div>
+        <div>
+          Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually. Everyone knows what is lore ipsum - it is
+          easy to understand if text is lore ipsum. You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one? You start to read it!
+          But the goal of this text is different. So a bit of Lore Ipsum is always great practice.
+        </div>
+      </accordion-group>
+      <accordion-group>
+        <div accordion-heading>
+          Check It
+        </div>
+        <div>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
+  <div class="col-lg-6 col-xs-12">
+    <h4><strong>Toggle</strong> Accordion</h4>
+    <accordion [closeOthers]="false" class="mb-lg show" id="accordion2">
+      <accordion-group>
+        <div accordion-heading>
+          Collapsible Group Item
+        </div>
+        <strong>Light Blue</strong> - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it:
+        We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one.
+        We searched for a solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
+        <br>
+        <em>- Some One</em>
+      </accordion-group>
+      <accordion-group>
+        <div accordion-heading>
+          Random from the Web
+        </div>
+        <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very
+          controversial point. I think the opposite actually. Everyone knows what is lore ipsum
+          - it is easy to understand if text is lore ipsum. You'll automatically skip -
+          because you know - it's just non-informative stub. But what if there some text like
+          this one? You start to read it! But the goal of this text is different. The goal is
+          the example. So a bit of Lore Ipsum is always very good practice. Keep it in mind!
+          <br>
+          Awesome text that <strong>stands out</strong>
+        </p>
+      </accordion-group>
+      <accordion-group>
+        <div accordion-heading>
+          Check It
+        </div>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+      </accordion-group>
+    </accordion>
+  </div>
+</div>

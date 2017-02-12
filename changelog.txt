@@ -1,3 +1,9 @@
+V3.5.0
+- Angular 2.4 Full Version
+
+Files changed:
+ * a2 folder containing completely new Angular 2.4 full version of Light Blue
+
 V3.4.0
 - Angular 2.0 Seed Version
 

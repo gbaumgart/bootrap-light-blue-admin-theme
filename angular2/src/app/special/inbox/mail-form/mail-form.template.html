@@ -1,0 +1,32 @@
+<div class="clearfix mb-xs">
+  <a class="btn btn-transparent btn-sm width-50 float-xs-left" id="back-btn" (click)="onToBack()">
+    <i class="fa fa-angle-left fa-lg"></i>
+  </a>
+</div>
+<section widget class="widget widget-email">
+  <header id="widget-email-header">
+    <h4>Compose <span class="fw-semi-bold">New</span></h4>
+  </header>
+  <div class="widget-body" id="mailbox-content">
+    <div class="compose-view" id="compose-view">
+      <form id="email-compose" class="form-email-compose" method="get" action="#">
+        <div class="form-group">
+          <input type="email" id="input-to" placeholder="To" [(ngModel)]="sender" name="sender" class="input-transparent form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" id="input-subject" placeholder="Subject" [(ngModel)]="subject"  name="subject" class="input-transparent form-control">
+        </div>
+        <div class="form-group">
+          <textarea rows="10" class="form-control input-transparent" id="wysiwyg" placeholder="Message">{{ body }}</textarea>
+        </div>
+        <div class="clearfix">
+          <div class="btn-toolbar float-xs-right">
+            <button type="reset" id="compose-discard-button" (click)="onToBack()" class="btn btn-transparent">Discard</button>
+            <button type="button" id="compose-save-button" class="btn btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+            <button type="submit" id="compose-send-button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

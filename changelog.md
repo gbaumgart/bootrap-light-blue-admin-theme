@@ -2,6 +2,12 @@
 Changelog
 -
 
+Version 3.5.0
+
+- Angular 2.0 Seed Version
+
+See readme.md in angular2 folder for details.
+
 Version 3.4.0
 
 - Angular 2.0 Seed Version

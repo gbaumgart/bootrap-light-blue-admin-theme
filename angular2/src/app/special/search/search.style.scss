@@ -1,0 +1,146 @@
+@import "../../../../node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../scss/select2-variables";
+
+
+/***********************************/
+/**         Search Result         **/
+/***********************************/
+
+:host {
+  color: #f8f8f8;
+}
+
+.pagination-search-result > .active > a {
+  background-color: rgba(51,51,51,0.25);
+  color: #fff;
+}
+
+.value3, .search-results-count {
+  color: #f8f8f8;
+}
+
+.search-result-categories{
+  > .nav-item > .nav-link {
+    color: $text-color;
+    background-color: transparent;
+    font-weight: $font-weight-normal;
+    &:hover{
+      color: $white;
+      background-color: rgba($widget-bg-common, .25);
+    }
+
+    > .glyphicon{
+      margin-right: 5px;
+    }
+
+    > .badge{
+      float: right;
+    }
+  }
+}
+
+.search-results-count{
+  margin-top: 10px;
+}
+
+.search-result-item{
+  padding: 20px;
+  background-color: $widget-bg;
+  border-radius: $border-radius;
+  @include clearfix();
+
+  .image-link{
+    display: block;
+    overflow: hidden;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    @include media-breakpoint-up(md){
+      display: inline-block;
+      margin: -20px 0 -20px -20px;
+      float: left;
+      width: 200px;
+    }
+    @include media-breakpoint-down(sm) {
+      max-height: 200px;
+    }
+  }
+
+  .image{
+    max-width: 100%;
+  }
+
+  .info{
+    margin-top: 2px;
+    font-size: $font-size-sm;
+  }
+
+  .description{
+    font-size: $font-size-base;
+  }
+
+  + .search-result-item{
+    margin-top: 20px;
+  }
+}
+
+.search-result-item-body{
+  height: auto;
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+  @include media-breakpoint-up(md){
+    margin-left: 200px;
+  }
+}
+
+.search-result-item-heading{
+  font-weight: $font-weight-normal;
+
+  > a {
+    color: $widget-header-color;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: 0;
+  }
+}
+
+.pagination-search-result{
+  > .page-link > .page-item,
+  > .page-link > span{
+    color: $text-color;
+
+    &:hover,
+    &:focus{
+      background-color: rgba($widget-bg, .25);
+      color: $white;
+    }
+  }
+
+  > .disabled > span,
+  > .disabled > span:hover,
+  > .disabled > span:focus,
+  > .disabled > .page-item,
+  > .disabled > .page-item:hover,
+  > .disabled > .page-item:focus{
+    color: #ddd;
+  }
+
+  > .active > .page-item,
+  > .active > .page-item:hover,
+  > .active > .page-item:focus,
+  > .active > span,
+  > .active > span:hover,
+  > .active > span:focus{
+    background-color: rgba($widget-bg, .25);
+    color: $white;
+  }
+}
+
+.dropdown-toggle:after {
+  display: none;
+}

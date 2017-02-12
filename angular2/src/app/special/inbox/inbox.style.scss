@@ -1,0 +1,42 @@
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../scss/variables";
+
+.nav-email-folders{
+  > li > a {
+    color: $gray-lighter;
+    font-weight: $font-weight-normal;
+    background-color: transparent;
+    &:hover{
+      background-color: rgba($widget-bg-common, .25);
+      color: $text-color;
+    }
+
+    > .glyphicon{
+      margin-right: 5px;
+    }
+
+    > .fa-circle{
+      margin-top: 3px;
+    }
+
+    > .badge{
+      background-color: $brand-danger;
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+
+  > li.active > a{
+    &,
+    &:hover,
+    &:focus {
+      background-color: rgba($widget-bg-common, .25);
+      color: $text-color;
+      font-weight: $font-weight-semi-bold;
+
+      > .badge{
+        color: $gray-dark
+      }
+    }
+  }
+}
+

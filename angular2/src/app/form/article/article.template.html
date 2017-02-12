@@ -1,0 +1,158 @@
+<h2 class="page-title">Article Demo
+  <small>Out of the box form</small>
+</h2>
+<div class="row">
+  <div class="col-lg-8">
+    <section widget class="widget">
+      <header>
+          <h4><i class="fa fa-file-alt"></i> Article <small>Create new or edit existing article</small></h4>
+      </header>
+      <div class="widget-body">
+        <form class="form-horizontal article-form" role="form" id="article-form" method="post" novalidate="novalidate"
+              data-parsley-priority-enabled="false">
+          <fieldset>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label text-md-right" for="title">Title <span class="required">*</span></label>
+              <div class="col-md-9">
+                <input type="text" id="title" name="title" class="form-control input-transparent"
+                       required="required">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label text-md-right">
+                Content
+              </label>
+              <div class="col-md-9" markdown-toolbar-transparent>
+                <textarea class="form-control input-transparent" id="markdown-editor" data-provide="markdown" rows="6"></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label text-md-right">Description</label>
+              <div class="col-md-9">
+                <textarea id="description" rows="3" name="text" class="form-control article-description input-transparent"></textarea>
+                <span class="help-block">Optional summary of your article that can be used in previews</span>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-actions">
+            <div class="row">
+              <div class="col-md-9 offset-md-3">
+                <div class="btn-toolbar">
+                  <button type="submit" class="btn btn-success">Submit</button>
+                  <button type="button" class="btn btn-secondary">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-4">
+    <section widget class="widget">
+      <header>
+        <h4><i class="fa fa-cog"></i> Options
+          <small>Publishing, categories</small>
+        </h4>
+      </header>
+      <div class="widget-body">
+        <form id="article-options" class="form-horizontal form-label-left"
+              method="post">
+          <fieldset>
+            <legend class="section">Publishing</legend>
+            <div class="form-group row">
+              <label for="article-status" class="col-form-label col-md-4">Status</label>
+
+              <div class="col-md-8">
+                <select id="article-status" name="article-status"
+                        data-style="btn-success"
+                        data-width="auto"
+                        class="selectpicker">
+                  <option value="0">Draft</option>
+                  <option value="1">Published</option>
+                  <option value="2">Pending Review</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="publish-date" class="col-form-label col-md-4">Publish at</label>
+              <div class="col-md-8">
+                <datetime [(ngModel)]="publishDate" class="article-options-datetime" name="publish-date" id="publish-date"></datetime>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="article-language" class="col-form-label col-md-4">Language</label>
+              <div class="col-md-8">
+                <select id="article-language" name="article-language"
+                        data-style="btn-success"
+                        data-width="auto"
+                        class="selectpicker">
+                  <option value="0">All Languages</option>
+                  <option value="1">English</option>
+                  <option value="2">Belarusian</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="section">Category</legend>
+            <div class="form-group row">
+              <label for="article-category" class="col-form-label col-md-4">Category</label>
+              <div class="col-md-8">
+                <select id="article-category" name="article-category"
+                        data-style="btn-warning"
+                        data-width="auto"
+                        class="selectpicker">
+                  <option value="0">Design</option>
+                  <option value="1">Bootstrap</option>
+                  <option value="2">ThemeForest</option>
+                  <option value="3">Personal Developement</option>
+                </select>
+              </div>
+            </div>
+            <!--<div class="form-group row">-->
+              <!--<label for="article-tags" class="col-form-label col-md-4">Tags</label>-->
+              <!--<div class="col-md-8">-->
+                <!--<input type="text" id="article-tags" name="article-tags"-->
+                       <!--class="select-block-level">-->
+                <!--<span class="help-block">Write or select a tag and press "Enter" to add it.</span>-->
+              <!--</div>-->
+            <!--</div>-->
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <section widget class="widget">
+      <header>
+        <h4><i class="fa fa-key"></i> Access</h4>
+      </header>
+      <div class="widget-body">
+        <form id="article-access" class="form-horizontal form-label-left"
+              method="post">
+          <fieldset>
+            <div class="form-group row">
+              <label for="article-visibility" class="col-form-label col-md-4">Visibility</label>
+              <div class="col-md-8">
+                <select id="article-visibility" name="article-visibility"
+                        data-style="btn-warning"
+                        data-width="auto"
+                        class="selectpicker">
+                  <option value="0">Everyone</option>
+                  <option value="1">Registered</option>
+                  <option value="2">Editors</option>
+                  <option value="3">Admins</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="article-password" class="col-form-label col-md-4">Password</label>
+              <div class="col-md-8">
+                <input type="password" id="article-password" class="form-control" name="article-password">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

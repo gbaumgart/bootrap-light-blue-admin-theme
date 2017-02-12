@@ -1,0 +1,44 @@
+/* Awesome Bootstrap Checkbox override */
+.abc-checkbox label{
+  &::before {
+    background: none;
+    border-color: #aaa;
+  }&::after{
+     color: $awesome-checkbox-default-color;
+   }
+}
+
+.abc-radio {
+  label {
+
+    &::before {
+      background: none;
+      border-color: #aaa;
+    }
+
+    &::after {
+      background-color: $awesome-checkbox-default-color;
+    }
+  }
+}
+
+.abc-checkbox-dark input[type="checkbox"]:checked + label{
+  &::after{
+    color: $gray;
+  }
+}
+
+.table {
+  .abc-checkbox {
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

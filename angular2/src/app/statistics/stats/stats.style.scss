@@ -1,0 +1,9 @@
+.equal-height-stats {
+  > * {
+    display: flex;
+
+    .widget {
+      width: 100%;
+    }
+  }
+}

@@ -1,14 +1,15 @@
-Light Blue v3.4.0
+Light Blue v3.5.0 with Angular 2.0 Final Release support
 =========
 
-![Light Blue Preview](http://demo.flatlogic.com/3.4.0/light-blue-preview-2016.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.5.0/light-blue-preview-2017.png)
 
 **World First Transparent Dashboard**
 
-Available in four versions [transparent dark (basic)](http://demo.flatlogic.com/3.4.0/dark),
- [transparent light](http://demo.flatlogic.com/3.4.0/light),
- [white opaque](http://demo.flatlogic.com/3.4.0/white) all with **handlebars** and **bower** under the hood
- and completely new [Angular 2.0 Seed version](http://demo.flatlogic.com/3.4.0/a2-seed)
+Available in five versions [transparent dark (basic)](http://demo.flatlogic.com/3.5.0/dark),
+ [transparent light](http://demo.flatlogic.com/3.5.0/light),
+ [white opaque](http://demo.flatlogic.com/3.5.0/white) all with **handlebars** and **bower** under the hood
+ plus Angular 2.4 Seed version
+ and completely new [Angular 2.4 Full version](http://demo.flatlogic.com/3.5.0/a2).
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
@@ -17,10 +18,10 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-New Version 3.4.0 Released!
+New Version 3.5.0 Released!
 -
 
-- Angular 2.0 Final Seed Version
+- Angular 2.4 Full Version
 
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
@@ -51,7 +52,7 @@ Full feature list
     *   Unobtrusive colors and widgets
     *   Option to select between two perfectly chosen background gradients
   - White & Transparent Versions
-  - Angular 2.0 Seed Version
+  - Angular 2.4 Full Version
   - Fully Responsive Layout: from small mobile to large desktop devices.
   - Bower package manager
   - Grunt tasks

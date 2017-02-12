@@ -1,0 +1,74 @@
+<div class="clearfix mb-xs">
+  <a class="btn btn-transparent btn-sm width-50 float-xs-left" id="back-btn" (click)="onToBack()">
+    <i class="fa fa-angle-left fa-lg"></i>
+  </a>
+</div>
+<section widget class="widget widget-email">
+  <header>
+    <h4>{{mail.subject}}</h4>
+    <div class="widget-controls">
+      <a href="#"><i class="fa fa-print"></i></a>
+    </div>
+  </header>
+  <div class="widget-body">
+    <div id="email-view" class="email-view">
+      <div class="email-details clearfix">
+        <div class="email-details-content">
+          <span class="thumb thumb-sm float-xs-left">
+            <img class="rounded-circle" src="assets/img/people/a5.jpg" alt="Philip Horbacheuski">
+          </span>
+          <div class="float-xs-left">
+            <strong>{{mail.sender}}</strong>
+            <span *ngIf="mail.senderMail" class="email">&lt;{{mail.senderMail}}&gt;</span>
+            <span class="receiver">to Wrapbootstrap</span>
+          </div>
+          <div class="email-actions float-xs-right">
+            <div class="btn-group">
+              <button id="email-opened-reply" class="btn btn-sm btn-transparent" (click)="goToReply(mail)">
+                <i class="fa fa-reply mr-xs"></i> Reply
+              </button>
+              <button class="btn btn-sm btn-transparent dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-angle-down"></i>
+              </button>
+              <ul class="dropdown-menu float-xs-right">
+                <li><a class="dropdown-item" href="#"><i class="fa fa-reply reply-btn"></i> Reply</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-right reply-btn"></i> Forward</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-print"></i> Print</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                <li><a class="dropdown-item" href="#"><i class="glyphicon glyphicon-trash"></i> Delete</a></li>
+              </ul>
+            </div>
+          </div>
+          <time class="email-date float-xs-right">
+            0:30
+          </time>
+        </div>
+      </div>
+      <div class="email-body">
+        <div class="email-body" [innerHTML]="mail.body"></div>
+      </div>
+      <div *ngIf="!mail.body" class="email-body">
+        {{mail.subject}}
+      </div>
+      <div class="email-attachments">
+        <div class="row">
+          <div class="col-sm-6">
+            <hr *ngIf="mail.attachments">
+            <p  *ngIf="mail.attachments" class="details"><strong>{{mail.attachments.length}} attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
+              &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
+            <section *ngFor="let attachment of mail.attachments; let i = index" class="attachment">
+              <img class="img-fluid" src="{{attachment}}" alt="">
+              <h5 class="title">some-cool-image{{i + 1}}.jpg</h5>
+              <p class="details">
+                568K  &nbsp;&nbsp;
+                <a href="#">View</a> &nbsp;&nbsp;
+                <a href="#">Download</a>
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

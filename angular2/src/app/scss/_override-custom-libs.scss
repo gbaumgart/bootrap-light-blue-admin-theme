@@ -1,0 +1,400 @@
+/**
+ * override custom libs styles. This files is not required for core sing functionality and may be removed
+ */
+
+/***********************/
+/*         NvD3        */
+/***********************/
+
+
+.nvd3-svg svg text,
+.nvd3-svg .nvd3 text{
+  font: $font-weight-base $font-size-small $font-family-base;
+  fill: $text-color;
+
+  .widget &{
+    fill: $widget-color;
+  }
+}
+
+.nvd3-svg svg .title {
+  font: $font-weight-bold $font-size-base $font-family-base;
+}
+
+.nvd3-svg  .nvd3.nv-noData {
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+
+.nvd3-svg .nvd3 .nv-axis path.domain {
+  stroke-opacity: 0;
+}
+
+.nvd3-svg .nv-controlsWrap{
+  .nv-legend-symbol{
+    fill: $white !important;
+    stroke: $white !important;
+  }
+}
+
+.nvd3-svg .nvd3 .nv-axis .zero line {
+  stroke-opacity: 0.1;
+}
+
+.nvd3-svg .nvd3 .nv-legend .disabled circle {
+  fill-opacity: 0;
+}
+
+.nvd3-svg .nvd3 .nv-axis line{
+  stroke: #000;
+  stroke-opacity: .1;
+}
+
+.nvtooltip.xy-tooltip h3{
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+.stat-widget header .nvd3.nv-multibar .nv-group{
+  fill-opacity: 1 !important;
+}
+
+.nvd3-svg .nvd3.nv-stackedarea path.nv-area {
+  fill-opacity: .8;
+}
+
+.nvd3-svg .nvd3.nv-stackedarea path.nv-area.hover {
+  fill-opacity: .95;
+}
+
+.nvd3-svg .nvd3 .nv-axis path.domain{
+  display: none;
+}
+
+
+.nvtooltip.xy-tooltip {
+  padding: 5px;
+  position: absolute;
+  background-color: rgba($widget-bg-common, .6);
+  color: $widget-color;
+  border: none;
+  z-index: 10000;
+
+  font-family: inherit;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+  transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+
+.nvtooltip.xy-tooltip {
+    font-size: $font-size-base;
+    text-align: center;
+}
+
+.nvd3-svg .nvd3 .nv-axis line.zero{
+  display: none;
+}
+
+/*!
+ * Bootstrap-select
+ */
+.bootstrap-select .btn:focus, .bootstrap-select > .btn.dropdown-toggle:focus{
+  outline: none !important;
+}
+
+/**
+ * Select2 Bootstrap CSS
+ */
+/*
+ * override .form-control:focus shadow
+ */
+.select2-container-active .select2-choice,
+.select2-container-multi.select2-container-active .select2-choices{
+  @include box-shadow(none);
+}
+
+.select2-container-multi .select2-choices .select2-search-choice{
+  border-radius: $input-border-radius;
+}
+
+.select2.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 0;
+}
+
+/**
+ * setting correct urls
+ */
+.select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice .select2-arrow b{
+  background-image: url("#{$libs-compiled-folder}/select2/select2.png");
+  @include retina(){
+    background-image: url("#{$libs-compiled-folder}/select2/select2x2.png") !important;
+  }
+}
+
+.select2-container .select2-choice .select2-arrow,
+.select2-container .select2-choice div {
+  border-left: none;
+}
+
+.select2-search input.select2-active {
+  background: #fff url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%;
+  background: url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+  background: url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+  background: url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+  background: url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%, linear-gradient(to bottom, #ffffff 85%, #eeeeee 99%) 0 0;
+}
+
+.select2-more-results.select2-active {
+  background: #f4f4f4 url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100%;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input.select2-active {
+  background: #fff url("#{$libs-compiled-folder}/select2/select2-spinner.gif") no-repeat 100% !important;
+}
+
+/**
+ * Make Simple Select2's selects be the same height with the rest of the inputs
+ */
+
+.select2-container .select2-selection.select2-selection--single {
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+}
+
+/**
+ * Make Multi Select2's choices match Bootstrap 3's default button styles.
+ */
+
+.select2-container-multi .select2-choices .select2-search-choice {
+  background: $btn-inverse-bg;
+}
+
+.actions .bootstrap-select .dropdown-toggle {
+  padding: 5px 12px;
+}
+
+/**
+ * Switchery
+ */
+
+.switchery{
+  background-color: transparent !important;
+}
+
+/**
+ * Bootstrap Colorpicker
+ * setting correct urls
+ */
+
+.colorpicker-saturation {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/saturation.png");;
+}
+
+.colorpicker-hue {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/hue.png");
+}
+
+.colorpicker-alpha,
+.colorpicker-color {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/alpha.png");
+}
+
+.colorpicker.colorpicker-horizontal .colorpicker-hue {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/hue-horizontal.png");
+}
+
+.colorpicker.colorpicker-horizontal .colorpicker-alpha {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/alpha-horizontal.png");
+}
+
+/**
+ * Rickshaw
+ */
+
+.rickshaw_graph .detail .x_label {
+  color: $gray;
+}
+
+/***********************/
+/*    Full Calendar    */
+/***********************/
+
+.fc-grid th{
+  text-transform: uppercase;
+}
+
+.fc-event {
+  padding: 2px 3px;
+  border: none;
+  font-weight: $font-weight-normal;
+  background-color: $gray-semi-lighter;
+  color: $text-color;
+}
+
+.fc-unthemed .fc-today{
+  background-color: rgba(#fff1b8, .35);
+}
+
+a.fc-event{
+  height: auto;
+  line-height: 20px;
+}
+
+.fc-event, .fc-event:hover, .ui-widget .fc-event{
+  color: $gray;
+}
+
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed hr,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover{
+  border-color: $calendar-border;
+}
+
+
+/***********************************/
+/**           Glyphicon           **/
+/***********************************/
+
+.glyphicon-comment:before {
+  content:"\E111";
+}
+
+/***********************************/
+/**        Awesome Checkbox       **/
+/***********************************/
+
+.abc-checkbox, .abc-radio {
+  label {
+    font-weight: $font-weight-normal;
+  }
+}
+
+/***********************************/
+/**        Select2       **/
+/***********************************/
+.select2-container--bootstrap .select2-search--dropdown .select2-search__field{
+  padding-left: 28px;
+}
+
+.select2-container--bootstrap .select2-results .select2-results__option{
+  color: $gray-dark;
+}
+
+/**
+* datetime
+**/
+.input-group.date, .input-group.timepicker {
+  width: auto;
+  box-sizing: border-box;
+  .input-group-addon {
+    padding: .375rem .75rem .375rem .75rem;
+    i {
+      height: 13px;
+      width: 13px;
+    }
+  }
+}
+
+.datepicker.datepicker-dropdown {
+  margin-top: 20px;
+  &.datepicker-orient-top {
+    margin-top: 14px;
+  }
+}
+
+/**
+ * Bootstrap select
+ */
+
+.selectpicker.form-control {
+  height: auto;
+}
+
+.bootstrap-select, .input-group-btn:not(first-child) .bootstrap-select {
+  &.btn-group.open {
+    z-index: 5;
+  }
+  .btn.dropdown-toggle {
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-left: -1px;
+
+    &:after {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .dropdown-menu {
+    z-index: 3;
+  }
+
+  .dropdown-menu > li > a {
+    display: block;
+    width: 100%; // For `<button>`s
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: $line-height-base;
+    color: $dropdown-link-color;
+    text-align: inherit; // For `<button>`s
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    background: none; // For `<button>`s
+    border: 0; // For `<button>`s
+
+    @include hover-focus {
+      color: $dropdown-link-hover-color;
+      text-decoration: none;
+      background-color: $dropdown-link-hover-bg;
+    }
+
+    // Active state
+    &.active {
+      @include plain-hover-focus {
+        color: $dropdown-link-active-color;
+        text-decoration: none;
+        background-color: $dropdown-link-active-bg;
+        outline: 0;
+      }
+    }
+
+    // Disabled state
+    //
+    // Gray out text and ensure the hover/focus state remains gray
+    &.disabled {
+      @include plain-hover-focus {
+        color: $dropdown-link-disabled-color;
+      }
+
+      // Nuke hover/focus effects
+      @include hover-focus {
+        text-decoration: none;
+        cursor: $cursor-disabled;
+        background-color: transparent;
+        background-image: none; // Remove CSS gradient
+        @include reset-filter();
+      }
+    }
+  }
+}
+
+/***********************************/
+/**       magnific-popup      **/
+/***********************************/
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-content .mfp-figure .mfp-close {
+  cursor: pointer;
+}

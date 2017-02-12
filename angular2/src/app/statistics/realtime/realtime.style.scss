@@ -1,0 +1,11 @@
+@import "../../../../node_modules/rickshaw/rickshaw";
+@import "../../scss/variables";
+
+/***********************************/
+/**           Rickshaw            **/
+/***********************************/
+
+.rickshaw_legend{
+  background-color: $widget-bg;
+  color: $widget-header-color;
+}

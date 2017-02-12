@@ -22,10 +22,12 @@ export class Layout {
 
   openSidebar(): void {
 
-    if(this.sidebarState) {
-      this.renderer.setElementStyle(this.el.nativeElement.querySelector('.content'), 'margin-top', '100px');
+    if (this.sidebarState) {
+      this.renderer.setElementStyle(
+        this.el.nativeElement.querySelector('.content'), 'margin-top', '100px');
     } else {
-      this.renderer.setElementStyle(this.el.nativeElement.querySelector('.content'), 'margin-top', '0px');
+      this.renderer.setElementStyle(
+        this.el.nativeElement.querySelector('.content'), 'margin-top', '0px');
     }
 
     this.sidebarState = !this.sidebarState;

@@ -1,0 +1,112 @@
+<h2 class="page-title">Maps
+  <small>Built-in google & vector maps</small>
+</h2>
+<div class="row">
+  <div class="col-md-6">
+    <section widget class="widget large">
+      <header>
+        <h5>
+          <i class="fa fa-google-plus"></i>
+          Google maps. Basic
+        </h5>
+      </header>
+      <div class="widget-body">
+        <div class="map">
+          <div id="basic">
+            <sebm-google-map [latitude]="latFirst" [longitude]="lngFirst" [zoom]="zoom" class="content-map">
+              <sebm-google-map-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true">
+              </sebm-google-map-marker>
+            </sebm-google-map>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-md-6">
+    <section widget class="widget large">
+      <header>
+        <h5>
+          <i class="fa fa-map-marker"></i>
+          Address and location
+        </h5>
+
+        <div class="actions">
+          <input id="address" type="text" class="form-control input-transparent mt-n-xs" placeholder="Enter Address">
+        </div>
+      </header>
+      <div class="widget-body">
+        <div class="map">
+          <div id="location">
+            <sebm-google-map [latitude]="latSecond" [longitude]="lngSecond" [zoom]="zoom" class="content-map">
+              <sebm-google-map-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true">
+              </sebm-google-map-marker>
+            </sebm-google-map>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <section widget class="widget large">
+      <header>
+        <h5>
+          <i class="fa fa-arrow-right"></i>
+          Region vector map
+        </h5>
+
+        <div class="actions">
+          <select id="maps" name="maps"
+                  data-style="btn-success"
+                  data-width="auto"
+                  class="selectpicker">
+            <option value="europe_en">Europe</option>
+            <option value="usa_en">USA</option>
+            <option value="australia_en">Australia</option>
+          </select>
+        </div>
+      </header>
+      <div class="widget-body">
+        <div class="map">
+          <jqvmap *ngIf="vectorMapContinent === 'europe_en'" id="vector-europe" [map]="'europe_en'" [zoomed]="'true'" (regionClick)="regionModalInfoOpen($event, modal)"></jqvmap>
+          <jqvmap *ngIf="vectorMapContinent === 'usa_en'" id="vector-usa" [map]="'usa_en'" (regionClick)="regionModalInfoOpen($event, modal)"></jqvmap>
+          <jqvmap *ngIf="vectorMapContinent === 'australia_en'" id="vector-australia" [map]="'australia_en'" (regionClick)="regionModalInfoOpen($event, modal)"></jqvmap>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-md-6">
+    <section widget class="widget large">
+      <header>
+        <h5>
+          <i class="fa fa-dashboard"></i>
+          World vector map
+        </h5>
+      </header>
+      <div class="widget-body">
+        <div class="map">
+          <jqvmap id="vector-world" (regionClick)="regionModalInfoOpen($event, modal)"></jqvmap>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div bsModal #modal="bs-modal" class="modal fade" tabindex="-1" [config]="{backdrop: false}" (onShow)="showBackdrop()" (onHide)="hideBackdrop()" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div *ngIf="vmRegion && vmCode" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="modal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>You clicked <strong><strong>{{ vmRegion }}</strong></strong> which has code '{{ vmCode }}'</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="modal.hide()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

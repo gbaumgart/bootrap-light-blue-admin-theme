@@ -1,0 +1,178 @@
+<h2 class="page-title">Form Wizard
+  <small>Form validation</small>
+</h2>
+<div class="row">
+  <div class="col-xl-7 col-xl-offset-1">
+    <section widget class="widget">
+      <header>
+        <h4>
+          <i class="fa fa-windows"></i>
+          Wizard
+          <small>Tunable widget</small>
+        </h4>
+        <p class="text-muted">An example of complete wizard form in widget.</p>
+        <div class="widget-controls">
+          <a title="Options" href="#"><i class="glyphicon glyphicon-cog"></i></a>
+          <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+          <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+          <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <div id="wizard" form-wizard class="form-wizard">
+          <ul class="wizard-navigation nav nav-justified nav-pills">
+            <li class="nav-item"><a class="nav-link" href="#tab1" data-toggle="tab">
+              <small>1.</small>
+              <strong> Your Details</strong></a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab2" data-toggle="tab">
+              <small>2.</small>
+              <strong>Shipping</strong></a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab3" data-toggle="tab">
+              <small>3.</small>
+              <strong>Pay</strong></a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab4" data-toggle="tab">
+              <small>4.</small>
+              <strong>Thank you!</strong></a></li>
+          </ul>
+
+          <progress id="bar" class="progress progress-inverse progress-sm" max="100" value="0"></progress>
+
+          <div class="tab-content">
+            <div class="tab-pane" id="tab1">
+              <form class="form-horizontal mt-sm" action='' method="POST">
+                <fieldset>
+                  <div class="form-group row">
+                    <!-- Username -->
+                    <label class="col-form-label text-md-right col-md-3" for="username">Username</label>
+                    <div class="col-md-8">
+                      <div class="col-md-10">
+                        <input type="text" id="username" name="username" placeholder="" class="form-control">
+                        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <!-- Email -->
+                    <label class="col-form-label text-md-right col-md-3" for="email">Email</label>
+                    <div class="col-md-8">
+                      <div class="col-md-10">
+                        <input type="text" id="email" name="email"
+                               placeholder="" class="form-control">
+                        <p class="help-block">Please provide your E-mail</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <!-- Password -->
+                    <label class="col-form-label text-md-right col-md-3" for="address">Address</label>
+                    <div class="col-md-8">
+                      <div class="col-md-10">
+                        <input type="text" id="address" name="address" placeholder="" class="form-control">
+                        <p class="help-block">Please provide your address</p>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="tab-pane" id="tab2">
+              <form class="form-horizontal mt-sm" action='' method="POST">
+                <fieldset>
+                  <div class="form-group row">
+                    <label for="country-select" class="col-form-label text-md-right col-md-3">Destination Country</label>
+
+                    <div class="col-md-8">
+                        <div class="col-md-10">
+                          <select2 id="country-select"
+                                   class="select-block-level chzn-select"
+                                   [data]="getSelect2CountriesList()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                          <p class="help-block">Please choose your country destination</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="courier" class="col-form-label text-md-right col-md-3">Choose shipping option</label>
+                    <div class="col-md-8">
+                        <div class="col-md-10">
+                          <select2 id="courier" class="select-block-level chzn-select"
+                                   [data]="getSelect2Shipment()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                        <p class="help-block">Please choose your shipping option</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-form-label text-md-right col-md-3" for="destination">Destination Zip Code</label>
+                    <div class="col-md-8">
+                        <div class="col-md-10"><input type="text" id="destination" name="destination" placeholder="" class="form-control">
+                        <p class="help-block">Please provide your Destination Zip Code</p></div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-form-label text-md-right col-md-3" for="dest-address">Destination Address</label>
+                    <div class="col-md-8">
+                        <div class="col-md-10"><input type="text" id="dest-address" name="address" placeholder="" class="form-control">
+                        <p class="help-block">Please provide the destination address</p></div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="tab-pane" id="tab3">
+              <form class="form-horizontal mt-sm" action='' method="POST">
+                <fieldset>
+                  <div class="form-group row">
+                    <label class="col-form-label text-md-right col-md-3" for="name">Name on the Card</label>
+                    <div class="col-md-8">
+                        <div class="col-md-10"><input type="text" id="name" name="name" placeholder="" class="form-control"></div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="credit-card-type" class="col-form-label text-md-right col-md-3">Credit Card Type</label>
+                    <div class="col-md-8">
+                        <div class="col-md-10">
+                          <select2 id="credit-card-type"
+                                   class="select-block-level chzn-select"
+                                   [data]="getSelect2CardTypes()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label class="col-form-label text-md-right col-md-3" for="credit">Credit Card Number </label>
+                    <div class="col-md-8">
+                      <div class="col-md-10"><input id="credit" type="text" tabindex="3" class="form-control"></div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="expiration-date" class="col-form-label text-md-right col-md-3">Expiration Date</label>
+                    <div class="col-md-8">
+                      <div class="col-md-10">
+                        <datetime [timepicker]="false" [datepicker]="datepickerOpts" [(ngModel)]="expirationDate" name="datetime" id="datetimepicker"></datetime>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="tab-pane" id="tab4">
+              <h2>Thank you!</h2>
+              <p>Your submission has been received.</p>
+            </div>
+            <div class="description ml mr">
+              <ul class="pager wizard">
+                <li class="previous">
+                  <button class="btn btn-primary"><i class="fa fa-caret-left"></i> Previous</button>
+                </li>
+                <li class="next">
+                  <button class="btn btn-primary">Next <i class="fa fa-caret-right"></i></button>
+                </li>
+                <li class="finish" style="display: none">
+                  <button class="btn btn-success">Finish <i class="fa fa-check"></i></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

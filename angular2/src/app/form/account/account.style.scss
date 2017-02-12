@@ -1,0 +1,94 @@
+@import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker3.min";
+@import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min";
+@import "../../../../node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../scss/select2-variables";
+@import "../../../../node_modules/select2/src/scss/core";
+@import "../../../../node_modules/select2-bootstrap-theme/src/select2-bootstrap";
+
+/**
+* datetime
+**/
+#datetimepicker, #date-of-birth {
+  .input-group {
+    width: 100%;
+    display: flex !important;
+    .input-group-addon {
+      padding: .375rem .75rem .375rem .75rem;
+    }
+  }
+}
+
+/**
+ * Bootstrap select
+ */
+
+.selectpicker.form-control {
+  height: auto;
+}
+
+.bootstrap-select {
+  .dropdown-toggle {
+    padding-left: 10px;
+
+    &:after {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    //span.bs-caret {
+    //  box-sizing: border-box;
+    //}
+  }
+  .dropdown-menu > li > a {
+    display: block;
+    width: 100%; // For `<button>`s
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: $line-height-base;
+    color: $dropdown-link-color;
+    text-align: inherit; // For `<button>`s
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    background: none; // For `<button>`s
+    border: 0; // For `<button>`s
+
+    @include hover-focus {
+      color: $dropdown-link-hover-color;
+      text-decoration: none;
+      background-color: $dropdown-link-hover-bg;
+    }
+
+    // Active state
+    &.active {
+      @include plain-hover-focus {
+        color: $dropdown-link-active-color;
+        text-decoration: none;
+        background-color: $dropdown-link-active-bg;
+        outline: 0;
+      }
+    }
+
+    // Disabled state
+    //
+    // Gray out text and ensure the hover/focus state remains gray
+    &.disabled {
+      @include plain-hover-focus {
+        color: $dropdown-link-disabled-color;
+      }
+
+      // Nuke hover/focus effects
+      @include hover-focus {
+        text-decoration: none;
+        cursor: $cursor-disabled;
+        background-color: transparent;
+        background-image: none; // Remove CSS gradient
+        @include reset-filter();
+      }
+    }
+  }
+}
+

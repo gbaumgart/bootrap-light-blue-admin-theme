@@ -1,0 +1,107 @@
+<h2 class="page-title">Components - <span class="fw-semi-bold">Calendar App</span>
+  <small>Draggable access</small>
+</h2>
+<div class="row">
+  <div class="col-md-8">
+    <section class="widget" widget>
+      <header>
+        <h4>
+          <i class="fa fa-calendar"></i>
+          Calendar
+        </h4>
+        <div class="actions">
+          <div class="btn-group mr-sm">
+            <button class="btn btn-secondary" id="calender-prev" (click)="prev()"><i class="fa fa-angle-left"></i></button>
+            <button class="btn btn-secondary" id="calender-next" (click)="next()"><i class="fa fa-angle-right"></i></button>
+          </div>
+          <button id="today" type="button" class="btn btn-warning mr-sm" (click)="today()">
+            Today
+          </button>
+          <div id="calendar-switcher" class="btn-group" data-toggle="buttons">
+            <label class="btn btn-secondary active" (click)="changeView('month')">
+              <input type="radio" name="view" value="month" checked> Month
+            </label>
+            <label class="btn btn-secondary" (click)="changeView('agendaWeek')">
+              <input type="radio" name="view" value="agendaWeek"> Week
+            </label>
+            <label class="btn btn-secondary" (click)="changeView('agendaDay')">
+              <input type="radio" name="view" value="agendaDay"> Day
+            </label>
+          </div>
+        </div>
+      </header>
+      <div class="widget-body">
+        <div id="calendar" class="calendar mt-lg"></div>
+      </div>
+    </section>
+  </div>
+  <div class="col-md-4">
+    <section widget class="widget">
+      <header>
+        <h5>
+          <i class="fa fa-exchange"></i>
+          Draggable events
+        </h5>
+      </header>
+      <div class="widget-body">
+        <div id='external-events'>
+          <div class='external-event draggable bg-danger' data-event-class="bg-danger text-white"><i class="fa fa-check"></i> Buy
+            this template
+          </div>
+          <div class='external-event draggable bg-warning' data-event-class="bg-warning text-white">Study some Node</div>
+          <div class='external-event draggable bg-success' data-event-class="bg-success text-white">Make a tea</div>
+          <div class='external-event draggable bg-primary' data-event-class="bg-primary text-white"><i class="fa fa-book"></i> Go
+            to school
+          </div>
+          <div class='external-event draggable bg-info' data-event-class="bg-info text-white">Open windows</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="modal fade" id="create-event-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body</p>
+
+        <div class="form-group">
+          <input type="text" [(ngModel)]="event.title" class="form-control input-no-border"
+                 placeholder="Name">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+        <button (click)="createEvent()" class="btn bg-success btn-success">OK</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="show-event-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 *ngIf="event.title" class="modal-title">{{ event.title }}</h4>
+      </div>
+      <div class="modal-body">
+        <p><i class="fa fa-calendar text-muted fs-sm"></i> &nbsp; {{ event.start }}
+        <p *ngIf="event.end">
+          <i class="fa fa-clock-o text-muted fs-sm"></i> &nbsp; {{ event.end }}
+        </p>
+        <p *ngIf="event.description">{{ event.description }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div><!-- /.modal -->

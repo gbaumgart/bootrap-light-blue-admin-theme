@@ -1,0 +1,92 @@
+<h2 class="page-title">Components - <span class="fw-semi-bold">Fileupload</span>
+  <small>Drag & drop fileupload</small>
+</h2>
+<div class="row">
+  <div class="col-md-8 offset-md-1">
+    <section widget class="widget">
+      <div class="widget-body">
+        <form id="fileupload" action="server/php" method="POST" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="dropzone"
+                   class="dropzone"
+                   ng2FileDrop
+                   [uploader]="uploader">
+                Drop files here
+                <i class="fa fa-download-alt float-xs-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 fileupload-progress">
+              <!-- The global progress bar -->
+              <progress class="progress progress-xs progress-inverse mt-0" *ngIf="uploader.progress || uploader.isUploading" value="{{uploader.progress}}" max="100"></progress>
+              <div *ngIf="uploader.progress || uploader.isUploading" class="progress-extended">{{floor(uploader.progress * uploader.queue.length / 100)}} / {{uploader.queue.length}} files uploaded</div>
+            </div>
+          </div>
+          <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+          <div class="form-actions fileupload-buttonbar no-margin">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+            <button class="btn btn-default add-files-btn fileinput-button mr-xs">
+              <i class="glyphicon glyphicon-plus"></i>
+              <span>Add files...</span>
+              <input type="file" name="files[]" ng2FileSelect [uploader]="uploader" multiple>
+            </button>
+            <button type="submit" class="btn btn-primary start mr-xs"
+                    (click)="uploader.uploadAll()">
+              <i class="glyphicon glyphicon-upload"></i>
+              <span>Start upload</span>
+            </button>
+            <button type="reset" class="btn btn-inverse cancel"
+                    (click)="uploader.cancelAll()">
+              <i class="glyphicon glyphicon-ban-circle"></i>
+              <span>Cancel upload</span>
+            </button>
+          </div>
+
+          <!-- The table listing the files available for upload/download -->
+          <table role="presentation" class="table table-striped files-table">
+            <tbody class="files">
+            <tr class="template-upload fade in" *ngFor="let item of uploader.queue">
+              <td>
+                <p class="name">{{ item?.file?.name }}</p>
+                <strong class="error text-danger"></strong>
+              </td>
+              <td>
+                <p class="size">{{ item?.file?.size/1024 | number:'.2' }} KB</p>
+                <progress
+                  hide-on-upload
+                  [fileItem]="item"
+                  class="progress progress-xs progress-success"
+                  value="{{item?.progress}}"
+                  max="100"></progress>
+              </td>
+              <td>
+                <button class="btn btn-primary btn-sm start"
+                        *ngIf="!item.isUploaded"
+                        (click)="item.upload()"
+                        [disabled]="item.isReady || item.isUploading || item.isSuccess">
+                  <i class="glyphicon glyphicon-upload"></i>
+                  <span>Start</span>
+                </button>
+                <button class="btn btn-warning btn-sm cancel"
+                        *ngIf="!item.isUploaded"
+                        (click)="cancelItem(item)">
+                  <i class="glyphicon glyphicon-ban-circle"></i>
+                  <span>Cancel</span>
+                </button>
+                <button class="btn btn-danger btn-sm delete"
+                        *ngIf="item.isUploaded"
+                        (click)="item.remove()">
+                  <i class="glyphicon glyphicon-trash"></i>
+                  <span>Delete</span>
+                </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

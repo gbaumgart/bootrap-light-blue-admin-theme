@@ -1,0 +1,127 @@
+<ul id="side-nav" class="side-nav">
+  <li [routerLinkActive]="['active']">
+    <a routerLink="dashboard"><i class="fa fa-home"></i> <span class="name">Dashboard <sup class="text-warning fw-bold">new</sup></span></a>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#forms-collapse">
+			 <i class="fa fa-pencil"></i>
+			 <span class="name">Forms</span>
+		 </a>
+    <ul id="forms-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="form/account">Account</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/article">Article</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/elements">Elements</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/validation">Validation</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/wizard">Wizard</a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">Statistics</span></a>
+    <ul id="stats-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="statistics/stats">Stats</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="statistics/charts">Charts</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="statistics/realtime">Realtime</a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
+    <ul id="ui-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="ui/buttons">Buttons</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/dialogs">Dialogs</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/notifications">Notifications</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/icons">Icons</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/tabs">Tabs</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/accordion">Accordion</a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
+    <ul id="components-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="components/calendar">Calendar <sup class="text-danger fw-bold">ng2</sup></a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/maps">Maps</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/gallery">Gallery <sup class="text-danger fw-bold">ng2</sup></a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/fileupload">Fileupload</a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
+    <ul id="tables-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="tables/static">Static</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="tables/dynamic">Dynamic <sup class="text-danger fw-bold">ng2</sup></a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#widgets-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>
+    <ul id="widgets-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="widgets/basic">Basic</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="widgets/live">Live</a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
+    <ul id="special-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="special/search">Search <sup class="text-warning fw-bold">new</sup></a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="special/invoice">Invoice</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="special/inbox">Inbox &nbsp; <span class="tag tag-danger">3</span></a></li>
+      <li><a routerLink="/login" >Login</a></li>
+      <li><a routerLink="/error">Error Page</a></li>
+      <li><a routerLink="/landing">Landing</a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#menu-collapse"><i class="fa fa-folder-open"></i> <span class="name">Menu Levels</span></a>
+    <ul id="menu-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li><a href="#">Item 1.1</a></li>
+      <li><a href="#">Item 1.2</a></li>
+      <li><a href="#">Item 1.3</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+<!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+<ul class="sidebar-labels">
+  <li>
+    <a href="#">
+      <!-- yep, .circle again -->
+      <i class="fa fa-circle text-warning"></i>
+      <span class="label-name">My Recent</span>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa fa-circle text-gray"></i>
+      <span class="label-name">Starred</span>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa fa-circle text-danger"></i>
+      <span class="label-name">Background</span>
+    </a>
+  </li>
+</ul>
+
+<h5 class="sidebar-nav-title">Projects</h5>
+<!-- A place for sidebar notifications & alerts -->
+<div class="sidebar-alerts">
+  <div class="alert fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+    <span class="text-white fw-semi-bold">Sales Report</span> <br>
+    <progress class="progress progress-xs mt-xs mb-0" value="16" max="100"></progress>
+    <small>Calculating x-axis bias... 65%</small>
+  </div>
+  <div class="alert fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+    <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+    <progress class="progress progress-xs progress-danger mt-xs mb-0" value="23" max="100"></progress>
+    <small>Provide required notes</small>
+  </div>
+</div>

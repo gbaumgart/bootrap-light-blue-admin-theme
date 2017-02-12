@@ -1,0 +1,147 @@
+@import "../../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+//#folder-actions {
+//  border: none;
+//  padding-left: 5px;
+//}
+
+.btn-sm {
+  font-size: 12px;
+}
+
+.dropdown-toggle {
+  box-shadow: none;
+
+  &:after {
+    display: none;
+  }
+}
+
+.dropdown-item {
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    color: #f8f8f8 !important;
+  }
+}
+
+//
+//.page-link {
+//  border: none;
+//}
+
+//[inbox] {
+//  color: #f8f8f8;
+//}
+
+.nav-link {
+  cursor: pointer;
+}
+
+
+.table-emails{
+  margin-bottom: 0;
+
+  thead > tr > th:first-child {
+    padding-left: 5px;
+  }
+
+  tbody > tr > td {
+    &:first-child {
+      width: 45px;
+    }
+
+    &:last-child {
+      padding-right: 17px;
+    }
+  }
+
+  tr {
+    height: 40px;
+  }
+
+  td,
+  th {
+    padding: 10px;
+  }
+
+  td > .abc-checkbox,
+  th > .abc-checkbox{
+
+    top: 8px;
+
+    label {
+      top: -7px;
+      left: 11px;
+    }
+
+    > label:before,
+    > label:after {
+      margin-left: 0px;
+    }
+  }
+
+  .select-mail {
+    padding-left: 5px;
+  }
+
+  .name,
+  .subject,
+  .date{
+    cursor: pointer;
+  }
+
+  .date{
+    text-align: right;
+    min-width: 65px;
+  }
+
+  .unread{
+    font-weight: $font-weight-semi-bold;
+    color: $text-color;
+  }
+
+  .favorite{
+    text-align: center;
+  }
+
+  .starred{
+    color: $text-muted;
+    cursor: pointer;
+    @include transition(color .2s);
+    &:hover{
+      color: $text-color;
+    }
+
+    .fa-star{
+      color: $brand-warning;
+    }
+  }
+}
+
+.widget-email-count{
+  display: inline-block;
+  margin: 0;
+  font-size: $font-size-small;
+  color: #d2d2d2;
+  line-height: 29px;
+
+  + .widget-email-pagination{
+    margin-left: 10px;
+    border-left: 1px solid $gray-semi-lighter;
+    padding-left: 15px;
+    border-radius: 0;
+    vertical-align: -9px;
+  }
+}
+
+.widget-email-pagination{
+  margin: 0;
+}
+
+.widget-body.mailbox-body {
+  margin: 0 -17px -12px;
+}
