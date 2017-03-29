@@ -3,7 +3,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Select2OptionData } from 'ng2-select2/ng2-select2';
 import * as data from './wizard.data';
 
-declare var jQuery: any;
+declare let jQuery: any;
 
 @Component({
   selector: '[wizard]',

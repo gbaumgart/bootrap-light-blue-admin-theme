@@ -63,6 +63,14 @@ pre {
   border-radius: $border-radius-base;
 }
 
+
+/***************************/
+/*         Grid           */
+/***************************/
+.container {
+  position: static;
+}
+
 /***************************/
 /*         Forms           */
 /***************************/
@@ -229,6 +237,12 @@ textarea,
 /*        Dropdowns        */
 /***************************/
 
+.dropdown.open {
+  .dropdown-menu {
+    display: block;
+  }
+}
+
 button.dropdown-toggle{
   &:after {
     content: none;
@@ -254,9 +268,12 @@ button.dropdown-toggle{
   outline: none;
 }
 
-.btn{
+.btn {
   color: $white;
   text-shadow: none;
+
+  // set to pointer since bs4 dropped this
+  cursor: pointer;
 
   @include box-shadow(none);
 
@@ -749,35 +766,35 @@ button.dropdown-toggle{
 }
 
 .badge-default {
-  @include tag-variant($tag-default-bg);
+  @include badge-variant($badge-default-bg);
 }
 
 .badge-primary {
-  @include tag-variant($tag-primary-bg);
+  @include badge-variant($badge-primary-bg);
 }
 
 .badge-success {
-  @include tag-variant($tag-success-bg);
+  @include badge-variant($badge-success-bg);
 }
 
 .badge-info {
-  @include tag-variant($tag-info-bg);
+  @include badge-variant($badge-info-bg);
 }
 
 .badge-warning {
-  @include tag-variant($tag-warning-bg);
+  @include badge-variant($badge-warning-bg);
 }
 
 .badge-danger {
-  @include tag-variant($tag-danger-bg);
+  @include badge-variant($badge-danger-bg);
 }
 
-.tag-important{
-  @include tag-variant($tag-danger-bg);
+.badge-important{
+  @include badge-variant($badge-danger-bg);
 }
 
-.label-inverse{
-  @include tag-variant($tag-default-bg);
+.badge-inverse{
+  @include badge-variant($badge-default-bg);
 }
 
 .help-block{
@@ -886,6 +903,7 @@ button.dropdown-toggle{
 .progress{
   background: rgba(black, .15);
   overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1)
 }
 
 .progress-sm{

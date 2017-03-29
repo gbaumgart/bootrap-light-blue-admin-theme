@@ -19,7 +19,7 @@ import { HideOnUpload } from './fileupload/hideOnUpload.directive';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { JqvmapModule } from './maps/jvmap/jqvmap.module';
-import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { ModalModule } from 'ng2-bootstrap';
 
 export const routes = [
   {path: '', redirectTo: 'calendar', pathMatch: 'full'},
@@ -42,7 +42,7 @@ export const routes = [
     CommonModule,
     FormsModule,
     JqvmapModule,
-    ModalModule,
+    ModalModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDe_oVpi9eRSN99G4o6TwVjJbFBNr58NxE',
       libraries: ['places']
@@ -51,6 +51,6 @@ export const routes = [
     FileUploadModule
   ]
 })
-export default class ComponentsModule {
+export class ComponentsModule {
   static routes = routes;
 }

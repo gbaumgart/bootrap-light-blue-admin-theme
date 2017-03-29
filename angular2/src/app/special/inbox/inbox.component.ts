@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-declare var jQuery: any;
+declare let jQuery: any;
 
 @Component({
   selector: '[inbox]',

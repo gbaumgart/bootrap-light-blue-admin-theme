@@ -231,3 +231,13 @@ $slider-handle-size: 26px;
     background: transparent none;
   }
 }
+
+#multiple-select {
+  .select2-selection__choice {
+    margin-top: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: $white-dark;
+    border: 1px solid rgba(0,0,0,0.15);
+  }
+}

@@ -32,6 +32,6 @@ export const routes = [
     RouterModule.forChild(routes),
   ]
 })
-export default class WidgetsModule {
+export class WidgetsModule {
   static routes = routes;
 }

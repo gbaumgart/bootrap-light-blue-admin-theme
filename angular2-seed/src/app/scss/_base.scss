@@ -319,7 +319,7 @@ $i: 1;
   }
 }
 
-.sidebar.nav-collapse, .sidebar.nav-collapse.collapse {
+.sidebar.nav-collapse:not(.show) {
   @media (max-width: 767px) {
     overflow: hidden;
     height: 0;
@@ -558,6 +558,10 @@ $i: 1;
     width: 100%;
   }
 
+  .navbar-collapse .navbar-nav {
+    flex-direction: row;
+  }
+
   .navbar-nav.nav li.dropdown.open > .dropdown-toggle,
   .navbar-nav.nav li.dropdown.active > .dropdown-toggle,
   .navbar-nav.nav li.dropdown.open.active > .dropdown-toggle {
@@ -680,8 +684,8 @@ $i: 1;
   }
 
   // Right aligned menus need alt position
-  .navbar-nav.float-xs-right > li > .dropdown-menu,
-  .navbar-nav.nav > li > .dropdown-menu.float-xs-right {
+  .navbar-nav.float-right > li > .dropdown-menu,
+  .navbar-nav.nav > li > .dropdown-menu.float-right {
     left: auto;
     right: 0;
     &:before {

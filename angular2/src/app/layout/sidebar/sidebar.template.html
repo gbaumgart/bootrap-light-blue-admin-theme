@@ -68,7 +68,7 @@
     <ul id="special-collapse" class="accordion-body collapse" aria-expanded="false">
       <li [routerLinkActive]="['active']"><a routerLink="special/search">Search <sup class="text-warning fw-bold">new</sup></a></li>
       <li [routerLinkActive]="['active']"><a routerLink="special/invoice">Invoice</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="special/inbox">Inbox &nbsp; <span class="tag tag-danger">3</span></a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="special/inbox">Inbox &nbsp; <span class="badge badge-danger">3</span></a></li>
       <li><a routerLink="/login" >Login</a></li>
       <li><a routerLink="/error">Error Page</a></li>
       <li><a routerLink="/landing">Landing</a></li>
@@ -112,16 +112,20 @@
 <h5 class="sidebar-nav-title">Projects</h5>
 <!-- A place for sidebar notifications & alerts -->
 <div class="sidebar-alerts">
-  <div class="alert fade in">
+  <div class="alert fade show">
     <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
     <span class="text-white fw-semi-bold">Sales Report</span> <br>
-    <progress class="progress progress-xs mt-xs mb-0" value="16" max="100"></progress>
+    <div class="progress progress-xs bg-blue-light mt-xs mb-0">
+      <div class="progress-bar progress-xs" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
     <small>Calculating x-axis bias... 65%</small>
   </div>
-  <div class="alert fade in">
+  <div class="alert fade show">
     <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
     <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-    <progress class="progress progress-xs progress-danger mt-xs mb-0" value="23" max="100"></progress>
+    <div class="progress progress-xs bg-blue-light mt-xs mb-0">
+      <div class="progress-bar progress-xs bg-danger" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
     <small>Provide required notes</small>
   </div>
 </div>

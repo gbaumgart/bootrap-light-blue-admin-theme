@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-declare var jQuery: any;
+declare let jQuery: any;
 
 @Directive ({
   selector: '[hide-on-upload]'
@@ -27,7 +27,7 @@ export class HideOnUpload {
   hideSelf(): void {
     setTimeout(() => {
       this.el.style.display = 'none';
-    }, 650);
+    }, 1050);
   }
 
   ngDoCheck(): void {

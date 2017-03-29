@@ -1,4 +1,4 @@
-<div class="alert alert-warning alert-sm float-xs-right no-margin animated bounceInLeft hide" id="app-alert">
+<div class="alert alert-warning alert-sm float-right no-margin animated bounceInLeft hide" id="app-alert">
   <button type="button" class="ml-lg close" data-dismiss="alert" aria-hidden="true">×</button>
   Hey! This is a <span class="fw-semi-bold">real app</span> with CRUD and Search functions. Have fun!
 </div>
@@ -6,9 +6,9 @@
   <small>Ready-to-use client-side application</small>
 </h2>
 <div class="row">
-  <div class="col-lg-3 col-xl-2 col-xs-12">
+  <div class="col-lg-3 col-xl-2 col-12">
     <button class="btn btn-danger btn-block" id="compose-btn" (click)="handleComposeBtn()">Compose</button>
-    <ul class="nav nav-pills nav-stacked nav-email-folders mt" id="folders-list">
+    <ul class="nav nav-pills nav-stacked nav-email-folders mt flex-column" id="folders-list">
       <li class="nav-item active">
         <a class="nav-link" (click)="setFolderName('Inbox')">
           Inbox
@@ -23,13 +23,13 @@
       <li class="nav-item"><a class="nav-link" (click)="setFolderName('Starred')">Starred</a></li>
     </ul>
     <h5 class="mt">QUICK VIEW</h5>
-    <ul class="nav nav-pills nav-stacked nav-email-folders mb-lg">
-      <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-xs-right"></i> Work </a></li>
-      <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white float-xs-right"></i> Private </a></li>
-      <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-xs-right"></i> Saved </a></li>
+    <ul class="nav nav-pills nav-stacked nav-email-folders mb-lg flex-column">
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-right"></i> Work </a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white float-right"></i> Private </a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-right"></i> Saved </a></li>
     </ul>
   </div>
-  <div *ngIf="mailListShow" mail-list [folderName]="currentFolderName" (replyMail)="onReplyMail($event)" class="col-lg-9 col-xl-10 col-xs-12"></div>
-  <div *ngIf="mailFormShow" mail-form (backToMailList)="changeEmailComponents('mailList')" [message]="repliedMessage" class="col-lg-9 col-xl-10 col-xs-12"></div>
-  <div *ngIf="mailDetailShow" mail-detail [mail]="currentMail" (replyMessage)="handleComposeBtn($event)" (backToMailList)="changeEmailComponents('mailList')" class="col-lg-9 col-xl-10 col-xs-12"></div>
+  <div *ngIf="mailListShow" mail-list [folderName]="currentFolderName" (replyMail)="onReplyMail($event)" class="col-lg-9 col-xl-10 col-12"></div>
+  <div *ngIf="mailFormShow" mail-form (backToMailList)="changeEmailComponents('mailList')" [message]="repliedMessage" class="col-lg-9 col-xl-10 col-12"></div>
+  <div *ngIf="mailDetailShow" mail-detail [mail]="currentMail" (replyMessage)="handleComposeBtn($event)" (backToMailList)="changeEmailComponents('mailList')" class="col-lg-9 col-xl-10 col-12"></div>
 </div>

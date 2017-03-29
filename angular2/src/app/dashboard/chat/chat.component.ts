@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-declare var jQuery: any;
+declare let jQuery: any;
 @Component({
   selector: '[chat]',
   templateUrl: './chat.template.html'

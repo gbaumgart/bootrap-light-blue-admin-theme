@@ -34,9 +34,9 @@
               <small>4.</small>
               <strong>Thank you!</strong></a></li>
           </ul>
-
-          <progress id="bar" class="progress progress-inverse progress-sm" max="100" value="0"></progress>
-
+          <div class="progress  bg-blue-light">
+            <div id="bar" class="progress-bar progress-sm bg-inverse" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
           <div class="tab-content">
             <div class="tab-pane" id="tab1">
               <form class="form-horizontal mt-sm" action='' method="POST">
@@ -85,7 +85,7 @@
                         <div class="col-md-10">
                           <select2 id="country-select"
                                    class="select-block-level chzn-select"
-                                   [data]="getSelect2CountriesList()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                                   [data]="getSelect2CountriesList()" [width]="'100%'" [options]="{theme: 'bootstrap'}"></select2>
                           <p class="help-block">Please choose your country destination</p>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                     <div class="col-md-8">
                         <div class="col-md-10">
                           <select2 id="courier" class="select-block-level chzn-select"
-                                   [data]="getSelect2Shipment()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                                   [data]="getSelect2Shipment()" [width]="'100%'" [options]="{theme: 'bootstrap'}"></select2>
                         <p class="help-block">Please choose your shipping option</p>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                         <div class="col-md-10">
                           <select2 id="credit-card-type"
                                    class="select-block-level chzn-select"
-                                   [data]="getSelect2CardTypes()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                                   [data]="getSelect2CardTypes()" [width]="'100%'" [options]="{theme: 'bootstrap'}"></select2>
                         </div>
                     </div>
                   </div>

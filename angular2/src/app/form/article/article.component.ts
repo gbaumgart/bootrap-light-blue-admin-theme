@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-declare var jQuery: any;
+declare let jQuery: any;
 
 @Component({
   selector: '[article]',
@@ -9,6 +9,7 @@ declare var jQuery: any;
 })
 export class Article {
   publishDate: Date;
+  items: Array<string> = [];
 
   ngOnInit(): void {
     jQuery('.selectpicker').selectpicker();

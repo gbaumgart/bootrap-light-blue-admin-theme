@@ -1,7 +1,7 @@
 import { Component, OnChanges, OnInit, ViewEncapsulation } from '@angular/core';
 import { Output, Input } from '@angular/core';
 import { EventEmitter, ElementRef } from '@angular/core';
-declare var jQuery: any;
+declare let jQuery: any;
 
 const MAILS = [
   { id: 1,

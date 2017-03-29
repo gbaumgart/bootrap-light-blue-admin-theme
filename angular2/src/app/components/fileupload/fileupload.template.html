@@ -13,14 +13,16 @@
                    ng2FileDrop
                    [uploader]="uploader">
                 Drop files here
-                <i class="fa fa-download-alt float-xs-right"></i>
+                <i class="fa fa-download-alt float-right"></i>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12 fileupload-progress">
               <!-- The global progress bar -->
-              <progress class="progress progress-xs progress-inverse mt-0" *ngIf="uploader.progress || uploader.isUploading" value="{{uploader.progress}}" max="100"></progress>
+              <div class="progress progress-xs bg-blue-light mt-0" *ngIf="uploader.progress || uploader.isUploading">
+                <div class="progress-bar progress-xs bg-inverse" role="progressbar" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': uploader.progress + '%'}"></div>
+              </div>
               <div *ngIf="uploader.progress || uploader.isUploading" class="progress-extended">{{floor(uploader.progress * uploader.queue.length / 100)}} / {{uploader.queue.length}} files uploaded</div>
             </div>
           </div>
@@ -47,21 +49,23 @@
           <!-- The table listing the files available for upload/download -->
           <table role="presentation" class="table table-striped files-table">
             <tbody class="files">
-            <tr class="template-upload fade in" *ngFor="let item of uploader.queue">
+            <tr class="template-upload fade" *ngFor="let item of uploader.queue">
               <td>
                 <p class="name">{{ item?.file?.name }}</p>
                 <strong class="error text-danger"></strong>
               </td>
               <td>
                 <p class="size">{{ item?.file?.size/1024 | number:'.2' }} KB</p>
-                <progress
-                  hide-on-upload
-                  [fileItem]="item"
-                  class="progress progress-xs progress-success"
-                  value="{{item?.progress}}"
-                  max="100"></progress>
+                <div hide-on-upload [fileItem]="item" class="progress progress-xs bg-blue-light">
+                  <div
+                    class="progress-bar progress-xs bg-success"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    [ngStyle]="{'width': item?.progress + '%'}"></div>
+                </div>
               </td>
-              <td>
+              <td class="width-150">
                 <button class="btn btn-primary btn-sm start"
                         *ngIf="!item.isUploaded"
                         (click)="item.upload()"

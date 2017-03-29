@@ -97,6 +97,11 @@ a{
 
 .btn{
   @include transition(background-color .2s);
+  font-family: $font-family-sans-serif;
+}
+
+.form-control{
+  font-family: $font-family-sans-serif;
 }
 
 svg {

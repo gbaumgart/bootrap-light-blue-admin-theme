@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-declare var Rickshaw: any;
+declare let Rickshaw: any;
 
 import { ColorsData } from '../colors.data';
 

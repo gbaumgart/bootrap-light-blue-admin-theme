@@ -23,7 +23,7 @@
 .error-code{
   margin: 20px;
   font-size: 80px;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-thin;
   color: $white;
   @include media-breakpoint-up(md){
     font-size: 180px;

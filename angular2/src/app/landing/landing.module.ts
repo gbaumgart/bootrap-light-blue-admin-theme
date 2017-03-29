@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { Landing } from './landing.component.ts';
+import { Landing } from './landing.component';
 
 export const routes = [
   { path: '', component: Landing, pathMatch: 'full' }
@@ -19,6 +19,6 @@ export const routes = [
     RouterModule.forChild(routes),
   ]
 })
-export default class LandingModule {
+export class LandingModule {
   static routes = routes;
 }

@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-declare var jQuery;
+declare let jQuery;
 
 @Component({
   selector: '[gallery]',

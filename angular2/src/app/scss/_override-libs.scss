@@ -1,4 +1,10 @@
 /* Awesome Bootstrap Checkbox override */
+
+.abc-checkbox, .abc-radio {
+  margin-bottom: 10px;
+  padding-left: 1.5rem;
+}
+
 .abc-checkbox label{
   &::before {
     background: none;

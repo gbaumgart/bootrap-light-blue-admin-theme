@@ -12,7 +12,7 @@ export const routes = [
   {path: '', redirectTo: 'search', pathMatch: 'full'},
   {path: 'search', component: Search},
   {path: 'invoice', component: Invoice},
-  {path: 'inbox', loadChildren: () => System.import('./inbox/inbox.module') }
+  {path: 'inbox', loadChildren: './inbox/inbox.module#InboxModule' }
 ];
 
 @NgModule({
@@ -27,6 +27,6 @@ export const routes = [
     RouterModule.forChild(routes),
   ]
 })
-export default class SpecialModule {
+export class SpecialModule {
   static routes = routes;
 }

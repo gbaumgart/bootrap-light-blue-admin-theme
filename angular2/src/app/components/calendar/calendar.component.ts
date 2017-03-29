@@ -2,8 +2,8 @@ import 'moment/moment.js';
 
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
-declare var jQuery: any;
-declare var moment: any;
+declare let jQuery: any;
+declare let moment: any;
 
 @Component({
   selector: '[calendar]',

@@ -15,28 +15,28 @@
         <table class="table table-striped static-table">
           <thead>
           <tr>
-            <th class="hidden-xs">#</th>
+            <th class="hidden-sm-down">#</th>
             <th>Picture</th>
             <th>Description</th>
-            <th class="hidden-xs">Info</th>
-            <th class="hidden-xs">Date</th>
-            <th class="hidden-xs">Size</th>
+            <th class="hidden-sm-down">Info</th>
+            <th class="hidden-sm-down">Date</th>
+            <th class="hidden-sm-down">Size</th>
             <th></th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let row of tableStriped; let i = index">
-            <td class="hidden-xs">{{row.id}}</td>
+            <td class="hidden-sm-down">{{row.id}}</td>
             <td>
               <img class="img-rounded" [src]="row.picture" alt="" height="50">
             </td>
             <td>
               {{row.description}}
               <div *ngIf="row.label">
-                <span class="tag tag-{{row.label.colorClass}}">{{row.label.text}}</span>
+                <span class="badge badge-{{row.label.colorClass}}">{{row.label.text}}</span>
               </div>
             </td>
-            <td class="hidden-xs">
+            <td class="hidden-sm-down">
               <p class="no-margin">
                 <small>
                   <span class="fw-semi-bold">Type:</span>
@@ -50,14 +50,17 @@
                 </small>
               </p>
             </td>
-            <td class="hidden-xs text-muted">
+            <td class="hidden-sm-down text-muted">
               {{row.date | date}}
             </td>
-            <td class="hidden-xs text-muted">
+            <td class="hidden-sm-down text-muted">
               {{row.size}}
             </td>
             <td class="width-150">
-              <progress progress-animate class="progress progress-sm progress-{{row.progress.colorClass}}" [value]="row.progress.percent" max="100"></progress>
+              <div class="progress  bg-blue-light">
+                <div progress-animate class="progress-bar progress-sm bg-{{row.progress.colorClass}}" role="progressbar" [value]="row.progress.percent" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!--<progress progress-animate class="progress progress-sm progress-{{row.progress.colorClass}}" [value]="row.progress.percent" max="100"></progress>-->
             </td>
           </tr>
 
@@ -65,7 +68,7 @@
 
         </table>
         <div class="clearfix">
-          <div class="float-xs-right">
+          <div class="float-right">
             <button class="btn btn-secondary btn-sm">
               Send to ...
             </button>
@@ -90,7 +93,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-6 col-xs-12">
+  <div class="col-lg-6 col-12">
     <section widget class="widget">
       <header>
         <h5>Table <span class="fw-semi-bold">Styles</span></h5>
@@ -128,7 +131,7 @@
             </td>
             <td>Mark</td>
             <td>Otto</td>
-            <td><span class="tag tag-danger">Online</span></td>
+            <td><span class="badge badge-danger">Online</span></td>
           </tr>
           <tr>
             <td>
@@ -137,9 +140,9 @@
                 <label for="checkbox3"></label>
               </div>
             </td>
-            <td>Jacob <span class="tag tag-warning text-gray-dark fw-semi-bold">ALERT!</span></td>
+            <td>Jacob <span class="badge badge-warning text-gray-dark fw-semi-bold">ALERT!</span></td>
             <td>Thornton</td>
-            <td><span class="tag bg-gray-light">Away</span></td>
+            <td><span class="badge bg-gray-light">Away</span></td>
           </tr>
           <tr>
             <td>
@@ -150,7 +153,7 @@
             </td>
             <td>Larry</td>
             <td>the Bird</td>
-            <td><span class="tag tag-danger">Construct</span></td>
+            <td><span class="badge badge-danger">Construct</span></td>
           </tr>
           </tbody>
         </table>
@@ -174,28 +177,28 @@
               <td>Mark</td>
               <td>Otto</td>
               <td><a href="#">ottoto@example.com</a></td>
-              <td><span class="tag tag-pill bg-gray-lighter text-gray fw-semi-bold">Pending</span></td>
+              <td><span class="badge badge-pill bg-gray-lighter text-gray fw-semi-bold">Pending</span></td>
             </tr>
             <tr>
               <td>2</td>
               <td>Jacob</td>
               <td>Thornton</td>
               <td><a href="#">fat.thor@example.com</a></td>
-              <td><span class="tag tag-pill bg-gray-lighter text-gray-light">Unconfirmed</span></td>
+              <td><span class="badge badge-pill bg-gray-lighter text-gray-light">Unconfirmed</span></td>
             </tr>
             <tr>
               <td>3</td>
               <td>Larry</td>
               <td>the Bird</td>
               <td><a href="#">larry@example.com</a></td>
-              <td><span class="tag tag-pill bg-gray-lighter text-gray fw-semi-bold">New</span></td>
+              <td><span class="badge badge-pill bg-gray-lighter text-gray fw-semi-bold">New</span></td>
             </tr>
             <tr>
               <td>4</td>
               <td>Peter</td>
               <td>Horadnia</td>
               <td><a href="#">peter@example.com</a></td>
-              <td><span class="tag tag-pill bg-gray-lighter text-gray-light">Active</span></td>
+              <td><span class="badge badge-pill bg-gray-lighter text-gray-light">Active</span></td>
             </tr>
             </tbody>
           </table>
@@ -203,7 +206,7 @@
       </div>
     </section>
   </div>
-  <div class="col-lg-6 col-xs-12">
+  <div class="col-lg-6 col-12">
     <section widget class="widget">
       <header>
         <h5>Table <span class="fw-semi-bold">Styles</span></h5>
@@ -227,8 +230,8 @@
               </div>
             </th>
             <th>Product</th>
-            <th class="text-xs-right">Price</th>
-            <th class="text-xs-center">Sales</th>
+            <th class="text-right">Price</th>
+            <th class="text-center">Sales</th>
           </tr>
           </thead>
           <tbody>
@@ -240,8 +243,8 @@
               </div>
             </td>
             <td>On the Road</td>
-            <td class="text-xs-right">$25 224.2</td>
-            <td class="text-xs-center">
+            <td class="text-right">$25 224.2</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#618fb0'}" [data]="[13,14,16,15,4,14,20]"></div>
             </td>
           </tr>
@@ -253,8 +256,8 @@
               </div>
             </td>
             <td>HP Core i7</td>
-            <td class="text-xs-right">$87 346.1</td>
-            <td class="text-xs-center">
+            <td class="text-right">$87 346.1</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#999'}" [data]="[14,12,16,11,17,19,16]"></div>
             </td>
           </tr>
@@ -266,8 +269,8 @@
               </div>
             </td>
             <td>Let's Dance</td>
-            <td class="text-xs-right">$57 944.6</td>
-            <td class="text-xs-center">
+            <td class="text-right">$57 944.6</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#f0b518'}" [data]="[11,17,19,16,14,12,16]"></div>
             </td>
           </tr>
@@ -279,8 +282,8 @@
               </div>
             </td>
             <td>Air Pro</td>
-            <td class="text-xs-right">$118 533.1</td>
-            <td class="text-xs-center">
+            <td class="text-right">$118 533.1</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#e5603b'}" [data]="[13,14,20,16,15,4,14]"></div>
             </td>
           </tr>
@@ -292,8 +295,8 @@
               </div>
             </td>
             <td>Version Control</td>
-            <td class="text-xs-right">$72 854.5</td>
-            <td class="text-xs-center">
+            <td class="text-right">$72 854.5</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#618fb0'}" [data]="[16,15,4,14,13,14,20]"></div>
             </td>
           </tr>
@@ -329,8 +332,8 @@
               </div>
             </th>
             <th>Product</th>
-            <th class="text-xs-right">Price</th>
-            <th class="text-xs-center">Sales</th>
+            <th class="text-right">Price</th>
+            <th class="text-center">Sales</th>
           </tr>
           </thead>
           <tbody>
@@ -342,8 +345,8 @@
               </div>
             </td>
             <td>On the Road</td>
-            <td class="text-xs-right">$25 224.2</td>
-            <td class="text-xs-center">
+            <td class="text-right">$25 224.2</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#618fb0'}" [data]="[13,14,16,15,4,14,20]"></div>
             </td>
           </tr>
@@ -355,8 +358,8 @@
               </div>
             </td>
             <td>HP Core i7</td>
-            <td class="text-xs-right">$87 346.1</td>
-            <td class="text-xs-center">
+            <td class="text-right">$87 346.1</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#999'}" [data]="[14,12,16,11,17,19,16]"></div>
             </td>
           </tr>
@@ -368,8 +371,8 @@
               </div>
             </td>
             <td>Let's Dance</td>
-            <td class="text-xs-right">$57 944.6</td>
-            <td class="text-xs-center">
+            <td class="text-right">$57 944.6</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#f0b518'}" [data]="[11,17,19,16,14,12,16]"></div>
             </td>
           </tr>
@@ -381,8 +384,8 @@
               </div>
             </td>
             <td>Air Pro</td>
-            <td class="text-xs-right">$118 533.1</td>
-            <td class="text-xs-center">
+            <td class="text-right">$118 533.1</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#e5603b'}" [data]="[13,14,20,16,15,4,14]"></div>
             </td>
           </tr>
@@ -394,8 +397,8 @@
               </div>
             </td>
             <td>Version Control</td>
-            <td class="text-xs-right">$72 854.5</td>
-            <td class="text-xs-center">
+            <td class="text-right">$72 854.5</td>
+            <td class="text-center">
               <div class="sparkline" jq-sparkline [options]="{type: 'bar', barColor: '#618fb0'}" [data]="[16,15,4,14,13,14,20]"></div>
             </td>
           </tr>

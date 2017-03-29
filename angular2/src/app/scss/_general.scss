@@ -30,6 +30,7 @@
 
 html{
   min-height: 100%;
+  font-size: $font-size-root;
 }
 
 body{
@@ -44,6 +45,10 @@ body{
 
 h1,h2,h3,h4,h5,h6{
   font-weight: $font-weight-base;
+
+  &::first-letter {
+    margin-top: 0;
+  }
 
   small{
     color: $text-muted;
@@ -102,6 +107,11 @@ a{
 
 .btn{
   @include transition(background-color .2s);
+  font-family: $font-family-sans-serif;
+}
+
+.form-control{
+  font-family: $font-family-sans-serif;
 }
 
 strong, b {

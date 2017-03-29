@@ -2,6 +2,13 @@
 Changelog
 -
 
+Version 3.6.0
+- Bootstrap 4 alpha 6 version
+- Bootstrap Bugfixes
+- Webpack 2.0 version
+- Add angular preload strategy to fix first long time app loading
+- Add pages loader
+
 Version 3.5.0
 
 - Angular 2.0 Seed Version

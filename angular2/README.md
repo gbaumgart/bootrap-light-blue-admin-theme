@@ -1,4 +1,4 @@
-# Light Blue (3.5.0 Full version) with Angular 2.4 Final Release support
+# Light Blue (3.6.0 Full version) with Angular 2.4 Final Release support
 
 
 > An Angular 2 application featuring [Angular 2](https://angular.io)

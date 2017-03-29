@@ -19,6 +19,6 @@ export const routes = [
     RouterModule.forChild(routes),
   ]
 })
-export default class ErrorModule {
+export class ErrorModule {
   static routes = routes;
 }

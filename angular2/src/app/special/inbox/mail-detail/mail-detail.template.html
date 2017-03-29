@@ -1,5 +1,5 @@
 <div class="clearfix mb-xs">
-  <a class="btn btn-transparent btn-sm width-50 float-xs-left" id="back-btn" (click)="onToBack()">
+  <a class="btn btn-transparent btn-sm width-50 float-left" id="back-btn" (click)="onToBack()">
     <i class="fa fa-angle-left fa-lg"></i>
   </a>
 </div>
@@ -14,23 +14,23 @@
     <div id="email-view" class="email-view">
       <div class="email-details clearfix">
         <div class="email-details-content">
-          <span class="thumb thumb-sm float-xs-left">
+          <span class="thumb thumb-sm float-left">
             <img class="rounded-circle" src="assets/img/people/a5.jpg" alt="Philip Horbacheuski">
           </span>
-          <div class="float-xs-left">
+          <div class="float-left">
             <strong>{{mail.sender}}</strong>
             <span *ngIf="mail.senderMail" class="email">&lt;{{mail.senderMail}}&gt;</span>
             <span class="receiver">to Wrapbootstrap</span>
           </div>
-          <div class="email-actions float-xs-right">
-            <div class="btn-group">
+          <div class="email-actions float-right">
+            <div class="btn-group d-inline-flex">
               <button id="email-opened-reply" class="btn btn-sm btn-transparent" (click)="goToReply(mail)">
                 <i class="fa fa-reply mr-xs"></i> Reply
               </button>
               <button class="btn btn-sm btn-transparent dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-angle-down"></i>
               </button>
-              <ul class="dropdown-menu float-xs-right">
+              <ul class="dropdown-menu float-right">
                 <li><a class="dropdown-item" href="#"><i class="fa fa-reply reply-btn"></i> Reply</a></li>
                 <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-right reply-btn"></i> Forward</a></li>
                 <li><a class="dropdown-item" href="#"><i class="fa fa-print"></i> Print</a></li>
@@ -40,7 +40,7 @@
               </ul>
             </div>
           </div>
-          <time class="email-date float-xs-right">
+          <time class="email-date float-right">
             0:30
           </time>
         </div>

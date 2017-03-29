@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-declare var jQuery: any;
+declare let jQuery: any;
 
 @Component({
   selector: 'landing',

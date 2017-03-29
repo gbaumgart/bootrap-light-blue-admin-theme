@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input } from '@angular/core';
 
-declare var jQuery: any;
+declare let jQuery: any;
 
 @Directive({
   selector: '[flot-chart-animator]'

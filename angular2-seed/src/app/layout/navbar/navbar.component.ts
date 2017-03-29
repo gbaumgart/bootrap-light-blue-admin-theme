@@ -32,17 +32,17 @@ export class Navbar {
 
   searchFormOpen(): void {
     if (this.searchFormState) {
-      this._changeStyleElement('#search-form', 'height', '40px');
-      this._changeStyleElement('.notifications ', 'top', '86px');
+      this.changeStyleElement('#search-form', 'height', '40px');
+      this.changeStyleElement('.notifications ', 'top', '86px');
     } else {
-      this._changeStyleElement('#search-form', 'height', '0px');
-      this._changeStyleElement('.notifications ', 'top', '46px');
+      this.changeStyleElement('#search-form', 'height', '0px');
+      this.changeStyleElement('.notifications ', 'top', '46px');
     }
     this.searchFormState = !this.searchFormState;
   }
 
-  _changeStyleElement(selector, styleName, styleValue): void {
-    this.renderer.setElementStyle(
-      this.el.nativeElement.querySelector(selector), styleName, styleValue);
+  private changeStyleElement(selector, styleName, styleValue): void {
+    this.renderer.setElementStyle(this.el.nativeElement
+      .querySelector(selector), styleName, styleValue);
   }
 }

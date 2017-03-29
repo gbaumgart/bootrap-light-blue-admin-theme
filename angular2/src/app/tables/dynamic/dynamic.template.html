@@ -25,7 +25,7 @@
               [rows]="rows" [columns]="columns">
     </ng-table>
     <pagination *ngIf="config.paging"
-                class="pagination-sm"
+                class="pagination mt-1"
                 [(ngModel)]="page"
                 [totalItems]="length"
                 [itemsPerPage]="itemsPerPage"
@@ -54,7 +54,7 @@
       <a href="https://github.com/mariuszfoltak/angular2-datatable" target="_blank">angular2-datatables</a>
     </p>
     <div class="mt">
-      <div class="width-200 float-xs-right">
+      <div class="width-200 float-right">
         <div class="input-group input-group-sm">
           <span class="input-group-addon">
             <i class="fa fa-search"></i>
@@ -103,7 +103,9 @@
           <td class="hidden-sm-down"><a href="#">{{person.description}}</a></td>
           <td class="hidden-sm-down">{{person.date}}</td>
           <td class="width-150">
-            <progress class="progress progress-sm progress-{{person.status.type}}" value="{{person.status.progress}}" max="100"></progress>
+            <div class="progress  bg-blue-light">
+              <div class="progress-bar progress-sm bg-{{person.status.type}}" role="progressbar" [ngStyle]="{'width': person.status.progress + '%'}" [attr.aria-valuenow]="person.status.progress" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
           </td>
         </tr>
         <tr *ngIf="(mf.data | SearchPipe : searchText).length === 0">

@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input } from '@angular/core';
 
-declare var Rickshaw: any;
+declare let Rickshaw: any;
 
 @Directive ({
   selector: '[rickshaw-chart]'

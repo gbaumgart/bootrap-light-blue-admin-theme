@@ -85,7 +85,7 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template (Light Blue 3.5.0)</h2>
+                    <h2>About Template (Light Blue 3.6.0)</h2>
                     <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful
                         front-end template. It's very useful for designing either your next
                         web application or admin entrance for it.</p>
@@ -114,7 +114,7 @@
                     </ul>
                     <p>Every version (as of 3.3.0 there are <a href="../html-transparent">html-transparent-light</a>,
                         <a href="../html-transparent-dark">html-transparent-dark</a> and <a href="../html-white">html-white</a>)
-                        goes with the following folders (except <a href="../angular2">Angular 2.0</a> version):</p>
+                        goes with the following folders (except <a href="../angular2">Angular 2.4</a> version):</p>
                     <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
                         <li><strong>src</strong> - handlebars & sass sources;</li>
                         <li><strong>dist</strong> - compiled html & css files;</li>
@@ -223,8 +223,8 @@ $> bower install</code></pre>
                     <p>For more instruction please refer to Angular 2.0 Final seed <a href="../angular2/readme.md">readme.md</a>.</p>
 
                     <h2 id="seed">Seed (minimal setup)</h2>
-                    <p>There are two more versions of Sing App included into the package: <a href="../angular-seed/dist">angular seed version</a> and <a href="../angular2-seed">angular 2 seed version</a>. Both seed versions are intended to be used when you want to build a project
-                        from scratch and do not want to have all libraries enabled in Sing App demo to be included in your project be default. So, in short, it's a same Sing App angular
+                    <p>There is one more version of Light Blue included into the package <a href="../angular2-seed">angular 2 seed version</a>. It is intended to be used when you want to build a project
+                        from scratch and do not want to have all libraries enabled in Light Blue demo to be included in your project be default. So, in short, it's a same Light Blue angular
                         version but containing only essential functionality. You don't need to throw anything out of it; it is ready to be a "seed" for
                         your project - just start to add your code.</p>
 
@@ -244,7 +244,7 @@ import { CurrentDateService } from './current-date.service.ts';
     styleUrls: ['./current-date.style.scss']         <-- links to your custom styles
 })
 export class CurrentDateComponent {
-    name = 'Get Date Widget on Sing App';
+    name = 'Get Date Widget on Light Blue';
     currentDate: string;
 
     constructor(public currentDateService: currentDateService) {}
@@ -329,6 +329,23 @@ export class CurrentDateModule {
 
                     <h3>Change Log</h3>
                     <hr/>
+                    <h4><strong>Version 3.6.0</strong></h4>
+                    <ul>
+                        <li>- Bootstrap 4 alpha 6 version</li>
+                        <li>- Bootstrap Bugfixes</li>
+                        <li>- Webpack 2.0 version</li>
+                        <li>- Add angular preload strategy to fix first long time app loading</li>
+                        <li>- Add pages loader</li>
+                    </ul>
+                    <h4><strong>Version 3.5.0</strong></h4>
+                    <ul>
+                        <li>- Angular 2.0 Full Version</li>
+                    </ul>
+                    <h4><strong>Version 3.4.0</strong></h4>
+                    <ul>
+                        <li>- Angular 2.0 Seed Version</li>
+                    </ul>
+
                     <h4><strong>Version 3.3.0</strong></h4>
                     <ul>
                         <li>- Completely new Transparent Light version!</li>

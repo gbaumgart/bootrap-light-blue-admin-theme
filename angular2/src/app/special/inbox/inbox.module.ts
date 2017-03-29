@@ -29,6 +29,6 @@ export const routes = [
         SearchPipe
     ]
 })
-export default class InboxModule {
+export class InboxModule {
     static routes = routes;
 }

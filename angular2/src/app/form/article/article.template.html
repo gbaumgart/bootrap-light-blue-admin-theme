@@ -110,6 +110,16 @@
                 </select>
               </div>
             </div>
+            <div class="form-group row">
+              <label for="article-tags" class="col-form-label col-md-4">Tags</label>
+              <div class="col-md-8">
+                <tag-input theme='form-control input-tags' [(ngModel)]='items' id="article-tags" name="article-tags">
+                  <tag-input-dropdown [autocompleteItems]="[{display: 'Item1', value: 0}, 'item2', 'item3']">
+                  </tag-input-dropdown>
+                </tag-input>
+                <span class="help-block">Write or select a tag and press "Enter" to add it.</span>
+              </div>
+            </div>
             <!--<div class="form-group row">-->
               <!--<label for="article-tags" class="col-form-label col-md-4">Tags</label>-->
               <!--<div class="col-md-8">-->

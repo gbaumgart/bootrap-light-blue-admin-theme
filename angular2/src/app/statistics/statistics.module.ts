@@ -47,6 +47,6 @@ export const routes = [
     WidgetModule
   ]
 })
-export default class StatisticsModule {
+export class StatisticsModule {
   static routes = routes;
 }

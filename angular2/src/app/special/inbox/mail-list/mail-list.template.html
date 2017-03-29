@@ -1,7 +1,7 @@
 <div class="clearfix mb-xs">
-  <div class="float-xs-right" id="folder-stats">
+  <div class="float-right" id="folder-stats">
     <p class="widget-email-count">Showing 1 - 10 of 96 messages</p>
-    <ul class="pagination pagination-sm widget-email-pagination">
+    <ul class="pagination widget-email-pagination">
       <li class="prev disabled page-item"><a class="page-link" href="#"><i class="fa fa-chevron-left"></i></a></li>
       <li class="active page-item"><a class="page-link" href="#">1</a></li>
       <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -12,8 +12,8 @@
 <section widget class="widget widget-email">
   <header id="widget-email-header">
     <div class="row">
-      <div class="col-sm-4">
-        <div class="btn-group">
+      <div class="col-sm-4 d-inline-flex">
+        <div class="btn-group mr-1">
           <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" data-toggle="dropdown">
             Select
             <i class="fa fa-angle-down "></i>
@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="col-sm-8">
-        <input class="form-control form-control-sm input-transparent width-200 float-xs-right" id="mailbox-search" [(ngModel)]="searchText" type="text" placeholder="Search Messages">
+        <input class="form-control form-control-sm input-transparent width-200 float-right" id="mailbox-search" [(ngModel)]="searchText" type="text" placeholder="Search Messages">
       </div>
     </div>
   </header>

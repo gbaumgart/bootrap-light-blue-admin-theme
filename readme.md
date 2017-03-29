@@ -1,15 +1,15 @@
-Light Blue v3.5.0 with Angular 2.0 Final Release support
+Light Blue v3.6.0 with Angular 2.4 Final Release support
 =========
 
-![Light Blue Preview](http://demo.flatlogic.com/3.5.0/light-blue-preview-2017.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.6.0/light-blue-preview-2017.png)
 
 **World First Transparent Dashboard**
 
-Available in five versions [transparent dark (basic)](http://demo.flatlogic.com/3.5.0/dark),
- [transparent light](http://demo.flatlogic.com/3.5.0/light),
- [white opaque](http://demo.flatlogic.com/3.5.0/white) all with **handlebars** and **bower** under the hood
+Available in five versions [transparent dark (basic)](http://demo.flatlogic.com/3.6.0/dark),
+ [transparent light](http://demo.flatlogic.com/3.6.0/light),
+ [white opaque](http://demo.flatlogic.com/3.6.0/white) all with **handlebars** and **bower** under the hood;
  plus Angular 2.4 Seed version
- and completely new [Angular 2.4 Full version](http://demo.flatlogic.com/3.5.0/a2).
+ and completely new [Angular 2.4 Full version](http://demo.flatlogic.com/3.6.0/a2).
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
@@ -18,7 +18,7 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-New Version 3.5.0 Released!
+New Version 3.6.0 Released!
 -
 
 - Angular 2.4 Full Version
@@ -39,10 +39,8 @@ Email us at [support@flatlogic.com](mailto:support@flatlogic.com) or tweet to [F
 Next Release Plan
 -
 
-  - Bootstrap 4.0 (is already [being developed](https://twitter.com/flatlogicinc/status/682193108549931010))
-  - Angular 2.0 Full version
   - Rails seed project
-  - .NET seed project
+  - React seed project
 
 Full feature list
 -

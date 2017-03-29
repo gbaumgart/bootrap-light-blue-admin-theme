@@ -15,6 +15,9 @@
 }
 
 .email-actions {
+  .btn-group {
+    display: inline-flex !important;
+  }
   .dropdown-toggle {
     padding-left: 8px;
     padding-right: 8px;

@@ -1,6 +1,6 @@
 import { Directive, ElementRef } from '@angular/core';
-declare var jQuery: any;
-declare var Tether: any;
+declare let jQuery: any;
+declare let Tether: any;
 
 @Directive ({
   selector: '[form-wizard]'
@@ -19,7 +19,7 @@ export class FormWizard {
       let $current = index + 1;
       let $percent = ($current / $total) * 100;
       let $wizard = jQuery('#wizard');
-      $wizard.find('#bar').attr('value', $percent);
+      $wizard.find('#bar').css('width', $percent + '%');
 
       if ($current >= $total) {
         $wizard.find('.pager .next').hide();

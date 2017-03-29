@@ -1,6 +1,6 @@
 import { Component, Input, Output,
   ElementRef, ViewEncapsulation, EventEmitter } from '@angular/core';
-declare var jQuery: any;
+declare let jQuery: any;
 
 import 'jqvmap/dist/jquery.vmap';
 import 'jqvmap/dist/maps/jquery.vmap.world';

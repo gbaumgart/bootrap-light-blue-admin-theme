@@ -1,16 +1,14 @@
 import { Routes } from '@angular/router';
-import { ErrorComponent } from './error/error.component';
-
 
 export const ROUTES: Routes = [{
   path: '', redirectTo: 'app', pathMatch: 'full'
 }, {
-  path: 'app',   loadChildren: () => System.import('./layout/layout.module')
+  path: 'app',   loadChildren: './layout/layout.module#LayoutModule'
 }, {
-  path: 'login', loadChildren: () => System.import('./login/login.module')
+  path: 'login', loadChildren: './login/login.module#LoginModule'
 }, {
-  path: 'error', component: ErrorComponent
+  path: 'error', loadChildren: './error/error.module#ErrorModule'
 }, {
-  path: '**',    component: ErrorComponent
+  path: '**',    loadChildren: './error/error.module#ErrorModule'
 }
 ];

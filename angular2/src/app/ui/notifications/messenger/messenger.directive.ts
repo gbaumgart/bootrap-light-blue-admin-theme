@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-declare var jQuery: any;
-declare var Messenger: any;
+declare let jQuery: any;
+declare let Messenger: any;
 
 @Directive ({
   selector: '[messenger-demo]'

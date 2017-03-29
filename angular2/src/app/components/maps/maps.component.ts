@@ -1,8 +1,8 @@
 import { Component, NgZone } from '@angular/core';
 import { MapsAPILoader } from 'angular2-google-maps/core';
 import { Select2OptionData } from 'ng2-select2/ng2-select2';
-declare var google: any;
-declare var jQuery: any;
+declare let google: any;
+declare let jQuery: any;
 
 @Component({
   selector: '[maps]',

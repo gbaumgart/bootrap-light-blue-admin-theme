@@ -1,5 +1,5 @@
-<div class="navbar-collapse">
-  <ul class="nav navbar-nav navbar-right float-xs-right">
+<nav class="navbar-collapse">
+  <ul class="nav navbar-nav navbar-right float-right">
     <li class="nav-item visible-phone-landscape">
       <a (click)="searchFormOpen()" class="nav-link" href="#" id="search-toggle">
         <i class="fa fa-search"></i>
@@ -48,7 +48,7 @@
           </a>
         </li>
         <li role="presentation">
-          <a href="#" class="dropdown-item text-xs-center see-all">
+          <a href="#" class="dropdown-item text-center see-all">
             See all messages <i class="fa fa-arrow-right"></i>
           </a>
         </li>
@@ -65,7 +65,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket ">
             <div class="picture">
-              <span class="tag tag-important"><i class="fa fa-bell-o"></i></span>
+              <span class="badge badge-important"><i class="fa fa-bell-o"></i></span>
             </div>
             <div class="details">
               Check out this awesome ticket
@@ -75,7 +75,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket">
             <div class="picture">
-              <span class="tag tag-warning"><i class="fa fa-question-circle"></i></span>
+              <span class="badge badge-warning"><i class="fa fa-question-circle"></i></span>
             </div>
             <div class="details">
               "What is the best way to get ...
@@ -85,7 +85,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket">
             <div class="picture">
-              <span class="tag tag-success"><i class="fa fa-tag"></i></span>
+              <span class="badge badge-success"><i class="fa fa-tag"></i></span>
             </div>
             <div class="details">
               This is just a simple notification
@@ -95,7 +95,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket">
             <div class="picture">
-              <span class="tag tag-info"><i class="fa fa-info-circle"></i></span>
+              <span class="badge badge-info"><i class="fa fa-info-circle"></i></span>
             </div>
             <div class="details">
               12 new orders has arrived today
@@ -105,7 +105,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket">
             <div class="picture">
-              <span class="tag tag-important"><i class="fa fa-plus"></i></span>
+              <span class="badge badge-important"><i class="fa fa-plus"></i></span>
             </div>
             <div class="details">
               One more thing that just happened
@@ -113,7 +113,7 @@
           </a>
         </li>
         <li role="presentation">
-          <a href="#" class="dropdown-item text-xs-center see-all">
+          <a href="#" class="dropdown-item text-center see-all">
             See all tickets <i class="fa fa-arrow-right"></i>
           </a>
         </li>
@@ -179,7 +179,7 @@
         </li>
       </ul>
     </li>
-    <li class="hidden-md-up">
+    <li class="hidden-md-up mr-3">
       <a href="#" (click)="sidebarOpen()" class="btn-navbar" data-toggle="collapse" data-target=".sidebar" title="">
         <i class="fa fa-bars"></i>
       </a>
@@ -188,14 +188,14 @@
       <a class="nav-link" routerLink="/login"><i class="glyphicon glyphicon-off"></i></a>
     </li>
   </ul>
-  <form id="search-form" class="navbar-form float-xs-right" role="search">
+  <form id="search-form" class="navbar-form float-right" role="search">
     <input type="search" class="form-control search-query" placeholder="Search...">
   </form>
-  <div class="notifications float-xs-right">
-    <div class="alert float-xs-right">
+  <div class="notifications float-right">
+    <div class="alert float-right">
       <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
       <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a (click)="settings.isOpen = !settings.isOpen" id="notification-link" href="#">settings</a> on
       the right!
     </div>
   </div>
-</div>
+</nav>

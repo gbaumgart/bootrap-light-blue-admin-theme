@@ -112,6 +112,28 @@
 }
 
 /**
+ * Bootstrap select
+ */
+
+.selectpicker.form-control {
+  height: auto;
+}
+
+.bootstrap-select {
+  width: auto !important;
+    z-index: 1;
+
+  &.show .dropdown-menu.inner {
+    display: block;
+  }
+
+  &.show {
+    z-index: 3;
+    display: inline-block !important;
+  }
+}
+
+/**
  * Select2 Bootstrap CSS
  */
 /*
@@ -244,6 +266,10 @@
   background-color: rgba(#fff1b8, .35);
 }
 
+td.fc-day-top.fc-today.fc-state-highlight {
+  border-color: rgb(221, 221, 221);
+}
+
 a.fc-event{
   height: auto;
   line-height: 20px;
@@ -279,7 +305,19 @@ a.fc-event{
 .abc-checkbox, .abc-radio {
   label {
     font-weight: $font-weight-normal;
+
+    &:before {
+      top: 1px;
+    }
   }
+}
+
+.abc-checkbox label:after {
+  top: 1px;
+}
+
+.abc-radio label:after {
+  top: 4px;
 }
 
 /***********************************/
@@ -330,7 +368,6 @@ a.fc-event{
   .btn.dropdown-toggle {
     padding-left: 10px;
     box-sizing: border-box;
-    margin-left: -1px;
 
     &:after {
       margin-right: 0;
@@ -347,7 +384,7 @@ a.fc-event{
     width: 100%; // For `<button>`s
     padding: 3px 20px;
     clear: both;
-    font-weight: normal;
+    font-weight: $font-weight-thin;
     line-height: $line-height-base;
     color: $dropdown-link-color;
     text-align: inherit; // For `<button>`s
@@ -385,7 +422,6 @@ a.fc-event{
         cursor: $cursor-disabled;
         background-color: transparent;
         background-image: none; // Remove CSS gradient
-        @include reset-filter();
       }
     }
   }

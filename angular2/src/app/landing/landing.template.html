@@ -1,23 +1,11 @@
 <div class="landing" id="landing-top">
   <div class="container">
     <header class="page-header">
-      <div class="navbar">
-        <div class="logo float-xs-left">
+      <div class="navbar flex-row">
+        <div class="logo">
           <h4><a href="index.html">Light <strong>Blue</strong></a> <small>bootstrap 4 template</small></h4>
         </div>
-        <ul class="nav navbar-nav float-xs-right navbar-menu hidden-sm-down">
-          <li class="active">
-            <a href="#">
-              Home
-            </a>
-          </li>
-          <li>
-            <a [routerLink]="['/landing']" fragment="about" (click)="onAnchorClick()">
-              About
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-buttons float-xs-right">
+        <ul class="navbar-buttons">
           <li>
             <a href="index.html" class="btn btn-sm btn-transparent">
               Preview&nbsp;
@@ -29,6 +17,18 @@
                class="btn btn-sm btn-transparent">
               Download&nbsp;
               <i class="fa fa-download"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav flex-row navbar-menu hidden-sm-down ml-auto">
+          <li class="active">
+            <a href="#">
+              Home
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/landing']" fragment="about" (click)="onAnchorClick()">
+              About
             </a>
           </li>
         </ul>
@@ -44,7 +44,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row">
-              <div class="col-xs-6">
+              <div class="col-6">
                 <div class="animated fadeInLeftBig">
                   <h1 class="slide-one-header"><strong>Light Blue</strong> <br>Dashboard Template</h1>
                   <p class="lead hidden-sm-down">
@@ -61,41 +61,41 @@
                   </p>
                 </div>
               </div>
-              <div class="col-xs-6">
-                <div class="text-xs-center animated fadeInRightBig">
+              <div class="col-6">
+                <div class="text-center animated fadeInRightBig">
                   <img src="assets/img/jpeg/light-blue-preview-1.png" alt="Second slide">
                 </div>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <h1 class="slide-two-header text-xs-center animated fadeInDown mt-1">
+            <h1 class="slide-two-header text-center animated fadeInDown mt-1">
               <strong>Transparent</strong> & <strong>White</strong>
               Versions
             </h1>
             <div class="row">
-              <div class="col-xs-6">
+              <div class="col-6">
                 <div class="animated fadeInLeftBig">
                   <p>
                     <a href="index.html">
                       <img src="assets/img/jpeg/light-blue-laptop-transparent.png" alt=""/>
                     </a>
                   </p>
-                  <p class="text-xs-center">
+                  <p class="text-center">
                     <a href="index.html" class="btn btn-transparent btn-lg btn-version-preview">
                       Preview &nbsp; <i class="fa fa-angle-right"></i>
                     </a>
                   </p>
                 </div>
               </div>
-              <div class="col-xs-6">
+              <div class="col-6">
                 <div class="animated fadeInRightBig">
                   <p>
                     <a href="../white/index.html">
                       <img src="assets/img/jpeg/light-blue-laptop-white.png" alt=""/>
                     </a>
                   </p>
-                  <p class="text-xs-center">
+                  <p class="text-center">
                     <a href="../white/index.html" class="btn btn-white btn-lg btn-version-preview">
                       Preview &nbsp; <i class="fa fa-angle-right"></i>
                     </a>
@@ -106,7 +106,7 @@
           </div>
           <div class="carousel-item">
             <div class="row">
-              <div class="col-xs-6">
+              <div class="col-6">
                 <div class="animated fadeInLeft">
                   <h1 class="slide-three-header">
                     <strong>Fully</strong>
@@ -120,7 +120,7 @@
                   </p>
                 </div>
               </div>
-              <div class="col-xs-6">
+              <div class="col-6">
                 <p class="animated fadeInUp" style="margin-top: 20px">
                   <img src="assets/img/jpeg/light-blue-phone.png" alt=""/>
                 </p>
@@ -128,11 +128,11 @@
             </div>
           </div>
         </div>
-        <a class="left carousel-control carousel-control-landing" href="#carousel-landing" data-slide="prev">
-          <span class="icon-prev"></span>
+        <a class="carousel-control-prev carousel-control-landing" href="#carousel-landing" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
         </a>
-        <a class="right carousel-control carousel-control-landing" href="#carousel-landing" data-slide="next">
-          <span class="icon-next"></span>
+        <a class="carousel-control-next carousel-control-landing" href="#carousel-landing" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
         </a>
       </div>
     </div>
@@ -150,14 +150,14 @@
             <div class="col-md-4">
               <section class="feature">
                 <div class="row">
-                  <div class="col-xs-4">
+                  <div class="col-4">
                     <p>
                       <span class="icon background-danger">
                         <i class="fa fa-bold"></i>
                       </span>
                     </p>
                   </div>
-                  <div class="col-xs-8">
+                  <div class="col-8">
                     <h4>Bootstrap 4</h4>
                     <p>
                       Light Blue comes with built-in Bootstrap 4 support.
@@ -170,14 +170,14 @@
             <div class="col-md-4">
               <section class="feature">
                 <div class="row">
-                  <div class="col-xs-4">
+                  <div class="col-4">
                     <p>
                       <span class="icon background-warning">
                         <i class="fa fa-magic"></i>
                       </span>
                     </p>
                   </div>
-                  <div class="col-xs-8">
+                  <div class="col-8">
                     <h4>Unique design</h4>
                     <p>
                       Transparent widgets and gradient background - have you seen something like this
@@ -190,14 +190,14 @@
             <div class="col-md-4">
               <section class="feature">
                 <div class="row">
-                  <div class="col-xs-4">
+                  <div class="col-4">
                     <p>
                       <span class="icon background-success">
                         <i class="fa fa-wrench"></i>
                       </span>
                     </p>
                   </div>
-                  <div class="col-xs-8">
+                  <div class="col-8">
                     <h4>Developer-friendly</h4>
                     <p>
                       Simple, intuitive and easily maintainable code.
@@ -211,14 +211,14 @@
             <div class="col-md-4">
               <section class="feature">
                 <div class="row">
-                  <div class="col-xs-4">
+                  <div class="col-4">
                     <p>
                       <span class="icon background-primary">
                         <i class="fa fa-superscript"></i>
                       </span>
                     </p>
                   </div>
-                  <div class="col-xs-8">
+                  <div class="col-8">
                     <h4>White & Transparent</h4>
                     <p>
                       Two styles each having two background options.
@@ -230,14 +230,14 @@
             <div class="col-md-4">
               <section class="feature">
                 <div class="row">
-                  <div class="col-xs-4">
+                  <div class="col-4">
                     <p>
                       <span class="icon background-lime">
                         <i class="fa fa-check"></i>
                       </span>
                     </p>
                   </div>
-                  <div class="col-xs-8">
+                  <div class="col-8">
                     <h4>Web applications</h4>
                     <p>
                       LB itself is a web app. Plus there is an Email -
@@ -250,14 +250,14 @@
             <div class="col-md-4">
               <section class="feature">
                 <div class="row">
-                  <div class="col-xs-4">
+                  <div class="col-4">
                     <p>
                       <span class="icon background-info">
                         <i class="fa fa-css3"></i>
                       </span>
                     </p>
                   </div>
-                  <div class="col-xs-8">
+                  <div class="col-8">
                     <h4>Sass-powered</h4>
                     <p>
                       Variables, mixins, includes - things that
@@ -270,13 +270,13 @@
           </div>
         </div>
       </div>
-      <p class="preview text-xs-center">
+      <p class="preview text-center">
         <a href="../white/index.html" class="btn btn-lg btn-danger">
           &nbsp; Preview the White Version &nbsp;
         </a>
       </p>
     </div>
   </div>
-  <h2 class="thanks text-xs-center">Thanks for watching!</h2>
-  <p class="lead text-xs-center"><a href="#" class="back-to-top"> back to top <i class="fa fa-angle-up"></i></a></p>
+  <h2 class="thanks text-center">Thanks for watching!</h2>
+  <p class="lead text-center"><a href="#" class="back-to-top"> back to top <i class="fa fa-angle-up"></i></a></p>
 </div>

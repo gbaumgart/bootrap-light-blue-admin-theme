@@ -5,28 +5,32 @@
   <div class="col-md-8">
     <section class="widget" widget>
       <header>
-        <h4>
-          <i class="fa fa-calendar"></i>
-          Calendar
-        </h4>
-        <div class="actions">
-          <div class="btn-group mr-sm">
-            <button class="btn btn-secondary" id="calender-prev" (click)="prev()"><i class="fa fa-angle-left"></i></button>
-            <button class="btn btn-secondary" id="calender-next" (click)="next()"><i class="fa fa-angle-right"></i></button>
+        <div class="row">
+          <div class="col-md-3">
+            <h4 class="mb-3">
+              <i class="fa fa-calendar"></i>
+              Calendar
+            </h4>
           </div>
-          <button id="today" type="button" class="btn btn-warning mr-sm" (click)="today()">
-            Today
-          </button>
-          <div id="calendar-switcher" class="btn-group" data-toggle="buttons">
-            <label class="btn btn-secondary active" (click)="changeView('month')">
-              <input type="radio" name="view" value="month" checked> Month
-            </label>
-            <label class="btn btn-secondary" (click)="changeView('agendaWeek')">
-              <input type="radio" name="view" value="agendaWeek"> Week
-            </label>
-            <label class="btn btn-secondary" (click)="changeView('agendaDay')">
-              <input type="radio" name="view" value="agendaDay"> Day
-            </label>
+          <div class="col-md-9 text-right">
+            <div class="btn-group mr-sm">
+              <button class="btn btn-secondary" id="calender-prev" (click)="prev()"><i class="fa fa-angle-left"></i></button>
+              <button class="btn btn-secondary" id="calender-next" (click)="next()"><i class="fa fa-angle-right"></i></button>
+            </div>
+            <button id="today" type="button" class="btn btn-warning mr-sm" (click)="today()">
+              Today
+            </button>
+            <div id="calendar-switcher" class="btn-group" data-toggle="buttons">
+              <label class="btn btn-secondary active" (click)="changeView('month')">
+                <input type="radio" name="view" value="month" checked> Month
+              </label>
+              <label class="btn btn-secondary" (click)="changeView('agendaWeek')">
+                <input type="radio" name="view" value="agendaWeek"> Week
+              </label>
+              <label class="btn btn-secondary" (click)="changeView('agendaDay')">
+                <input type="radio" name="view" value="agendaDay"> Day
+              </label>
+            </div>
           </div>
         </div>
       </header>

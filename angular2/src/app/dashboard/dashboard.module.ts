@@ -30,6 +30,6 @@ export const routes = [
     RouterModule.forChild(routes),
   ]
 })
-export default class DashboardModule {
+export class DashboardModule {
   static routes = routes;
 }

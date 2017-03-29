@@ -8,10 +8,10 @@
         <img src="assets/img/logo.png" alt="Logo" class="invoice-logo"/>
       </div>
       <div class="col-sm-6 col-print-6">
-        <div class="invoice-number text-xs-right">
+        <div class="invoice-number text-right">
           #4346345 / 6 Nov 2014
         </div>
-        <div class="invoice-number-info text-xs-right">
+        <div class="invoice-number-info text-right">
           Some Invoice number description or whatever
         </div>
       </div>
@@ -56,9 +56,9 @@
       <tr>
         <th>#</th>
         <th>Item</th>
-        <th class="hidden-xs hidden-print">Description</th>
+        <th class="hidden-sm-down hidden-print">Description</th>
         <th>Quantity</th>
-        <th class="hidden-xs hidden-print">Price per Unit</th>
+        <th class="hidden-sm-down hidden-print">Price per Unit</th>
         <th>Total</th>
       </tr>
       </thead>
@@ -66,33 +66,33 @@
       <tr>
         <td>1</td>
         <td>Brand-new 27' monitor</td>
-        <td class="hidden-xs hidden-print">2,560x1,440-pixel (WQHD) resolution supported!</td>
+        <td class="hidden-sm-down hidden-print">2,560x1,440-pixel (WQHD) resolution supported!</td>
         <td>2</td>
-        <td class="hidden-xs hidden-print">700</td>
+        <td class="hidden-sm-down hidden-print">700</td>
         <td>1,400.00</td>
       </tr>
       <tr>
         <td>2</td>
         <td>Domain: okendoken.com</td>
-        <td class="hidden-xs hidden-print">6-month registration</td>
+        <td class="hidden-sm-down hidden-print">6-month registration</td>
         <td>1</td>
-        <td class="hidden-xs hidden-print">10.99</td>
+        <td class="hidden-sm-down hidden-print">10.99</td>
         <td>21.88</td>
       </tr>
       <tr>
         <td>3</td>
         <td>Atlas Shrugged</td>
-        <td class="hidden-xs hidden-print">Novel by Ayn Rand, first published in 1957 in the United States</td>
+        <td class="hidden-sm-down hidden-print">Novel by Ayn Rand, first published in 1957 in the United States</td>
         <td>5</td>
-        <td class="hidden-xs hidden-print">35</td>
+        <td class="hidden-sm-down hidden-print">35</td>
         <td>175.00</td>
       </tr>
       <tr>
         <td>4</td>
         <td>New Song by Dr. Pre</td>
-        <td class="hidden-xs hidden-print">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
+        <td class="hidden-sm-down hidden-print">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
         <td>1</td>
-        <td class="hidden-xs hidden-print">2</td>
+        <td class="hidden-sm-down hidden-print">2</td>
         <td>2.00</td>
       </tr>
       </tbody>
@@ -104,15 +104,13 @@
         </blockquote>
       </div>
       <div class="col-sm-6 col-print-6">
-        <div class="row text-xs-right">
-          <div class="col-xs-6"></div>
-          <!-- instead of offset -->
-          <div class="col-xs-3">
+        <div class="row text-right justify-content-end">
+          <div class="col-3">
             <p>Subtotal</p>
             <p>Tax(10%)</p>
             <p class="no-margin"><strong>Total</strong></p>
           </div>
-          <div class="col-xs-3">
+          <div class="col-3">
             <p>1,598.88</p>
             <p>159.89</p>
             <p class="no-margin"><strong>1,758.77</strong></p>
@@ -120,13 +118,13 @@
         </div>
       </div>
     </div>
-    <p class="text-xs-right mt-lg mb-xs">
+    <p class="text-right mt-lg mb-xs">
       Marketing Consultant
     </p>
-    <p class="text-xs-right">
+    <p class="text-right">
       <span class="fw-semi-bold">Bob Smith</span>
     </p>
-    <div class="btn-toolbar mt-lg text-xs-right hidden-print">
+    <div class="btn-toolbar mt-lg text-right hidden-print">
       <button id="print" (click)="printInvoice()" class="btn btn-default">
         <i class="fa fa-print"></i>
         &nbsp;&nbsp;

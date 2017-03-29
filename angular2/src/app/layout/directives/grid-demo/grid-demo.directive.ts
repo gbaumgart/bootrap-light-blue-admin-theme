@@ -1,5 +1,5 @@
 import { Directive } from '@angular/core';
-declare var jQuery: any;
+declare let jQuery: any;
 
 @Directive ({
   selector: '[grid-demo]'

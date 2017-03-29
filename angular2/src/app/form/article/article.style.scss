@@ -102,3 +102,59 @@
 .md-nooverflow .page-controls {
   z-index: 0 !important;
 }
+
+.input-tags {
+  display: inline-table !important;
+
+  .ng2-tags-container {
+    min-height: 23px;
+  }
+
+  tag-input-form {
+    form {
+      height: 100%;
+      input {
+        height: 100% !important;
+        background: transparent;
+        width: 105px;
+      }
+    }
+  }
+
+  tag {
+    height: 100% !important;
+    line-height: 20px !important;
+    background: $white-dark;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: $border-radius-base !important;
+
+    > div > div {
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      > span {
+        color: $gray-dark;
+      }
+      > delete-icon {
+        height: 100%;
+
+        svg {
+          height: 100% !important;
+          width: 13px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+.ng2-dropdown-menu {
+  margin-left: 5px;
+  margin-top: -4px;
+  border-radius: $border-radius-base !important;
+
+  .ng2-menu-item {
+    height: 24px !important;
+    line-height: 16px !important;
+  }
+}
