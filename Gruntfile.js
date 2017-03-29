@@ -46,14 +46,19 @@ module.exports = function(grunt) {
             options: {
                 importer:  function(url, prev, done) {
                     var urlPrefix = "projects/flaming-octo-nemesis";
+                    //var urlPrefix = "projects/flaming-octo-nemesis";
+                    //fix vendor bug
+                    urlPrefix ="";
                     if ((/^CSS:/.test(url))) { // if indexOf == true then url.indexOf == 0 == false
+                        //fix vendor bug
+                        url = url.replace('../../','');
                         return {
                             contents: fs.readFileSync(urlPrefix+url.replace('CSS:.', '') + '.css').toString()
-                        }
+                        };
                     } else {
                         return {
                             file: url
-                        }
+                        };
                     }
                 },
                 sourcemap: 'none'
