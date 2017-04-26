@@ -7793,7 +7793,7 @@ button.close {
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -19913,11 +19913,6 @@ be a descendant of the grid when it is being dragged.
   font-family: sans-serif, Verdana;
   font-size: smaller;
   padding: 3px;
-  pointer-events: none;
-}
-
-.jqvmap-pin {
-  pointer-events: none;
 }
 
 .jqvmap-zoomin, .jqvmap-zoomout {

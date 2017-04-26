@@ -85,7 +85,7 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template (Light Blue 3.6.0)</h2>
+                    <h2>About Template (Light Blue 3.7.0)</h2>
                     <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful
                         front-end template. It's very useful for designing either your next
                         web application or admin entrance for it.</p>
@@ -98,7 +98,7 @@
                         Transparent Dark version or <a href="../html-white/dist">../html-white/dist folder</a> if you prefer White version)
                         to check the most default html/css-only version of Light Blue. The stuff below
                     is for compiling different variations of Light Blue from sass/handlebars sources.</p>
-                    <p><strong>For <strong>Angular 2.4 Full version</strong> please refer to <a href="#running-angular2">Angular 2.4 Section</a> of this documentation.</strong></p>
+                    <p><strong>For <strong>Angular 4.4 Full version</strong> please refer to <a href="#running-angular4">Angular 4.0 Section</a> of this documentation.</strong></p>
                     <p>Since version <span class="label label-important">3.0.0</span> Light Blue template depends on
                         <a href="http://gruntjs.com/">Grunt Task runner</a>
                         to build an application version. So Light Blue root folder contains only setting & build files. Here is the structure:</p>
@@ -114,7 +114,7 @@
                     </ul>
                     <p>Every version (as of 3.3.0 there are <a href="../html-transparent">html-transparent-light</a>,
                         <a href="../html-transparent-dark">html-transparent-dark</a> and <a href="../html-white">html-white</a>)
-                        goes with the following folders (except <a href="../angular2">Angular 2.4</a> version):</p>
+                        goes with the following folders (except <a href="../angular4">Angular 4.0</a> version):</p>
                     <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
                         <li><strong>src</strong> - handlebars & sass sources;</li>
                         <li><strong>dist</strong> - compiled html & css files;</li>
@@ -204,13 +204,13 @@ $> bower install</code></pre>
                     variable to <code>false</code> (js/app.js file):</p>
                     <pre><code>window.PJAX_ENABLED = false;</code></pre>
 
-                    <h2 id="running-angular2">Running the project <small><span class="label label-info" style="font-size: 13px">angular 2 full version</span></small></h2>
+                    <h2 id="running-angular4">Running the project <small><span class="label label-info" style="font-size: 13px">angular 2 full version</span></small></h2>
                     <ol style="list-style: decimal; padding-left: 40px; margin-bottom: 10px" start="0">
                         <li><p>Windows 10 users need to install <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Visual C++ Build Tools</a>,
                             choose Custom Install, and select both Windows 8.1 and Windows 10 SDKs.
                             <a href="https://www.python.org/">Python 2.7</a> is also required. For an extensive description on how to solve <code>node-gyp</code> problems please read though this
                             <a href="https://github.com/nodejs/node-gyp/issues/629">thread on github</a>.</p></li>
-                        <li><p>Run <code>npm install</code> to install node dependencies defined in <a href="../angular2-seed/package.json">package.json</a> and to install typings defined in <a href="../angular2-seed/typings.json">typings.json</a></p></li>
+                        <li><p>Run <code>npm install</code> to install node dependencies defined in <a href="../angular4-seed/package.json">package.json</a> and to install typings defined in <a href="../angular4-seed/typings.json">typings.json</a></p></li>
                         <li><p>Run <code>npm start</code> to run the project</p></li>
                     </ol>
                     <p>There are also other npm tasks:</p>
@@ -220,15 +220,15 @@ $> bower install</code></pre>
                             to your production server when publising the application;</p></li>
                         <li><p><code>npm run lint</code> - checks your code in <code>.ts</code> files for typescript errors</p></li>
                     </ul>
-                    <p>For more instruction please refer to Angular 2.0 Final seed <a href="../angular2/readme.md">readme.md</a>.</p>
+                    <p>For more instruction please refer to Angular 4.0 Final seed <a href="../angular4/readme.md">readme.md</a>.</p>
 
                     <h2 id="seed">Seed (minimal setup)</h2>
-                    <p>There is one more version of Light Blue included into the package <a href="../angular2-seed">angular 2 seed version</a>. It is intended to be used when you want to build a project
+                    <p>There is one more version of Light Blue included into the package <a href="../angular4-seed">angular 4 seed version</a>. It is intended to be used when you want to build a project
                         from scratch and do not want to have all libraries enabled in Light Blue demo to be included in your project be default. So, in short, it's a same Light Blue angular
                         version but containing only essential functionality. You don't need to throw anything out of it; it is ready to be a "seed" for
                         your project - just start to add your code.</p>
 
-                    <h2 id="custom-angular2-widget">Custom Angular 2 Widget</h2>
+                    <h2 id="custom-angular4-widget">Custom Angular 4 Widget</h2>
                     <p>Angular applications are made up of components. A component is the combination of an HTML template and a component class that controls a portion of the screen. Here is an example of a component that displays a current date:</p>
                     <ol style="list-style: decimal; padding-left: 40px; margin-bottom: 10px" start="0">
                         <li><p>Create directory <code>current-date</code> in <code>./src/app</code> path</p></li>
@@ -296,7 +296,7 @@ export class CurrentDateModule {
 </code></pre></li>
                         </ul>
                         <li>To add route for the custom widget page go to <code>./src/app/layout/layout.routes.ts</code>; Add to the <strong>routes</strong> object next code: <code>{ path: 'current-date', loadChildren: '../current-date/current-date.module#CurrentDateModule' }</code></li>
-                        <li>Full start guide for Angular 2 framework you can find here: <a href="https://angular.io/docs/ts/latest/guide/">Angualar 2 Guide</a></li>
+                        <li>Full start guide for Angular 4 framework you can find here: <a href="https://angular.io/docs/ts/latest/guide/">Angualar 2 Guide</a></li>
                     </ol>
 
                     <h2>Support</h2>
@@ -329,6 +329,11 @@ export class CurrentDateModule {
 
                     <h3>Change Log</h3>
                     <hr/>
+                    <h4><strong>Version 3.7.0</strong></h4>
+                    <ul>
+                        <li>- Update Angular to 4.0 version on full and seed projects</li>
+                        <li>- Charts bug fixes</li>
+                    </ul>
                     <h4><strong>Version 3.6.0</strong></h4>
                     <ul>
                         <li>- Bootstrap 4 alpha 6 version</li>

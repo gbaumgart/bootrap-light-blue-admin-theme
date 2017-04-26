@@ -2,7 +2,7 @@
   backgrid-paginator
   http://github.com/wyuenho/backgrid
 
-  Copyright (c) 2013-present Cloudflare, Inc and contributors
+  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
   Licensed under the MIT @license.
 */
 (function (root, factory) {
@@ -15,8 +15,8 @@
                              require("backbone.paginator"));
   }
   // AMD. Register as an anonymous module.
-  else if (typeof define == "function" && define.amd) {
-    define(["underscore", "backbone", "backgrid", "backbone.paginator"], factory);
+  else if (typeof define === 'function' && define.amd) {
+    define(['underscore', 'backbone', 'backgrid', 'backbone.paginator'], factory);
   }
   // Browser
   else {
@@ -197,10 +197,10 @@
       e.preventDefault();
       var $el = this.$el, col = this.collection;
       if (!$el.hasClass("active") && !$el.hasClass("disabled")) {
-        if (this.isRewind) col.getFirstPage({reset: true});
-        else if (this.isBack) col.getPreviousPage({reset: true});
-        else if (this.isForward) col.getNextPage({reset: true});
-        else if (this.isFastForward) col.getLastPage({reset: true});
+        if (this.isRewind) col.getFirstPage();
+        else if (this.isBack) col.getPreviousPage();
+        else if (this.isForward) col.getNextPage();
+        else if (this.isFastForward) col.getLastPage();
         else col.getPage(this.pageIndex, {reset: true});
       }
       return this;
@@ -269,13 +269,6 @@
     renderIndexedPageHandles: true,
 
     /**
-      @property renderMultiplePagesOnly. Determines if the paginator
-      should show in cases where the collection has more than one page.
-      Default is false for backwards compatibility.
-    */
-    renderMultiplePagesOnly: false,
-
-    /**
        @property {Backgrid.Extension.PageHandle} pageHandle. The PageHandle
        class to use for rendering individual handles
     */
@@ -292,7 +285,6 @@
        @param {boolean} [options.controls]
        @param {boolean} [options.pageHandle=Backgrid.Extension.PageHandle]
        @param {boolean} [options.goBackFirstOnSort=true]
-       @param {boolean} [options.renderMultiplePagesOnly=false]
     */
     initialize: function (options) {
       var self = this;
@@ -301,15 +293,14 @@
 
       _.extend(self, _.pick(options || {}, "windowSize", "pageHandle",
                             "slideScale", "goBackFirstOnSort",
-                            "renderIndexedPageHandles",
-                            "renderMultiplePagesOnly"));
+                            "renderIndexedPageHandles"));
 
       var col = self.collection;
       self.listenTo(col, "add", self.render);
       self.listenTo(col, "remove", self.render);
       self.listenTo(col, "reset", self.render);
       self.listenTo(col, "backgrid:sorted", function () {
-        if (self.goBackFirstOnSort && col.state.currentPage !== col.state.firstPage) col.getFirstPage({reset: true});
+        if (self.goBackFirstOnSort) col.getFirstPage({reset: true});
       });
     },
 
@@ -418,13 +409,6 @@
     */
     render: function () {
       this.$el.empty();
-
-      var totalPages = this.collection.state.totalPages;
-
-      // Don't render if collection is empty
-      if(this.renderMultiplePagesOnly && totalPages <= 1) {
-        return this;
-      }
 
       if (this.handles) {
         for (var i = 0, l = this.handles.length; i < l; i++) {

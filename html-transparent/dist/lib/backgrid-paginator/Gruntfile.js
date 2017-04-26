@@ -2,7 +2,7 @@
   backgrid-paginator
   http://github.com/wyuenho/backgrid-paginator
 
-  Copyright (c) 2013-present-present Cloudflare, Inc and contributors
+  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
   Licensed under the MIT license.
 */
 
@@ -28,14 +28,36 @@ module.exports = function (grunt) {
         "test/coverage/**/*"
       ]
     },
-
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
+    jasmine: {
+      test: {
+        version: "1.3.1",
+        src: [
+          "backgrid-paginator.js"
+        ],
+        options: {
+          specs: [
+            "test/p*.js"
+          ],
+          template: require("grunt-template-jasmine-istanbul"),
+          templateOptions: {
+            coverage: "test/coverage/coverage.json",
+            report: {
+              type: "html",
+              options: {
+                dir: "test/coverage"
+              }
+            }
+          },
+          vendor: [
+            "test/vendor/js/jquery.js",
+            "test/vendor/js/underscore.js",
+            "test/vendor/js/backbone.js",
+            "test/vendor/js/backgrid.js",
+            'test/vendor/js/backbone.paginator.js'
+          ]
+        }
       }
     },
-
     jsduck: {
       main: {
         src: ["backgrid-paginator.js"],
@@ -45,11 +67,11 @@ module.exports = function (grunt) {
           "title": "backgrid-paginator",
           "no-source": true,
           "categories": "categories.json",
+          "warnings": "-no_doc",
           "pretty-json": true
         }
       }
     },
-
     recess: {
       csslint: {
         options: {
@@ -68,7 +90,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     uglify: {
       options: {
         mangle: true,
@@ -87,8 +108,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-recess");
   grunt.loadNpmTasks("grunt-jsduck");
-  grunt.loadNpmTasks("grunt-karma");
+  grunt.loadNpmTasks("grunt-contrib-jasmine");
 
   grunt.registerTask("dist", ["uglify", "recess"]);
-  grunt.registerTask("default", ["clean", "jsduck", "dist", "karma"]);
+  grunt.registerTask("default", ["clean", "jsduck", "dist", "jasmine"]);
 };

@@ -1,15 +1,15 @@
-Light Blue v3.6.0 with Angular 2.4 Final Release support
+Light Blue v3.7.0 with Angular 4.0 Final Release support
 =========
 
-![Light Blue Preview](http://demo.flatlogic.com/3.6.0/light-blue-preview-2017.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.7.0/light-blue-preview-2017.png)
 
 **World First Transparent Dashboard**
 
-Available in five versions [transparent dark (basic)](http://demo.flatlogic.com/3.6.0/dark),
- [transparent light](http://demo.flatlogic.com/3.6.0/light),
- [white opaque](http://demo.flatlogic.com/3.6.0/white) all with **handlebars** and **bower** under the hood;
- plus Angular 2.4 Seed version
- and completely new [Angular 2.4 Full version](http://demo.flatlogic.com/3.6.0/a2).
+Available in five versions [transparent dark (basic)](http://demo.flatlogic.com/3.7.0/dark),
+ [transparent light](http://demo.flatlogic.com/3.7.0/light),
+ [white opaque](http://demo.flatlogic.com/3.7.0/white) all with **handlebars** and **bower** under the hood;
+ plus Angular 4.0 Seed version
+ and completely new [Angular 4.0 Full version](http://demo.flatlogic.com/3.7.0/a4).
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
@@ -18,10 +18,10 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-New Version 3.6.0 Released!
+New Version 3.7.0 Released!
 -
 
-- Angular 2.4 Full Version
+- Angular 4.0 Full Version
 
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
@@ -50,7 +50,7 @@ Full feature list
     *   Unobtrusive colors and widgets
     *   Option to select between two perfectly chosen background gradients
   - White & Transparent Versions
-  - Angular 2.4 Full Version
+  - Angular 4.0 Full Version
   - Fully Responsive Layout: from small mobile to large desktop devices.
   - Bower package manager
   - Grunt tasks
@@ -127,3 +127,5 @@ Full feature list
 
 
 Please note that support is provided via email as mentioned in the documentation page.
+
+> Looking for Angular development or consulting services? Hire the best - [contact@flatlogic.com](mailto:contact@flatlogic.com)

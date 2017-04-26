@@ -1,6 +1,6 @@
 //! moment-timezone.js
-//! version : 0.5.11
-//! Copyright (c) JS Foundation and other contributors
+//! version : 0.5.0
+//! author : Tim Wood
 //! license : MIT
 //! github.com/moment/moment-timezone
 
@@ -19,12 +19,12 @@
 	"use strict";
 
 	// Do not load moment-timezone a second time.
-	// if (moment.tz !== undefined) {
-	// 	logError('Moment Timezone ' + moment.tz.version + ' was already loaded ' + (moment.tz.dataVersion ? 'with data from ' : 'without any data') + moment.tz.dataVersion);
-	// 	return moment;
-	// }
+	if (moment.tz !== undefined) {
+		logError('Moment Timezone ' + moment.tz.version + ' was already loaded ' + (moment.tz.dataVersion ? 'with data from ' : 'without any data') + moment.tz.dataVersion);
+		return moment;
+	}
 
-	var VERSION = "0.5.11",
+	var VERSION = "0.5.0",
 		zones = {},
 		links = {},
 		names = {},
@@ -202,17 +202,14 @@
 
 	function OffsetAt(at) {
 		var timeString = at.toTimeString();
-		var abbr = timeString.match(/\([a-z ]+\)/i);
+		var abbr = timeString.match(/\(.+\)/);
 		if (abbr && abbr[0]) {
 			// 17:56:31 GMT-0600 (CST)
 			// 17:56:31 GMT-0600 (Central Standard Time)
-			abbr = abbr[0].match(/[A-Z]/g);
-			abbr = abbr ? abbr.join('') : undefined;
+			abbr = abbr[0].match(/[A-Z]/g).join('');
 		} else {
 			// 17:56:31 CST
-			// 17:56:31 GMT+0800 (台北標準時間)
-			abbr = timeString.match(/[A-Z]{3,5}/g);
-			abbr = abbr ? abbr[0] : undefined;
+			abbr = timeString.match(/[A-Z]{3,5}/g)[0];
 		}
 
 		if (abbr === 'GMT') {
@@ -232,7 +229,7 @@
 
 	ZoneScore.prototype.scoreOffsetAt = function (offsetAt) {
 		this.offsetScore += Math.abs(this.zone.offset(offsetAt.at) - offsetAt.offset);
-		if (this.zone.abbr(offsetAt.at).replace(/[^A-Z]/g, '') !== offsetAt.abbr) {
+		if (this.zone.abbr(offsetAt.at).match(/[A-Z]/g).join('') !== offsetAt.abbr) {
 			this.abbrScore++;
 		}
 	};
@@ -321,21 +318,6 @@
 	}
 
 	function rebuildGuess () {
-
-		// use Intl API when available and returning valid time zone
-		try {
-			var intlName = Intl.DateTimeFormat().resolvedOptions().timeZone;
-			if (intlName){
-				var name = names[normalizeName(intlName)];
-				if (name) {
-					return name;
-				}
-				logError("Moment Timezone found " + intlName + " from the Intl api, but did not have that data loaded.");
-			}
-		} catch (e) {
-			// Intl unavailable, fall back to manual guessing.
-		}
-
 		var offsets = userOffsets(),
 			offsetsLength = offsets.length,
 			guesses = guessesForUserOffsets(offsets),

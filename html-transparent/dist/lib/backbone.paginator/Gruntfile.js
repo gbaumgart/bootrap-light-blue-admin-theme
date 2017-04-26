@@ -28,30 +28,34 @@ module.exports = function (grunt) {
         "test/coverage/**/*"
       ]
     },
-
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
-      }
-    },
-
-    documentation: {
-      "default": {
-        files: {
-          src: ["lib/backbone.paginator.js"]
-        },
-        options: {
-          access: ['public', 'protected', 'private', 'undefined'],
-          destination: "api"
+    qunit: {
+      all: ["test/*.html"],
+      options: {
+        coverage: {
+          src: ["lib/backbone.paginator.js"],
+          instrumentedFiles: "test/coverage/temp",
+          htmlReport: "test/coverage"
         }
       }
     },
-
+    jsduck: {
+      main: {
+        src: ["lib/backbone.paginator.js"],
+        dest: "api",
+        options: {
+          "external": ["Backbone.Model,Backbone.Collection,XMLHttpRequest"],
+          "title": "backbone-pageable",
+          "no-source": true,
+          "categories": "categories.json",
+          "warnings": "-no_doc",
+          "pretty-json": true
+        }
+      }
+    },
     uglify: {
       options: {
         mangle: true,
-        compress: {},
+        compress: true,
         preserveComments: "some"
       },
       "default": {
@@ -60,7 +64,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     connect: {
       server: {
         options: {
@@ -71,10 +74,10 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks("grunt-contrib-clean");
+  grunt.loadNpmTasks("grunt-qunit-istanbul");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-connect");
-  grunt.loadNpmTasks("grunt-documentation");
-  grunt.loadNpmTasks("grunt-karma");
+  grunt.loadNpmTasks("grunt-jsduck");
 
-  grunt.registerTask("default", ["clean", "karma", "documentation", "uglify"]);
+  grunt.registerTask("default", ["clean", "qunit", "jsduck", "uglify"]);
 };

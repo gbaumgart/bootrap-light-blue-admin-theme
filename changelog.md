@@ -2,7 +2,13 @@
 Changelog
 -
 
+Version 3.7.0
+
+- Update Angular to 4.0 version on full and seed projects
+- Charts bug fixes
+
 Version 3.6.0
+
 - Bootstrap 4 alpha 6 version
 - Bootstrap Bugfixes
 - Webpack 2.0 version

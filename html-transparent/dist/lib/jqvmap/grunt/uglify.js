@@ -2,10 +2,11 @@ module.exports = {
 	options: {
 		banner: '/*!\n' +
 		' * <%= package.author.name %>: <%= package.description %>\n' +
-		' * @author <%= package.author.name %> <<%= package.author.email %>>\n' +
+		' * @author <%= package.author.email %>\n' +
 		' * @version <%= package.version %>\n' +
 		' * @link <%= package.author.url %>\n' +
-		' * @license https://github.com/manifestinteractive/jqvmap/blob/master/LICENSE\n' +
+		' * @license Unauthorized copying of this file, via any medium is strictly prohibited.\n' +
+		' * This file cannot be copied and/or distributed without express written consent from @author.\n' +
 		' * @builddate <%= grunt.template.today("yyyy/mm/dd") %>\n' +
 		' */\n\n'
 	},
