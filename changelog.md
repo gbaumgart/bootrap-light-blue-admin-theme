@@ -2,6 +2,17 @@
 Changelog
 -
 
+Version 3.9.0
+
+- Completely new React JS Seed version with Server Side Rendering and Bootstrap 4 Beta support
+
+Version 3.8.0
+
+- Update Angular to 4.2.4 version
+- Update webpack to 3.0.0 version
+- Update all dependencies and devDependencies
+- Update webpack configs
+
 Version 3.7.0
 
 - Update Angular to 4.0 version on full and seed projects

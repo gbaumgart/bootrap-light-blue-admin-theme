@@ -12,13 +12,11 @@ import { Icons } from './icons/icons.component';
 import { Tabs } from './tabs/tabs.component';
 import { Notifications } from './notifications/notifications.component';
 import { Accordion } from './accordion/accordion.component';
-import { TooltipModule, AlertModule, DropdownModule } from 'ng2-bootstrap';
-import { TabsModule, AccordionModule, PopoverModule  } from 'ng2-bootstrap';
+import { TooltipModule, AlertModule, BsDropdownModule } from 'ngx-bootstrap';
+import { TabsModule, AccordionModule, PopoverModule  } from 'ngx-bootstrap';
 import { MessengerDemo } from './notifications/messenger/messenger.directive';
 import { WidgetModule } from '../layout/widget/widget.module';
 
-console.log('`Detail` bundle loaded asynchronously');
-// async components must be named routes for WebpackAsyncRoute
 export const routes = [
   {path: '', redirectTo: 'buttons', pathMatch: 'full'},
   {path: 'buttons', component: Buttons},
@@ -46,7 +44,7 @@ export const routes = [
     FormsModule,
     RouterModule.forChild(routes),
     TooltipModule.forRoot(), AlertModule.forRoot(),
-    DropdownModule.forRoot(),
+    BsDropdownModule.forRoot(),
     TabsModule.forRoot(), AccordionModule.forRoot(),
     PopoverModule.forRoot()
   ]

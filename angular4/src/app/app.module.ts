@@ -1,10 +1,20 @@
-import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule, PreloadAllModules } from '@angular/router';
-import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {
+  NgModule,
+  ApplicationRef
+} from '@angular/core';
+import {
+  removeNgStyles,
+  createNewHosts,
+  createInputTransfer
+} from '@angularclass/hmr';
+import {
+  RouterModule,
+  PreloadAllModules
+} from '@angular/router';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -15,8 +25,8 @@ import { CheckAllService } from './layout/utils/directives/check-all.service';
 // App is our top level component
 import { App } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import { AppState, InteralStateType } from './app.service';
-
+import { AppState, InternalStateType } from './app.service';
+import { ErrorComponent } from './error/error.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -26,7 +36,7 @@ const APP_PROVIDERS = [
 ];
 
 type StoreType = {
-  state: InteralStateType,
+  state: InternalStateType,
   restoreInputValues: () => void,
   disposeOldHosts: () => void
 };
@@ -37,9 +47,13 @@ type StoreType = {
 @NgModule({
   bootstrap: [ App ],
   declarations: [
-    App
+    App,
+    ErrorComponent
   ],
-  imports: [ // import Angular's modules
+  /**
+   * Import Angular's modules.
+   */
+  imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
@@ -49,20 +63,33 @@ type StoreType = {
       preloadingStrategy: PreloadAllModules
     })
   ],
-  providers: [ // expose our Services and Providers into Angular's dependency injection
+  /**
+   * Expose our Services and Providers into Angular's dependency injection.
+   */
+  providers: [
     ENV_PROVIDERS,
     APP_PROVIDERS
   ]
 })
 export class AppModule {
-  constructor(public appRef: ApplicationRef, public appState: AppState) {}
 
-  hmrOnInit(store: StoreType) {
-    if (!store || !store.state) return;
+  constructor(
+    public appRef: ApplicationRef,
+    public appState: AppState
+  ) {}
+
+  public hmrOnInit(store: StoreType) {
+    if (!store || !store.state) {
+      return;
+    }
     console.log('HMR store', JSON.stringify(store, null, 2));
-    // set state
+    /**
+     * Set state
+     */
     this.appState._state = store.state;
-    // set input values
+    /**
+     * Set input values
+     */
     if ('restoreInputValues' in store) {
       let restoreInputValues = store.restoreInputValues;
       setTimeout(restoreInputValues);
@@ -73,24 +100,33 @@ export class AppModule {
     delete store.restoreInputValues;
   }
 
-  hmrOnDestroy(store: StoreType) {
-    const cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
-    // save state
+  public hmrOnDestroy(store: StoreType) {
+    const cmpLocation = this.appRef.components.map((cmp) => cmp.location.nativeElement);
+    /**
+     * Save state
+     */
     const state = this.appState._state;
     store.state = state;
-    // recreate root elements
+    /**
+     * Recreate root elements
+     */
     store.disposeOldHosts = createNewHosts(cmpLocation);
-    // save input values
+    /**
+     * Save input values
+     */
     store.restoreInputValues  = createInputTransfer();
-    // remove styles
+    /**
+     * Remove styles
+     */
     removeNgStyles();
   }
 
-  hmrAfterDestroy(store: StoreType) {
-    // display new elements
+  public hmrAfterDestroy(store: StoreType) {
+    /**
+     * Display new elements
+     */
     store.disposeOldHosts();
     delete store.disposeOldHosts;
   }
 
 }
-

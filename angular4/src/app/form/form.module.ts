@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { Select2Module } from 'ng2-select2';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
-import { AlertModule, TooltipModule } from 'ng2-bootstrap';
+import { AlertModule, TooltipModule } from 'ngx-bootstrap';
 import { Autosize } from 'angular2-autosize';
 import { TagInputModule } from 'ng2-tag-input';
 

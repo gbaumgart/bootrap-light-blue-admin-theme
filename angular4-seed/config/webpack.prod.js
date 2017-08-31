@@ -1,19 +1,25 @@
 const helpers = require('./helpers');
-const webpackMerge = require('webpack-merge'); // used to merge webpack configs
-const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+/**
+ * Used to merge webpack configs
+*/
+const webpackMerge = require('webpack-merge');
+/**
+ * The settings that are common to prod and dev
+*/
+const commonConfig = require('./webpack.common.js');
 
 /**
  * Webpack Plugins
  */
-const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HashedModuleIdsPlugin = require('webpack/lib/HashedModuleIdsPlugin')
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
-const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
+const OptimizeJsPlugin = require('optimize-js-plugin');
 
 /**
  * Webpack Constants
@@ -21,15 +27,20 @@ const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
-const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
+const METADATA = webpackMerge(commonConfig({
+  env: ENV
+}).metadata, {
   host: HOST,
   port: PORT,
   ENV: ENV,
   HMR: false
 });
 
-module.exports = function(env) {
-  return webpackMerge(commonConfig({env: ENV}), {
+module.exports = function (env) {
+  return webpackMerge(commonConfig({
+    env: ENV
+  }), {
+
     /**
      * Developer tool to enhance debugging
      *
@@ -66,7 +77,7 @@ module.exports = function(env) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-sourcemapfilename
        */
-      sourceMapFilename: '[name].[chunkhash].bundle.map',
+      sourceMapFilename: '[file].map',
 
       /**
        * The filename of non-entry chunks as relative path
@@ -74,7 +85,7 @@ module.exports = function(env) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-chunkfilename
        */
-      chunkFilename: '[id].[chunkhash].chunk.js'
+      chunkFilename: '[name].[chunkhash].chunk.js'
 
     },
 
@@ -84,13 +95,25 @@ module.exports = function(env) {
      * See: http://webpack.github.io/docs/configuration.html#plugins
      */
     plugins: [
+
       /**
-       * Plugin: WebpackMd5Hash
-       * Description: Plugin to replace a standard webpack chunkhash with md5.
+       * Webpack plugin to optimize a JavaScript file for faster initial load
+       * by wrapping eagerly-invoked functions.
        *
-       * See: https://www.npmjs.com/package/webpack-md5-hash
+       * See: https://github.com/vigneshshanmugam/optimize-js-plugin
        */
-      new WebpackMd5Hash(),
+      new OptimizeJsPlugin({
+        sourceMap: false
+      }),
+
+      /**
+       * Plugin: ExtractTextPlugin
+       * Description: Extracts imported CSS files into external stylesheet
+       *
+       * See: https://github.com/webpack/extract-text-webpack-plugin
+       */
+      new ExtractTextPlugin('[name].[contenthash].css'),
+
       /**
        * Plugin: DefinePlugin
        * Description: Define free variables.
@@ -110,36 +133,19 @@ module.exports = function(env) {
           'HMR': METADATA.HMR,
         }
       }),
+
       /**
        * Plugin: UglifyJsPlugin
        * Description: Minimize all JavaScript output of chunks.
        * Loaders are switched into minimizing mode.
        *
        * See: https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
+       *
+       * NOTE: To debug prod builds uncomment //debug lines and comment //prod lines
        */
-      // NOTE: To debug prod builds uncomment //debug lines and comment //prod lines
       new UglifyJsPlugin({
-        // beautify: true, //debug
-        // mangle: false, //debug
-        // dead_code: false, //debug
-        // unused: false, //debug
-        // deadCode: false, //debug
-        // compress: {
-        //   screw_ie8: true,
-        //   keep_fnames: true,
-        //   drop_debugger: false,
-        //   dead_code: false,
-        //   unused: false
-        // }, // debug
-        // comments: true, //debug
-
         beautify: false, //prod
-        output: {
-          comments: false
-        }, //prod
-        mangle: {
-          screw_ie8: true, keep_fnames: true, except: ['$super']
-        }, //prod
+        mangle: { screw_ie8 : true, keep_fnames: true, except: ['$super'] }, //prod
         compress: {
           screw_ie8: true,
           warnings: false,
@@ -152,7 +158,8 @@ module.exports = function(env) {
           if_return: true,
           join_vars: true,
           negate_iife: false // we need this for lazy v8
-        }
+        }, //prod
+        comments: false //prod
       }),
 
       /**
@@ -161,7 +168,6 @@ module.exports = function(env) {
        *
        * See: http://webpack.github.io/docs/list-of-plugins.html#normalmodulereplacementplugin
        */
-
       new NormalModuleReplacementPlugin(
         /angular2-hmr/,
         helpers.root('config/empty.js')
@@ -172,44 +178,41 @@ module.exports = function(env) {
         helpers.root('config/empty.js')
       ),
 
-      // AoT
-      // new NormalModuleReplacementPlugin(
-      //   /@angular(\\|\/)upgrade/,
-      //   helpers.root('config/empty.js')
-      // ),
-      // new NormalModuleReplacementPlugin(
-      //   /@angular(\\|\/)compiler/,
-      //   helpers.root('config/empty.js')
-      // ),
-      // new NormalModuleReplacementPlugin(
-      //   /@angular(\\|\/)platform-browser-dynamic/,
-      //   helpers.root('config/empty.js')
-      // ),
-      // new NormalModuleReplacementPlugin(
-      //   /dom(\\|\/)debug(\\|\/)ng_probe/,
-      //   helpers.root('config/empty.js')
-      // ),
-      // new NormalModuleReplacementPlugin(
-      //   /dom(\\|\/)debug(\\|\/)by/,
-      //   helpers.root('config/empty.js')
-      // ),
-      // new NormalModuleReplacementPlugin(
-      //   /src(\\|\/)debug(\\|\/)debug_node/,
-      //   helpers.root('config/empty.js')
-      // ),
-      // new NormalModuleReplacementPlugin(
-      //   /src(\\|\/)debug(\\|\/)debug_renderer/,
-      //   helpers.root('config/empty.js')
-      // ),
+      new HashedModuleIdsPlugin(),
 
       /**
-       * Plugin: IgnorePlugin
-       * Description: Don’t generate modules for requests matching the provided RegExp.
-       *
-       * See: http://webpack.github.io/docs/list-of-plugins.html#ignoreplugin
+       * AoT
        */
-
-      // new IgnorePlugin(/angular2-hmr/),
+      /*
+      new NormalModuleReplacementPlugin(
+        /@angular(\\|\/)upgrade/,
+        helpers.root('config/empty.js')
+      ),
+      new NormalModuleReplacementPlugin(
+        /@angular(\\|\/)compiler/,
+        helpers.root('config/empty.js')
+      ),
+      new NormalModuleReplacementPlugin(
+        /@angular(\\|\/)platform-browser-dynamic/,
+        helpers.root('config/empty.js')
+      ),
+      new NormalModuleReplacementPlugin(
+        /dom(\\|\/)debug(\\|\/)ng_probe/,
+        helpers.root('config/empty.js')
+      ),
+      new NormalModuleReplacementPlugin(
+        /dom(\\|\/)debug(\\|\/)by/,
+        helpers.root('config/empty.js')
+      ),
+      new NormalModuleReplacementPlugin(
+        /src(\\|\/)debug(\\|\/)debug_node/,
+        helpers.root('config/empty.js')
+      ),
+      new NormalModuleReplacementPlugin(
+        /src(\\|\/)debug(\\|\/)debug_renderer/,
+        helpers.root('config/empty.js')
+      ),
+      */
 
       /**
        * Plugin: CompressionPlugin
@@ -224,6 +227,11 @@ module.exports = function(env) {
       //   threshold: 2 * 1024
       // })
 
+      /**
+       * Plugin LoaderOptionsPlugin (experimental)
+       *
+       * See: https://gist.github.com/sokra/27b24881210b56bbaff7
+       */
       new LoaderOptionsPlugin({
         minimize: true,
         debug: false,
@@ -245,13 +253,24 @@ module.exports = function(env) {
               [/\[?\(?/, /(?:)/]
             ],
             customAttrAssign: [/\)?\]?=/]
-          }
+          },
+
         }
-      })
+      }),
+
+      /**
+       * Plugin: BundleAnalyzerPlugin
+       * Description: Webpack plugin and CLI utility that represents
+       * bundle content as convenient interactive zoomable treemap
+       *
+       * `npm run build:prod -- --env.analyze` to use
+       *
+       * See: https://github.com/th0r/webpack-bundle-analyzer
+       */
 
     ],
 
-    /*
+    /**
      * Include polyfills or mocks for various node stuff
      * Description: Node configuration
      *
@@ -265,5 +284,6 @@ module.exports = function(env) {
       clearImmediate: false,
       setImmediate: false
     }
+
   });
-};
+}

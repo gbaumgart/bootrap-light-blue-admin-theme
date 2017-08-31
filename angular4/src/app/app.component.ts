@@ -3,8 +3,6 @@
  */
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import { AppState } from './app.service';
-
 /*
  * App Component
  * Top Level Component
@@ -18,4 +16,5 @@ import { AppState } from './app.service';
   template: `<router-outlet></router-outlet>`
 })
 export class App {
+  constructor(){}
 }

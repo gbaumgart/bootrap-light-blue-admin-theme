@@ -332,6 +332,12 @@ legend {
 /*        Dropdowns        */
 /***************************/
 
+.dropdown.open {
+  .dropdown-menu {
+    display: block;
+  }
+}
+
 button.dropdown-toggle{
   &:after {
     content: none;

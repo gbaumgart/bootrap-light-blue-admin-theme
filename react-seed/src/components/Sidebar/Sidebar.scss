@@ -1,0 +1,114 @@
+@import '../../styles/app';
+
+.root {
+  height: 0;
+  overflow: hidden;
+  margin: 30px 0 0 ($grid-gutter-width/2);
+  padding: 10px 0;
+  color: $sidebar-color;
+  transition: height 0.3s ease-in-out;
+
+  @media (min-width: breakpoint-min('md')) {
+    width: $sidebar-width-open;
+    height: auto !important;
+    overflow: auto;
+  }
+
+  :global(.sidebar-right) & {
+    margin-left: 0;
+    margin-right: ($grid-gutter-width/2);
+  }
+
+  :global(.sidebar-hidden) & {
+    display: none;
+  }
+}
+
+.nav {
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.navTitle {
+  margin: 35px 0 5px 20px;
+
+  @media (max-width: breakpoint-max('sm')) {
+    display: none;
+  }
+}
+
+.actionLink {
+  color: #aaa;
+  float: right;
+  margin-right: 15px;
+  margin-top: 1px;
+}
+
+.labelName {
+  opacity: 1;
+}
+
+.glyphiconSm {
+  font-size: 9px;
+}
+
+.sidebarLabels {
+  list-style-type: none;
+  padding: 10px 20px;
+  margin: 0;
+
+  > li + li {
+    margin-top: 0.5rem;
+  }
+
+  li > a {
+    text-decoration: none;
+    font-weight: normal;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.8);
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    > i {
+      font-size: 11px;
+      vertical-align: 1px;
+      margin-left: 4px;
+      margin-right: 8px;
+    }
+  }
+
+  @media (max-width: breakpoint-max('sm')) {
+    display: none;
+  }
+}
+
+.sidebarAlerts {
+  opacity: 1;
+
+  @media (max-width: breakpoint-max('sm')) {
+    display: none;
+  }
+
+  :global(.alert .close) {
+    font-size: 14px;
+    outline: none;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: none;
+  }
+}
+
+.sidebarAlert {
+  background: transparent;
+  margin-bottom: 0;
+  padding: 0.5rem 12px 0.5rem 20px;
+}
+
+.sidebarProgress {
+  background: rgba(0, 0, 0, 0.15);
+  margin-bottom: 0;
+}

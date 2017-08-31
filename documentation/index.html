@@ -85,7 +85,7 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template (Light Blue 3.7.0)</h2>
+                    <h2>About Template (Light Blue 3.9.0)</h2>
                     <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful
                         front-end template. It's very useful for designing either your next
                         web application or admin entrance for it.</p>
@@ -98,6 +98,7 @@
                         Transparent Dark version or <a href="../html-white/dist">../html-white/dist folder</a> if you prefer White version)
                         to check the most default html/css-only version of Light Blue. The stuff below
                     is for compiling different variations of Light Blue from sass/handlebars sources.</p>
+                    <p><strong>For <strong>React JS Seed version</strong> please refer to <a href="#running-react">React JS Section</a> of this documentation.</strong></p>
                     <p><strong>For <strong>Angular 4.4 Full version</strong> please refer to <a href="#running-angular4">Angular 4.0 Section</a> of this documentation.</strong></p>
                     <p>Since version <span class="label label-important">3.0.0</span> Light Blue template depends on
                         <a href="http://gruntjs.com/">Grunt Task runner</a>
@@ -114,7 +115,7 @@
                     </ul>
                     <p>Every version (as of 3.3.0 there are <a href="../html-transparent">html-transparent-light</a>,
                         <a href="../html-transparent-dark">html-transparent-dark</a> and <a href="../html-white">html-white</a>)
-                        goes with the following folders (except <a href="../angular4">Angular 4.0</a> version):</p>
+                        goes with the following folders (except <a href="../angular2">Angular 4.0</a> version):</p>
                     <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
                         <li><strong>src</strong> - handlebars & sass sources;</li>
                         <li><strong>dist</strong> - compiled html & css files;</li>
@@ -203,6 +204,25 @@ $> bower install</code></pre>
                     <p>In case you want to turn off ajax page loading you need to just set <code>window.PJAX_ENABLED</code>
                     variable to <code>false</code> (js/app.js file):</p>
                     <pre><code>window.PJAX_ENABLED = false;</code></pre>
+
+                    <h2 id="running-react">Running the project <small><span class="label label-info" style="font-size: 13px">react js seed version</span></small></h2>
+                    <ol style="list-style: decimal; padding-left: 40px; margin-bottom: 10px" start="0">
+                        <li><p>Install <a href="https://yarnpkg.com/">Yarn package</a> + <a href="https://nodejs.org/">Node.js</a> v6.5 or newer</p></li>
+                        <li><p>Run <code>yarn install</code> to install node dependencies defined in <a href="../react-seed/package.json">package.json</a>.</p></li>
+                        <li><p>Run <code>yarn start</code> to run the project</p></li>
+                    </ol>
+                    <p>Now you can open your web app in a browser <a href="http://localhost:3001/">http://localhost:3001/</a>, on mobile devices and start
+                        hacking. Whenever you modify any of the source files inside the `/src` folder,
+                        the module bundler ([Webpack](http://webpack.github.io/)) will recompile the
+                        app on the fly and refresh all the connected browsers.</p>
+                    <p>There are also other yarn tasks:</p>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><p><code>yarn run build</code> - builds a production version of the application. All html/css/js code is
+                            minified and put to <code>build</code> folder. The contents of this folder you will want to put
+                            to your production server when publising the application;</p></li>
+                        <li><p><code>yarn run lint</code> - checks your code files for javascript & scss errors.</p></li>
+                    </ul>
+                    <p>For more instruction please refer to React JS Seed <a href="../react-seed/readme.md">readme.md</a>.</p>
 
                     <h2 id="running-angular4">Running the project <small><span class="label label-info" style="font-size: 13px">angular 2 full version</span></small></h2>
                     <ol style="list-style: decimal; padding-left: 40px; margin-bottom: 10px" start="0">
@@ -329,6 +349,17 @@ export class CurrentDateModule {
 
                     <h3>Change Log</h3>
                     <hr/>
+                    <h4><strong>Version 3.9.0</strong></h4>
+                    <ul>
+                        <li>- React JS Seed version with Server Side Rendering and Bootstrap 4 Beta support</li>
+                    </ul>
+                    <h4><strong>Version 3.8.0</strong></h4>
+                    <ul>
+                        <li>- Update Angular to 4.2.4 version</li>
+                        <li>- Update webpack to 3.0.0 version</li>
+                        <li>- Update all dependencies and devDependencies</li>
+                        <li>- Update webpack configs</li>
+                    </ul>
                     <h4><strong>Version 3.7.0</strong></h4>
                     <ul>
                         <li>- Update Angular to 4.0 version on full and seed projects</li>

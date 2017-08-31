@@ -1,0 +1,40 @@
+@import '../../../styles/app';
+
+.headerLink {
+  a {
+    display: block;
+    position: relative;
+    padding: 10px 20px;
+    color: $sidebar-color;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: $border-radius;
+
+    &:hover,
+    &:focus {
+      background: $sidebar-item-active-bg;
+    }
+
+    > i {
+      margin-right: 7px;
+    }
+  }
+
+  .icon {
+    width: 16px;
+    margin-right: 8px;
+    float: left;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: right;
+
+    i {
+      opacity: 0.4;
+    }
+  }
+}
+
+a.headerLinkActive {
+  font-weight: 700;
+}
+

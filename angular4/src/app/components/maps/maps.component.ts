@@ -43,7 +43,7 @@ export class Maps {
     modal.show();
   }
 
-  // workaround for ng2-bootstrap modal backdrop issue
+  // workaround for ngx-bootstrap modal backdrop issue
 
   showBackdrop() {
     let el = document.createElement('div');

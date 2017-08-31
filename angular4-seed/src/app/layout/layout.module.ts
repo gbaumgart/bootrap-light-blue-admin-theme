@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { FormsModule }      from '@angular/forms';
 import { CommonModule }  from '@angular/common';
 
-import { ButtonsModule, DropdownModule } from 'ng2-bootstrap';
+import { ButtonsModule, BsDropdownModule } from 'ngx-bootstrap';
 
 import { ROUTES } from './layout.routes';
 
@@ -17,7 +17,7 @@ import { EmptyLinkModule } from './directives/empty-link/empty-link.module';
     ROUTES,
     FormsModule,
     ButtonsModule.forRoot(),
-    DropdownModule.forRoot(),
+    BsDropdownModule.forRoot(),
     EmptyLinkModule
   ],
   declarations: [Layout, Sidebar, Navbar]

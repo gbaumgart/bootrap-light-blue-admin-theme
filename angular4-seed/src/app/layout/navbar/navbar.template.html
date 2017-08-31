@@ -120,14 +120,14 @@
       </ul>
     </li>
     <li class="divider"></li>
-    <li dropdown [isOpen]="settings.isOpen" [autoClose]="'outsideClick'" class="nav-item dropdown hidden-sm-down">
+    <li dropdown [isOpen]="settings.isOpen" [autoClose]="false" class="nav-item dropdown hidden-sm-down">
       <a href="#" id="settings"
          title="Settings"
          class="nav-link dropdown-toggle"
          dropdownToggle>
         <i class="glyphicon glyphicon-cog"></i>
       </a>
-      <div class="settings" dropdownMenu role="menu" aria-labelledby="settings">
+      <div class="settings dropdown-menu" *dropdownMenu>
         <div class="settings-content">
           <div class="setting clearfix">
             <div>Sidebar on the</div>

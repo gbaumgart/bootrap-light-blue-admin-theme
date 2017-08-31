@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { PaginationModule, DropdownModule } from 'ng2-bootstrap';
+import { PaginationModule, BsDropdownModule } from 'ngx-bootstrap';
 import { DataTableModule } from 'angular2-datatable';
 import { Ng2TableModule } from 'ng2-table';
 import { JqSparklineModule } from '../layout/directives/sparkline/sparkline.module';
@@ -34,7 +34,7 @@ export const routes = [
     Ng2TableModule,
     JqSparklineModule,
     UtilsModule,
-    DropdownModule.forRoot(),
+    BsDropdownModule.forRoot(),
     RouterModule.forChild(routes)
   ]
 })

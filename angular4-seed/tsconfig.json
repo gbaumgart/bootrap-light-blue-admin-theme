@@ -7,14 +7,16 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "noEmit": true,
     "noEmitHelpers": true,
+    "importHelpers": true,
     "strictNullChecks": false,
-    "baseUrl": "./src",
-    "paths": {
-    },
     "lib": [
       "dom",
       "es6"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
     ],
     "types": [
       "hammerjs",
@@ -34,5 +36,7 @@
   },
   "compileOnSave": false,
   "buildOnSave": false,
-  "atom": { "rewriteTsconfig": false }
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }

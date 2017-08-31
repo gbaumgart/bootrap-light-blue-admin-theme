@@ -14,8 +14,7 @@
 @include media-breakpoint-down(xs) {
 //@media (max-width: $screen-xs-max){
 
-  .sidebar.nav-collapse,
-  .sidebar.nav-collapse.collapse {
+  .sidebar.nav-collapse:not(.show) {
     overflow: hidden;
     height: 0;
   }

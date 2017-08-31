@@ -15,7 +15,6 @@ export class MarkdownToolbarTransparent {
   render(): void {
     let btns = this.el.nativeElement.querySelectorAll('.btn-toolbar .btn');
     btns.forEach((btn) => {
-      console.log(btn.classList);
       btn.classList.remove('btn-default', 'btn-primary');
       // btn.classList.remove('btn-primary');
       btn.classList.add('btn-transparent');

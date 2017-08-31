@@ -10,8 +10,6 @@ import { Live } from './live/live.component';
 import { WidgetModule } from '../layout/widget/widget.module';
 import { GridDemoModule } from '../layout/directives/grid-demo/grid-demo.module';
 
-console.log('`Detail` bundle loaded asynchronously');
-// async components must be named routes for WebpackAsyncRoute
 export const routes = [
   {path: '', redirectTo: 'basic', pathMatch: 'full'},
   {path: 'basic', component: Basic},

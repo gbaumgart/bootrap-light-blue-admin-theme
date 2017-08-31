@@ -19,7 +19,7 @@ import { HideOnUpload } from './fileupload/hideOnUpload.directive';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { JqvmapModule } from './maps/jvmap/jqvmap.module';
-import { ModalModule } from 'ng2-bootstrap';
+import { ModalModule } from 'ngx-bootstrap';
 
 export const routes = [
   {path: '', redirectTo: 'calendar', pathMatch: 'full'},

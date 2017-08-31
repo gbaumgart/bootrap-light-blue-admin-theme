@@ -1,0 +1,101 @@
+html {
+  font-size: $font-size-initial;
+}
+
+body {
+  overflow-x: hidden;
+  color: $text-color;
+
+  @include background-radial-gradient (
+    ellipse, farthest-side, 10%, 0,
+    $bg-gradient-color-1 20%, $bg-gradient-color-2
+  );
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+th {
+  font-weight: 600;
+}
+
+label {
+  margin-bottom: 0.3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-base;
+
+  small {
+    color: $text-muted;
+    font-weight: $font-weight-base;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-family-base;
+}
+
+ul ul,
+ol ul {
+  list-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+//setting default iframe behaviour to border box
+//so it behaves normally within .control-row
+iframe {
+  @include box-sizing(border-box);
+}
+
+//opera is buggy? no chrome is buggy! really strange fix
+fieldset {
+  width: 100%;
+  //Thanks to johan@holmweb.se for that fix
+  min-width: 0;
+}
+
+form {
+  margin-bottom: 0;
+}
+
+.btn {
+  @include transition(background-color 0.2s);
+
+  font-family: $font-family-sans-serif;
+}
+
+.form-control {
+  font-family: $font-family-sans-serif;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+}

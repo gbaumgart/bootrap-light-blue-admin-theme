@@ -1,0 +1,50 @@
+@import '../../styles/app';
+
+.errorPage {
+  height: 100%;
+
+  :global(.container) {
+    position: static;
+  }
+}
+
+.errorContainer {
+  padding-top: 10vh;
+  text-align: center;
+
+  @media (max-height: 600px) {
+    padding-top: 3vh;
+  }
+}
+
+.errorBtn {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.errorCode {
+  margin: 20px;
+  font-size: 80px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 180px;
+  }
+}
+
+.errorInfo {
+  font-size: 20px;
+}
+
+.errorHelp {
+  font-size: 14px;
+}
+
+.pageFooter {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: $font-size-base*0.9;
+  text-align: center;
+}

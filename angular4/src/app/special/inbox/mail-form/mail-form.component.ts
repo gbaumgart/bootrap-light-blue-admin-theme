@@ -19,7 +19,6 @@ export class MailForm {
     ' So we hope it will appear soon.';
 
   onToBack(): void {
-    console.log('qwerty');
     this.backToMailList.emit('');
   }
 

@@ -1,0 +1,74 @@
+@import '../../styles/app';
+
+.root {
+  left: 0;
+  top: 50%;
+  margin-top: -192.5px;
+  position: absolute;
+  width: 100%;
+}
+
+.widget {
+  width: 350px;
+  margin: 0 auto;
+
+  header {
+    margin: 15px 0 25px;
+  }
+
+  :global .form-control {
+    font-size: $font-size-base;
+  }
+
+  :global .input-group-addon {
+    border: none;
+  }
+}
+
+.formActions {
+  margin: 0 (-$widget-padding-horizontal);
+  padding: 20px $widget-padding-horizontal 0;
+  background-color: $bg-addition;
+
+  .smallCircle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .forgot {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 15px 0;
+  }
+
+  :global .btn-lg {
+    font-size: $font-size-larger;
+  }
+}
+
+.footer {
+  margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+  border-bottom-left-radius: $border-radius-base;
+  border-bottom-right-radius: $border-radius-base;
+  overflow: hidden;
+  position: static;
+
+  .facebookLogin {
+    padding: 10px 0;
+    background: $blue;
+    text-align: center;
+
+    :global a {
+      color: $white;
+      display: block;
+      text-shadow: none;
+      text-decoration: none;
+    }
+  }
+}
+

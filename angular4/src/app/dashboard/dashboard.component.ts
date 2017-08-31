@@ -104,7 +104,6 @@ export class Dashboard {
     for (let i = 0; i < this.tableSparklineOptions.length; i++) {
       Object.assign(this.tableSparklineOptions[i], this.tableSparklineGeneralOptions);
     }
-    console.log(this.tableSparklineOptions[4]);
   }
 
   randomValue() {
