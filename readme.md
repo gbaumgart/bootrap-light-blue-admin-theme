@@ -1,15 +1,15 @@
-Light Blue v3.9.0 with Angular 4.0 Final and React Versions!
+Light Blue v3.9.1 with Angular 4.0 Final and React Versions!
 =========
 
-![Light Blue Preview](http://demo.flatlogic.com/3.9.0/light-blue-preview-2017.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.9.1/light-blue-preview-2017.png)
 
 **World First Transparent Dashboard**
 
-Available in six versions [transparent dark (basic)](http://demo.flatlogic.com/3.8.0/dark),
- [transparent light](http://demo.flatlogic.com/3.8.0/light),
- [white opaque](http://demo.flatlogic.com/3.8.0/white) all with **handlebars** and **bower** under the hood;
- plus Angular 4.0 Seed and Full version [Angular 4.0 Full version](http://demo.flatlogic.com/3.8.0/a4)
- and completely new React JS Seed version with Server Side Rendering and Bootstrap 4 Beta support!
+Available in six versions [transparent dark (basic)](http://demo.flatlogic.com/3.9.1/dark),
+ [transparent light](http://demo.flatlogic.com/3.9.1/light),
+ [white opaque](http://demo.flatlogic.com/3.9.1/white) all with handlebars and bower under the hood;
+ plus **Angular 4.0** Full and Seed versions [Angular 4.0 Full version](http://demo.flatlogic.com/3.9.1/a4)
+ and completely new **React JS** Seed version with **Server Side Rendering** and Bootstrap 4 Beta support!
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
@@ -18,10 +18,10 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-New Version 3.9.0 Released!
--
+New Version 3.9.1 Released!
 
-- React JS Seed version with Server Side Rendering and Bootstrap 4 Beta support
+- Bootstrap 4 Beta update for Angular 4.0 version
+- Styles refactoring
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster.

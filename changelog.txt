@@ -1,3 +1,6 @@
+V3.9.1
+- Bootstrap 4 Beta update for Angular 4.0 version
+
 V3.9.0
 - React JS Seed version with Server Side Rendering and Bootstrap 4 Beta support
 

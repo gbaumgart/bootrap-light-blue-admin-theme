@@ -3,8 +3,8 @@
 <p class="lead text-muted text-center">
     Faith makes it possible to achieve that which man's mind can conceive and believe.
 </p>
-<div class="row">
-    <div class="col-md-10 offset-md-1">
+<div class="row justify-content-md-center">
+    <div class="col-md-10">
         <form>
 
             <div class="form-group">

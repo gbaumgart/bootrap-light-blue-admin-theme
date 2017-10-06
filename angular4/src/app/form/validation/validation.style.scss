@@ -1,4 +1,5 @@
 @import "../../scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
@@ -8,17 +9,17 @@
 
 
 input.parsley-error{
-  border-color: $brand-danger;
-  @include box-shadow(inset 0 1px 1px rgba($brand-danger,.075));
+  border-color: theme-color('danger');
+  @include box-shadow(inset 0 1px 1px rgba(theme-color('danger'),.075));
 }
 
 .parsley-errors-list{
-  font-size: $font-size-smaller;
+  font-size: $small-font-size;
   padding-left: 0;
   margin-bottom: 5px;
 
   li{
     list-style: none;
-    color: $brand-danger;
+    color: theme-color('danger');
   }
 }

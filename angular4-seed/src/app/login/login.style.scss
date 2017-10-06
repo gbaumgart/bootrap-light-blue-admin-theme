@@ -1,5 +1,7 @@
-@import "../../../node_modules/bootstrap/scss/variables";
 @import "../scss/variables";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
 
 /***********************************/
 /**             LOGIN             **/
@@ -72,7 +74,7 @@
   }
 
   .facebook-login {
-    height: 30px;
+    height: 40px;
     background: $blue;
     text-align: center;
     padding-top: 10px;
@@ -85,10 +87,6 @@
     }
 
   }
-}
-
-.login-page{
-  background-color: $gray-semi-lighter;
 }
 
 .login-page .page-footer {
@@ -137,11 +135,6 @@ header h4{
   font-weight: 600 !important;
 }
 
-.btn {
-  height: 21px;
-  width: 90%;
-}
-
 small {
-  font-size: $font-size-smaller;
+  font-size: $small-font-size;
 }

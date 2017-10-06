@@ -26,7 +26,7 @@ blockquote{
   }
   p{
     font-size: inherit;
-    margin-bottom: $line-height-computed / 2;
+    margin-bottom: $spacer / 2;
   }
 }
 
@@ -42,11 +42,11 @@ h2 small { font-size: $font-size-base * 1.25; } // ~18px
 h3 small { font-size: $font-size-base; }
 h4 small { font-size: $font-size-base; }
 
-.text-primary        { color: $brand-primary; }
-.text-warning        { color: $brand-warning; }
-.text-danger         { color: $brand-danger; }
-.text-success        { color: $brand-success; }
-.text-info           { color: $brand-info; }
+.text-primary        { color: theme-color('primary') }
+.text-warning        { color: theme-color('warning'); }
+.text-danger         { color: theme-color('danger'); }
+.text-success        { color: theme-color('success'); }
+.text-info           { color: theme-color('info'); }
 
 @media (min-width: 768px) {
   .lead {
@@ -117,19 +117,19 @@ textarea,
 .input-prepend,
 .input-append {
   + .help-block {
-    margin-top: $line-height-computed / 4;
+    margin-top: $spacer / 4;
   }
 }
 
 .help-block {
   margin-top: 0;
-  font-size: $font-size-small - 1;
+  font-size: $font-size-sm - 1;
   color: $text-muted;
 }
 
 .search-query, .navbar-form .search-query{
   border-radius: $border-radius-base;
-  line-height: $line-height-computed;
+  line-height: $spacer;
 }
 
 .form-horizontal{
@@ -140,13 +140,13 @@ textarea,
   .input-prepend,
   .input-append {
     + .help-block {
-      margin-top: $line-height-computed / 4;
+      margin-top: $spacer / 4;
     }
   }
 }
 
 .form-group{
-  margin-bottom: $line-height-computed;
+  margin-bottom: $spacer;
 }
 
 .form-horizontal.form-label-left {
@@ -299,7 +299,7 @@ button.dropdown-toggle{
 }
 
 .btn-secondary {
-  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  @include button-variant($btn-secondary-bg, $btn-secondary-border);
 }
 
 /***************************/
@@ -379,7 +379,7 @@ button.dropdown-toggle{
   &:hover,
   &:focus {
     border-bottom-color: transparent;
-    border-top-color: #ddd;
+    border-top-color: $gray-light;
   }
 }
 .tabs-below > .nav-tabs > .active > a,
@@ -408,7 +408,7 @@ button.dropdown-toggle{
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid $gray-light;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
@@ -416,19 +416,19 @@ button.dropdown-toggle{
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
-  border-color: $gray-lighter #ddd $gray-lighter $gray-lighter;
+  border-color: $gray-200 $gray-light $gray-200 $gray-200;
 }
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: $gray-light transparent $gray-light $gray-light;
 }
 
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid $gray-light;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
@@ -436,12 +436,12 @@ button.dropdown-toggle{
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
-  border-color: $gray-lighter $gray-lighter $gray-lighter #ddd;
+  border-color: $gray-200 $gray-200 $gray-200 $gray-light;
 }
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: $gray-light $gray-light $gray-light transparent;
 }
 
 /***************************/
@@ -455,7 +455,7 @@ button.dropdown-toggle{
     &,
     &:hover,
     &:focus {
-      background-color: $nav-link-hover-bg;
+      background-color: $gray-200;
       border-color: transparent;
     }
   }
@@ -630,7 +630,7 @@ button.dropdown-toggle{
   > li > a {
     padding-top:    10px;
     padding-bottom: 10px;
-    line-height: $line-height-computed;
+    line-height: $spacer;
   }
 
   @include media-breakpoint-up(xs) {
@@ -689,11 +689,11 @@ button.dropdown-toggle{
 /***************************/
 
 .modal {
-  color: $gray-dark;
+  color: $gray-800;
   border-radius: $border-radius-base;
 
   h1,h2,h3,h4,h5,h6{
-    color: $gray-dark;
+    color: $gray-800 ;
   }
 }
 
@@ -706,7 +706,7 @@ button.dropdown-toggle{
 /***************************/
 
 .tooltip {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 
 .tooltip-inner {
@@ -758,7 +758,7 @@ button.dropdown-toggle{
   line-height: 14px; // ensure proper line-height if floated
   text-shadow: none;
   font-weight: $font-weight-semi-bold;
-  font-size: $font-size-small - 1;
+  font-size: $font-size-sm - 1;
 }
 
 .badge{
@@ -766,40 +766,56 @@ button.dropdown-toggle{
 }
 
 .badge-default {
-  @include badge-variant($badge-default-bg);
+  @include badge-variant($gray-400);
 }
 
 .badge-primary {
-  @include badge-variant($badge-primary-bg);
+  @include badge-variant(theme-color('primary'));
 }
 
 .badge-success {
-  @include badge-variant($badge-success-bg);
+  @include badge-variant(theme-color('success'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
 }
 
 .badge-info {
-  @include badge-variant($badge-info-bg);
+  @include badge-variant(theme-color('info'));
 }
 
 .badge-warning {
-  @include badge-variant($badge-warning-bg);
+  @include badge-variant(theme-color('warning'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
 }
 
 .badge-danger {
-  @include badge-variant($badge-danger-bg);
+  @include badge-variant(theme-color('danger'));
 }
 
-.badge-important{
-  @include badge-variant($badge-danger-bg);
+.badge-important {
+  @include badge-variant(theme-color('danger'));
 }
 
-.badge-inverse{
-  @include badge-variant($badge-default-bg);
+.badge-inverse {
+  @include badge-variant($gray-400);
 }
 
 .help-block{
   margin-top: 5px;
-  font-size: $font-size-smaller;
+  font-size: $small-font-size;
   color: $text-muted;
   display: block;
 }
@@ -834,7 +850,7 @@ button.dropdown-toggle{
 
 .alert-sm{
   padding: 10px 12px;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 
   .close{
     font-size: 18px;
@@ -908,12 +924,12 @@ button.dropdown-toggle{
 
 .progress-sm{
   height: 10px;
-  margin-bottom: $line-height-computed/2;
+  margin-bottom: $spacer/2;
 }
 
 .progress-xs{
   height: 5px;
-  margin-bottom: $line-height-computed/2;
+  margin-bottom: $spacer/2;
 }
 
 .progress-bar {

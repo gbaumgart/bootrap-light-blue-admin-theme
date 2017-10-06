@@ -84,6 +84,7 @@ function mapStateToProps(store) {
   return {
     alertsList: store.alerts.alertsList,
     sidebarOpen: store.navigation.sidebarOpen,
+    activeItem: store.navigation.activeItem,
   };
 }
 

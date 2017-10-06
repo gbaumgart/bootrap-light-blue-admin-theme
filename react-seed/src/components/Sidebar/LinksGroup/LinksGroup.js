@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
+import { Collapse } from 'reactstrap';
 import { Route } from 'react-router';
 
 import s from './LinksGroup.scss';
@@ -14,7 +15,9 @@ class LinksGroup extends Component {
     childrenLinks: PropTypes.array,
     iconName: PropTypes.string.isRequired,
     className: PropTypes.string,
-    badge: PropTypes.string,
+    activeItem: PropTypes.string,
+    isActive: PropTypes.bool,
+    onActiveSidebarItemChange: PropTypes.func,
   };
   /* eslint-enable */
 
@@ -26,13 +29,22 @@ class LinksGroup extends Component {
 
   constructor(props) {
     super(props);
+    this.togglePanelCollapse = this.togglePanelCollapse.bind(this);
 
     this.state = {
-      isOpen: false,
+      headerLinkWasClicked: true,
     };
   }
 
+  togglePanelCollapse() {
+    this.props.onActiveSidebarItemChange();
+    this.setState({ headerLinkWasClicked:
+    !this.state.headerLinkWasClicked || !this.props.isActive });
+  }
+
   render() {
+    const isOpen = this.props.isActive && this.state.headerLinkWasClicked;
+
     if (!this.props.childrenLinks) {
       return (
         <li className={[s.headerLink, this.props.className].join(' ')}>
@@ -50,23 +62,40 @@ class LinksGroup extends Component {
       <Route
         path={this.props.headerLink}
         children={({ match }) => {
-          const expanded = !!match || this.state.isOpen;
           return (
             <li className={[s.headerLink, this.props.className].join(' ')}>
-              <a
-                className={match ? s.headerLinkActive : ''}
-                onClick={() => this.setState({ isOpen: !this.state.isOpen })}
+              <a className={[match ? s.headerLinkActive : '', isOpen ? s.collapsed : ''].join(' ')}
+                 onClick={this.togglePanelCollapse}
               >
-                <i className={`glyphicon ${this.props.iconName}`} />
+                <span className={s.icon}>
+                  <i className={`fa ${this.props.iconName}`} />
+                </span>
                 {this.props.header}
+                <b className={['fa fa-angle-left', s.caret].join(' ')} />
               </a>
+              {/* eslint-enable */}
+              <Collapse className={s.panel} isOpen={isOpen}>
+                <ul>
+                  {this.props.childrenLinks &&
+                  this.props.childrenLinks.map(child =>
+                    <li key={child.name}>
+                      <NavLink
+                        to={child.link}
+                        exact
+                        activeClassName={s.headerLinkActive}
+                      >
+                        {child.name}
+                      </NavLink>
+                    </li>,
+                  )}
+                </ul>
+              </Collapse>
             </li>
           );
         }}
       />
     );
   }
-
 }
 
-export default withStyles(s)(LinksGroup);
+export default withRouter(withStyles(s)(LinksGroup));

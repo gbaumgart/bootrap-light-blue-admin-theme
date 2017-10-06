@@ -72,7 +72,7 @@
   vertical-align: bottom;
 
   .time{
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     line-height: 1.5em;
     color: $text-muted;
   }
@@ -250,7 +250,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
   .visits{
     font-weight: $font-weight-base;
     color: $widget-header-color;
-    font-size: $font-size-large;
+    font-size: $font-size-lg;
   }
 }
 
@@ -290,13 +290,13 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
     }
 
     .key{
-      font-size: $font-size-small;
+      font-size: $font-size-sm;
       font-weight: normal;
       margin: 0;
     }
 
     .value{
-      font-size: $font-size-large;
+      font-size: $font-size-lg;
       font-weight: bold;
       margin-bottom: 5px;
     }
@@ -321,7 +321,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
   .value{
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: $font-size-large;
+    font-size: $font-size-lg;
   }
 }
 
@@ -414,7 +414,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
   }
 
   .time{
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     color: $text-muted;
   }
 
@@ -423,7 +423,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
   }
 
   .comment{
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     color: $widget-color;
     line-height: 1.3em;
   }
@@ -480,7 +480,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
   }
 
   .time{
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     line-height: 1.5em;
     text-align: center;
     color: $text-muted;
@@ -578,7 +578,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
 /***********************************/
 
 .icon-list{
-  margin-top: $line-height-computed;
+  margin-top: $spacer;
 }
 
 .icon-list-item{
@@ -623,7 +623,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
     border-radius: $border-radius-base;
 
     + .list-group-item{
-      margin-top: $line-height-computed/2;
+      margin-top: $spacer/2;
     }
   }
 

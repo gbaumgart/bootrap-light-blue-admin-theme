@@ -1,6 +1,7 @@
+@import "../scss/variables";
+@import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
-@import "../scss/variables";
 
 /***********************************/
 /**            LANDING            **/
@@ -22,7 +23,7 @@
       line-height: 40px;
       padding: 0 10px;
       width: auto;
-      font-size: $font-size-large;
+      font-size: $font-size-lg;
     }
   }
 
@@ -119,11 +120,11 @@
 
 .widget-white{
   background: $white;
-  color: $gray;
+  color: $gray-300;
   box-shadow: 0 -1px 1px $shadow-color, 0 1px 1px $shadow-color;
 
   *{
-    color: $gray;
+    color: $gray-300;
   }
 }
 

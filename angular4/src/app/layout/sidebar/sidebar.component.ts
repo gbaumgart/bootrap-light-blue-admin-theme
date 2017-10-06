@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-import { Renderer } from '@angular/core';
+import { Renderer2 } from '@angular/core';
 
 declare let jQuery: any;
 
@@ -11,7 +11,7 @@ export class Sidebar {
   sidebarHeight: number = 0;
   sidebarMenu: any = 0;
 
-  constructor(private renderer: Renderer, private el: ElementRef) {
+  constructor(private renderer: Renderer2, private el: ElementRef) {
   }
 
   ngAfterViewInit() {
@@ -56,6 +56,7 @@ export class Sidebar {
     let collapsingMenu = this.sidebarMenu
       .querySelector('.accordion-group .accordion-body.collapse.show');
     jQuery(collapsingMenu).collapse('hide');
+    jQuery(currentMenu).collapse('show');
     if (collapsingMenu && currentMenu !== collapsingMenu && window.innerWidth < 768) {
       let submenuHeight = 0;
       let submenuItems = collapsingMenu.querySelectorAll('li');
@@ -69,7 +70,7 @@ export class Sidebar {
   sidebarBehavior(event) {
     this.setSidebarHeight(event);
     this.collapseSubMenu(event);
-    this.renderer.setElementStyle(document
+    this.renderer.setStyle(document
       .querySelector('.content'), 'margin-top', this.sidebarHeight + 'px');
   }
 }

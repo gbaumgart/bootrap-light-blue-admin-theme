@@ -1,5 +1,6 @@
-@import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/_variables";
 
 div[live] {
   .widget .widget-body > .list-group {

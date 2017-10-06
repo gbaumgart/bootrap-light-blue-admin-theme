@@ -2,6 +2,7 @@
 @import "../../../../node_modules/morris.js/morris";
 @import "../../../../node_modules/nvd3/build/nv.d3";
 @import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
@@ -65,8 +66,8 @@
 
 .chart-tooltip{
   position: fixed;
-  padding: $input-padding-y-sm $input-padding-x-sm;
-  border: 1px solid $gray-semi-lighter;
+  padding: $padding-small-vertical $padding-small-horizontal;
+  border: 1px solid $gray-light;
   font-size: $font-size-mini;
   background-color: $white;
 }

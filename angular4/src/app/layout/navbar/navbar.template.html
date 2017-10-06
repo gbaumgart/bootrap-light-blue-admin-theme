@@ -11,7 +11,7 @@
          data-toggle="dropdown">
         <i class="glyphicon glyphicon-comment"></i>
       </a>
-      <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+      <ul id="messages-menu" class="dropdown-menu dropdown-menu-right messages" role="menu">
         <li role="presentation">
           <a href="#" class="dropdown-item message">
             <img src="assets/img/1.png" alt="">
@@ -61,7 +61,7 @@
         <i class="glyphicon glyphicon-globe"></i>
         <span class="count">8</span>
       </a>
-      <ul id="support-menu" class="dropdown-menu support" role="menu">
+      <ul id="support-menu" class="dropdown-menu dropdown-menu-right support" role="menu">
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket ">
             <div class="picture">
@@ -120,7 +120,7 @@
       </ul>
     </li>
     <li class="divider"></li>
-    <li dropdown [isOpen]="settings.isOpen" [autoClose]="false" class="nav-item dropdown hidden-sm-down">
+    <li dropdown [isOpen]="settings.isOpen" [autoClose]="false" class="nav-item dropdown d-sm-down-none">
       <a href="#" id="settings"
          title="Settings"
          class="nav-link dropdown-toggle"
@@ -148,13 +148,13 @@
         </div>
       </div>
     </li>
-    <li class="nav-item dropdown hidden-sm-down">
+    <li class="nav-item dropdown d-sm-down-none">
       <a href title="Account" id="account"
          class="nav-link dropdown-toggle"
          data-toggle="dropdown">
         <i class="glyphicon glyphicon-user"></i>
       </a>
-      <ul id="account-menu" class="dropdown-menu account" role="menu">
+      <ul id="account-menu" class="dropdown-menu dropdown-menu-right account" role="menu">
         <li role="presentation" class="account-picture">
           <img src="assets/img/2.png" alt="">
           Philip Daineka
@@ -179,12 +179,12 @@
         </li>
       </ul>
     </li>
-    <li class="hidden-md-up mr-3">
+    <li class="d-md-none mr-3">
       <a href="#" (click)="sidebarOpen()" class="btn-navbar" data-toggle="collapse" data-target=".sidebar" title="">
         <i class="fa fa-bars"></i>
       </a>
     </li>
-    <li class="nav-item hidden-sm-down">
+    <li class="nav-item d-sm-down-none">
       <a class="nav-link" routerLink="/login"><i class="glyphicon glyphicon-off"></i></a>
     </li>
   </ul>

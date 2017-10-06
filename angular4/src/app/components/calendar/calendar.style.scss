@@ -1,5 +1,6 @@
 @import "../../../../node_modules/fullcalendar/dist/fullcalendar";
 @import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
@@ -31,12 +32,12 @@ label.btn.btn-secondary {
   padding: 2px 3px;
   border: none;
   font-weight: $font-weight-normal;
-  background-color: $gray-semi-lighter;
-  color: $gray;
+  background-color: $gray-light;
+  color: $gray-300;
 }
 
 a:not([href]):not([tabindex]) {
-  color: $gray;
+  color: $gray-300;
   text-decoration: none;
 }
 

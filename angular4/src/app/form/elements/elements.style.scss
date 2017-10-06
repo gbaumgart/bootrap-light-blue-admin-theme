@@ -1,10 +1,12 @@
 @import "../../scss/variables";
 @import "../../scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 @import "../../../../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker";
 @import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker3.min";
 @import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min";
+@import "../../../../node_modules/bootstrap-select/sass/bootstrap-select";
 @import "../../scss/select2-variables";
 @import "../../../../node_modules/select2/src/scss/core";
 @import "../../../../node_modules/select2-bootstrap-theme/src/select2-bootstrap";
@@ -191,22 +193,22 @@ $slider-handle-size: 26px;
 }
 .slider-selection {
   position: absolute;
-  background-color: $brand-primary;
+  background-color: theme-color('primary');
   @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
   //@include box-sizing(border-box);
   border-radius: $border-radius-base;
 
   .slider-danger &{
-    background-color: $brand-danger;
+    background-color: theme-color('danger');
   }
   .slider-success &{
-    background-color: $brand-success;
+    background-color: theme-color('success');
   }
   .slider-warning &{
-    background-color: $brand-warning;
+    background-color: theme-color('warning');
   }
   .slider-info &{
-    background-color: $brand-info;
+    background-color: theme-color('info');
   }
   .slider-inverse &{
     background-color: $widget-color;
@@ -217,8 +219,8 @@ $slider-handle-size: 26px;
   width: $slider-handle-size;
   height: $slider-handle-size;
   background-color: $white;
-  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.5));
-  border: 0px solid transparent;
+  @include box-shadow("inset 0 1px 0 rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.5)");
+  border: 0 solid transparent;
 
   &:focus{
     outline: 0;

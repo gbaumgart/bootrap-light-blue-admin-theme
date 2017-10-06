@@ -30,7 +30,7 @@
 
 html{
   min-height: 100%;
-  font-size: $font-size-root;
+  font-size: $font-size-initial;
 }
 
 body{
@@ -105,9 +105,10 @@ a{
   @include transition(color .2s);
 }
 
-.btn{
+button, .btn{
   @include transition(background-color .2s);
   font-family: $font-family-sans-serif;
+  cursor: pointer;
 }
 
 .form-control{

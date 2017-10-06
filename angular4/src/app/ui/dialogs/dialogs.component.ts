@@ -7,9 +7,4 @@ declare let jQuery: any;
   styleUrls: [ './dialogs.style.scss' ]
 })
 export class Dialogs {
-
-  ngOnInit() {
-    jQuery('[data-toggle="popover"]').popover();
-  }
-
 }

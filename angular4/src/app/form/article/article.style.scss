@@ -1,13 +1,15 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
+@import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap-select/sass/bootstrap-select";
 @import "../../../../node_modules/bootstrap-markdown/css/bootstrap-markdown.min";
 @import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker3.min";
 @import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min";
 
 .article-description {
-  min-height: $input-height * 2;
+  min-height: calc(#{$input-height} * 2);
 }
 
 .article-options-datetime {
@@ -67,7 +69,7 @@
   }
 
   > .md-preview {
-    padding: $input-padding-y $input-padding-x;
+    padding: $padding-base-vertical $padding-base-horizontal;
     background: $widget-bg;
     border-top: none;
     border-radius: $input-border-radius;
@@ -83,9 +85,9 @@
     margin: 0;
     display: block;
     width: 100%;
-    height: 6 * $input-height;
+    height: calc(6 * #{$input-height});
     border: 0;
-    padding: $input-padding-y $input-padding-x;
+    padding: $padding-base-vertical $padding-base-horizontal;
     border-radius: $input-border-radius;
   }
 
@@ -133,7 +135,7 @@
       display: inline-flex;
       align-items: center;
       > span {
-        color: $gray-dark;
+        color: $gray-800;
       }
       > delete-icon {
         height: 100%;

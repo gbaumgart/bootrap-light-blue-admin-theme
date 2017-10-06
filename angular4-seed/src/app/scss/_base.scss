@@ -1,41 +1,21 @@
-$i: 1;
-@each $color in $colors{
-
-  .#{nth($color-names, $i)}{
-    background: #{$color} !important;
-    color:  $white !important;
-  }
-  $i: $i + 1;
-}
-
-$i: 1;
-@each $color in $colors{
-
-  .color-#{nth($color-names, $i)}{
-    color: #{$color} !important;
-  }
-  $i: $i + 1;
-}
-
-/***********************************/
-/**          VALIDATION          **/
-/**********************************/
-
-
-.form-control.parsley-error{
-  &, &:focus{
-    box-shadow: inset 0 0 3px $brand-warning;
-  }
-}
-
-.parsley-errors-list{
-  font-size: $font-size-small;
-
-  li{
-    list-style: none;
-    color: $orange;
-  }
-}
+//$i: 1;
+//@each $color in $colors{
+//
+//  .#{nth($color-names, $i)}{
+//    background: #{$color} !important;
+//    color:  $white !important;
+//  }
+//  $i: $i + 1;
+//}
+//
+//$i: 1;
+//@each $color in $colors{
+//
+//  .color-#{nth($color-names, $i)}{
+//    color: #{$color} !important;
+//  }
+//  $i: $i + 1;
+//}
 
 /***********************************/
 /**          LOGO                **/
@@ -243,7 +223,7 @@ $i: 1;
     }
 
     + li {
-      margin-top: $line-height-computed/2;
+      margin-top: $spacer/2;
     }
   }
   @media (max-width: 767px) {
@@ -254,7 +234,7 @@ $i: 1;
 .sidebar-alerts{
   .alert{
     margin-bottom: 0;
-    padding: $line-height-computed/2 12px $line-height-computed/2 20px;
+    padding: $spacer/2 12px $spacer/2 20px;
 
     .close{
       font-size: 16px;
@@ -502,7 +482,7 @@ $i: 1;
   z-index: 1;
   top: 0;
   right: 0;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   word-spacing: 1px;
 
   &.left{
@@ -628,7 +608,7 @@ $i: 1;
       height: 38px;
       width: 1px;
       margin: 0 20px;
-      background: linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray, 0));
+      background: linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray-300, 0));
     }
   }
 
@@ -659,7 +639,7 @@ $i: 1;
 
   .navbar-nav{
     .nav-item + .nav-item{
-      margin-left: 0px;
+      margin-left: 0;
     }
 
     .dropdown-menu {
@@ -687,8 +667,6 @@ $i: 1;
   // Right aligned menus need alt position
   .navbar-nav.float-right > li > .dropdown-menu,
   .navbar-nav.nav > li > .dropdown-menu.float-right {
-    left: auto;
-    right: 0;
     &:before {
       left: auto;
       right: 12px;
@@ -711,7 +689,7 @@ $i: 1;
   color: $page-title-color;
   font-weight: 300;
   line-height: 1;
-  margin: 11px 0 $line-height-computed;
+  margin: 11px 0 $spacer;
 
   small{
     color: rgba($page-title-color, .7);
@@ -725,7 +703,7 @@ $i: 1;
   .alert{
     background: transparentize($text-transparent, .1);
     border: none;
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     line-height: 20px !important;
     margin-bottom: 0;
     padding: 3px 9px;
@@ -737,6 +715,14 @@ $i: 1;
       color: $widget-color;
       font-weight: bold;
     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    right: 0;
+    top: 46px;
+    margin: 0;
+    transition: top 0.3s ease;
   }
 }
 
@@ -796,7 +782,7 @@ $i: 1;
   }
 
   .text{
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     color: $header-dropdown-secondary-color;
   }
 }
@@ -850,7 +836,7 @@ $i: 1;
 
   .details{
     margin-left: 30px;
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
   }
 }
 
@@ -863,7 +849,7 @@ $i: 1;
   border-radius: $border-radius-base !important;
   color: $header-dropdown-primary-color;
   width: 122px;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   text-align: center;
   min-width: auto;
 
@@ -995,9 +981,17 @@ $i: 1;
   padding: 10px 0 0;
 
   small{
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     color: $text-muted;
     font-weight: bold;
+  }
+}
+
+.input-group {
+  &.input-group-transparent {
+    .input-group-addon {
+      border: none;
+    }
   }
 }
 
@@ -1046,8 +1040,8 @@ $i: 1;
 // ------------
 
 .form-actions {
-  padding: ($line-height-computed - 1) 20px $line-height-computed;
-  margin-top: $line-height-computed;
+  padding: ($spacer - 1) 20px $spacer;
+  margin-top: $spacer;
   background-color: $bg-addition;
   @include clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
@@ -1453,27 +1447,27 @@ $i: 1;
 }
 
 .background-danger{
-  background: $brand-danger;
+  background: theme-color('danger');
   color: white;
 }
 
 .background-warning{
-  background: $brand-warning;
+  background: theme-color('warning');
   color: white;
 }
 
 .background-success{
-  background: $brand-success;
+  background: theme-color('success');
   color: white;
 }
 
 .background-primary{
-  background: $brand-primary;
+  background: theme-color('primary');
   color: white;
 }
 
 .background-info{
-  background: $brand-info;
+  background: theme-color('info');
   color: white;
 }
 
@@ -1563,7 +1557,7 @@ $i: 1;
 }
 
 ul.text-list, ol.text-list{
-  margin-bottom: $line-height-computed/2;
+  margin-bottom: $spacer/2;
   padding-left: 40px;
 }
 

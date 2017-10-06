@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
                   Light Blue built with <strong>React JS</strong> using
                   Redux, React Router and Server Side Rendering!
                 </p>
-                <p className="fs-mini">Made by <a href="https://flatlogic.com" target="_blank" rel="noopener noreferrer">Flatlogic</a>.</p>
+                <p className="fs-mini text-right m-0">Made by <a href="https://flatlogic.com" target="_blank" rel="noopener noreferrer">Flatlogic</a>.</p>
               </div>
             </Widget>
           </Col>

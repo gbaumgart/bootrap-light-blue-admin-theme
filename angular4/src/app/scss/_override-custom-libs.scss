@@ -9,7 +9,7 @@
 
 .nvd3-svg svg text,
 .nvd3-svg .nvd3 text{
-  font: $font-weight-base $font-size-small $font-family-base;
+  font: $font-weight-base $font-size-sm $font-family-base;
   fill: $text-color;
 
   .widget &{
@@ -22,7 +22,7 @@
 }
 
 .nvd3-svg  .nvd3.nv-noData {
-  font-size: $font-size-large;
+  font-size: $font-size-lg;
   font-weight: $font-weight-bold;
 }
 
@@ -111,10 +111,6 @@
   outline: none !important;
 }
 
-/**
- * Bootstrap select
- */
-
 .selectpicker.form-control {
   height: auto;
 }
@@ -131,6 +127,11 @@
     z-index: 3;
     display: inline-block !important;
   }
+}
+
+body .bootstrap-select > select {
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /**
@@ -189,7 +190,7 @@
 
 .select2-container .select2-selection.select2-selection--single {
   height: $input-height;
-  padding: $input-padding-y $input-padding-x;
+  padding: $padding-base-vertical $padding-base-horizontal;
 }
 
 /**
@@ -201,7 +202,7 @@
 }
 
 .actions .bootstrap-select .dropdown-toggle {
-  padding: 5px 12px;
+  padding: 5px 20px 5px 15px;
 }
 
 /**
@@ -243,7 +244,7 @@
  */
 
 .rickshaw_graph .detail .x_label {
-  color: $gray;
+  color: $gray-300;
 }
 
 /***********************/
@@ -258,7 +259,7 @@
   padding: 2px 3px;
   border: none;
   font-weight: $font-weight-normal;
-  background-color: $gray-semi-lighter;
+  background-color: $gray-light;
   color: $text-color;
 }
 
@@ -276,7 +277,7 @@ a.fc-event{
 }
 
 .fc-event, .fc-event:hover, .ui-widget .fc-event{
-  color: $gray;
+  color: $gray-300;
 }
 
 .fc-unthemed th,
@@ -320,6 +321,55 @@ a.fc-event{
   top: 4px;
 }
 
+.abc-checkbox, .abc-radio {
+  margin-bottom: 10px;
+  padding-left: 1.5rem;
+}
+
+.abc-checkbox label{
+  &::before {
+    background: none;
+    border-color: #aaa;
+  }&::after{
+     color: $awesome-checkbox-default-color;
+   }
+}
+
+.abc-radio {
+  label {
+
+    &::before {
+      background: none;
+      border-color: #aaa;
+    }
+
+    &::after {
+      background-color: $awesome-checkbox-default-color;
+    }
+  }
+}
+
+.abc-checkbox-dark input[type="checkbox"]:checked + label{
+  &::after{
+    color: $gray-300;
+  }
+}
+
+.table {
+  .abc-checkbox {
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
 /***********************************/
 /**        Select2       **/
 /***********************************/
@@ -328,7 +378,7 @@ a.fc-event{
 }
 
 .select2-container--bootstrap .select2-results .select2-results__option{
-  color: $gray-dark;
+  color: $gray-800;
 }
 
 /**

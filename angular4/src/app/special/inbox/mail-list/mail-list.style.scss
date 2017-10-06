@@ -1,5 +1,6 @@
-@import "../../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
 //#folder-actions {
@@ -80,7 +81,7 @@
 
     > label:before,
     > label:after {
-      margin-left: 0px;
+      margin-left: 0;
     }
   }
 
@@ -117,7 +118,7 @@
     }
 
     .fa-star{
-      color: $brand-warning;
+      color: theme-color('warning');
     }
   }
 }
@@ -125,14 +126,14 @@
 .widget-email-count{
   display: inline-block;
   margin: 0;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   color: #d2d2d2;
   line-height: 29px;
   vertical-align: bottom;
 
   + .widget-email-pagination{
     margin-left: 10px;
-    border-left: 1px solid $gray-semi-lighter;
+    border-left: 1px solid $gray-light;
     padding-left: 15px;
     border-radius: 0;
     vertical-align: -9px;

@@ -114,7 +114,7 @@
       float: none;
     }
     .form-search{
-      margin-top: $line-height-computed / 2;
+      margin-top: $spacer / 2;
       label{
         display: block;
       }
@@ -195,8 +195,8 @@
     }
 
     h3{
-      font-size: $font-size-large;
-      line-height: $line-height-computed + 2;
+      font-size: $font-size-lg;
+      line-height: calc(#{$spacer} + 2px);
     }
   }
 

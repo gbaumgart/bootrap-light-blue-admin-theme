@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import {Component, NgZone, ViewEncapsulation} from '@angular/core';
 import { MapsAPILoader } from 'angular2-google-maps/core';
 import { Select2OptionData } from 'ng2-select2/ng2-select2';
 declare let google: any;
@@ -7,7 +7,8 @@ declare let jQuery: any;
 @Component({
   selector: '[maps]',
   templateUrl: './maps.template.html',
-  styleUrls: [ './maps.style.scss' ]
+  styleUrls: [ './maps.style.scss' ],
+  encapsulation: ViewEncapsulation.None
 })
 export class Maps {
   latFirst: number = -37.813179;

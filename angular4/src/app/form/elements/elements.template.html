@@ -71,7 +71,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label text-md-right" for="prepended-input">Prepended input</label>
               <div class="col-md-7">
-                <div class="input-group">
+                <div class="input-group input-group-transparent">
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
                   <input id="prepended-input" class="form-control input-transparent" size="16" type="text" placeholder="Username">
                 </div>
@@ -80,7 +80,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label text-md-right" for="password-field">Password</label>
               <div class="col-md-7">
-                <div class="input-group">
+                <div class="input-group input-group-transparent">
                   <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                   <input type="password" class="form-control input-transparent" id="password-field" placeholder="Password">
                 </div>
@@ -89,7 +89,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label text-md-right" for="appended-input">Appended input</label>
               <div class="col-md-7">
-                <div class="input-group">
+                <div class="input-group input-group-transparent">
                   <input id="appended-input" class="form-control input-transparent" size="16" type="text">
                   <span class="input-group-addon">.00</span>
                 </div>
@@ -98,7 +98,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label text-md-right" for="combined-input">Combined</label>
               <div class="col-md-7">
-                <div class="input-group">
+                <div class="input-group input-group-transparent">
                   <span class="input-group-addon">$</span>
                   <input id="combined-input" class="form-control input-transparent" size="16" type="text">
                   <span class="input-group-addon">.00</span>
@@ -110,7 +110,7 @@
                 Append Transparent
               </label>
               <div class="col-md-7">
-                <div class="input-group">
+                <div class="input-group input-group-transparent">
                   <input id="transparent-input" class="form-control input-transparent" type="text">
                   <span class="input-group-addon">
                     <i class="fa fa-camera"></i>
@@ -120,13 +120,9 @@
             </div>
           </fieldset>
           <div class="form-actions">
-            <div class="row">
-              <div class="offset-md-4 col-md-7">
-                <div class="btn-toolbar">
-                  <button type="submit" class="btn btn-primary">Save Changes</button>
-                  <button type="button" class="btn btn-inverse">Cancel</button>
-                </div>
-              </div>
+            <div class="btn-toolbar justify-content-center">
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+              <button type="button" class="btn btn-inverse">Cancel</button>
             </div>
           </div>
         </form>
@@ -310,7 +306,7 @@
               </div>
             </div>
             <div class="form-group">
-              <div class="input-group input-group-lg">
+              <div class="input-group input-group-transparent input-group-lg">
                 <span class="input-group-addon"><i class="fa fa-bars"></i></span>
                 <input class="form-control input-transparent" size="16" type="text" placeholder="Username">
               </div>
@@ -890,8 +886,8 @@
             <p>Vertical orientation is also possible. Simply changing <strong>data-slider-orientation</strong>
               attribute does the thing.</p>
             <form>
-              <div class="row">
-                <div class="col-md-8 offset-md-2">
+              <div class="row justify-content-md-center">
+                <div class="col-md-8">
                   <span class="">
                     <input class="js-slider" id="slider-ex6" data-slider-orientation="vertical" data-slider-id='ex6Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
                   </span>

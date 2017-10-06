@@ -1,5 +1,6 @@
-@import "../../../node_modules/bootstrap/scss/variables";
 @import "../scss/variables";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
 
 /***********************************/
 /**             LOGIN             **/
@@ -75,7 +76,7 @@
   }
 
   .facebook-login {
-    height: 30px;
+    height: 40px;
     background: $blue;
     text-align: center;
     padding-top: 10px;
